@@ -1,7 +1,7 @@
-import { SplashImage } from './SplashImage.jsx';
+import SplashImage from './SplashImage.jsx';
 import './Splash.css';
 
-export function Splash() {
+export default function Splash() {
   return (
     <section className="Splash">
       <div className="Splash__inner">

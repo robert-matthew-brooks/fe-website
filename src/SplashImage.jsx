@@ -109,7 +109,7 @@ const addLetter = (visibleTags, setVisibleTags) => {
   }, addLetterDelay);
 };
 
-export function SplashImage() {
+export default function SplashImage() {
   const [visibleTags, setVisibleTags] = useState([]);
 
   useEffect(() => {
