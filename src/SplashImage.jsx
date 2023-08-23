@@ -7,7 +7,7 @@ import './SplashImage.css';
 const colours = [
   'white',
   'yellow',
-  'lavendar',
+  'lavender',
   'lightgreen',
   'lightblue',
   'aquamarine',
