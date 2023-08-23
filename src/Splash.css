@@ -1,0 +1,65 @@
+.Splash {
+  background: radial-gradient(#c0c0a0, #c0c0c0);
+}
+
+.Splash__inner {
+  max-width: var(--global-max-width);
+  margin: auto;
+
+  min-height: calc(100vh - var(--header-height));
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5%;
+  padding: 3em;
+}
+
+.Splash__text {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
+
+.Splash__text > h2 {
+  width: fit-content;
+  padding-left: 0.5em;
+  margin-left: 2px;
+  font-size: 2.5em;
+  font-weight: normal;
+  border-left: 2px dotted black;
+  text-transform: uppercase;
+}
+.fullstack-highlight {
+  font-weight: bold;
+}
+
+.Splash__text > h3 {
+  font-weight: bold;
+  color: #404050;
+}
+
+.contact-links {
+  position: relative;
+  height: 2.5em;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-links__whatsapp {
+  position: absolute;
+  top: 0;
+  padding: 0.7em;
+  color: white;
+  background-color: darkgreen;
+  text-decoration: none;
+
+  border-bottom: solid black;
+  border-width: 5px;
+  border-radius: 1em;
+  transition: all 0.1s linear;
+}
+.contact-links__whatsapp:hover {
+  top: 5px;
+  border-width: 0;
+  background-color: green;
+}

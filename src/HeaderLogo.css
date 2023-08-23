@@ -1,0 +1,70 @@
+.Logo {
+    display: block;
+    color: white;
+    border: 1px solid white;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.Logo > ul {
+    overflow: hidden;
+    padding: 2px;
+    list-style-type: none;
+}
+
+.Logo:hover {
+    color: black;
+    background-color: white;
+}
+
+.Logo > ul > li {
+    position: relative;
+    animation: move-logo-text-initial 0.4s ease-in-out;
+}
+.Logo > ul > li:nth-of-type(2) {
+    animation-delay: 0.15s;
+}
+.Logo > ul > li:nth-of-type(3) {
+    animation-delay: 0.3s;
+}
+
+@keyframes move-logo-text-initial {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: 120%;
+    }
+    51% {
+        left: -120%;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+.Logo:hover > ul > li {
+    position: relative;
+    animation: move-logo-text 0.4s ease-in-out;
+}
+.Logo:hover > ul > li:nth-of-type(2) {
+    animation-delay: 0.15s;
+}
+.Logo:hover > ul > li:nth-of-type(3) {
+    animation-delay: 0.3s;
+}
+
+@keyframes move-logo-text {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: 120%;
+    }
+    51% {
+        left: -120%;
+    }
+    100% {
+        left: 0;
+    }
+}
