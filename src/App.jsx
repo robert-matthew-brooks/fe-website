@@ -1,3 +1,4 @@
+import { Routes, Route } from 'react-router-dom';
 import Header from './Header.jsx';
 import Home from './Home.jsx';
 import Footer from './Footer.jsx';
@@ -9,7 +10,9 @@ export default function App() {
       <Header />
 
       <main>
-        <Home />
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
       </main>
 
       <Footer />
