@@ -1,9 +1,5 @@
 @import url('./_dimens.css');
-
-:root {
-  --colour: invert(40%) sepia(91%) saturate(774%) hue-rotate(157deg)
-    brightness(101%) contrast(101%);
-}
+@import url('./_colours.css');
 
 header {
   height: var(--header-height);
@@ -13,7 +9,7 @@ header {
   overflow: hidden;
   padding-right: 0.7rem;
   padding-left: 1em;
-  background-color: #000020;
+  background-color: var(--header-bg-colour);
 }
 
 .desktop-nav {
@@ -26,10 +22,10 @@ header {
 .desktop-nav > a {
   height: 100%;
   display: block;
-  color: white;
+  color: var(--header-link-colour);
   padding: 1em;
   text-decoration: none;
 }
 .desktop-nav > a:hover {
-  color: #c0c0c0;
+  color: var(--header-link-hover-colour);
 }

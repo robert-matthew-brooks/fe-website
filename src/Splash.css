@@ -1,5 +1,10 @@
+@import url('./_colours.css');
+
 .Splash {
-  background: radial-gradient(#c0c0a0, #c0c0c0);
+  background: radial-gradient(
+    var(--splash-inner-bg-colour),
+    var(--splash-outer-bg-colour)
+  );
 }
 
 .Splash__inner {
@@ -18,6 +23,7 @@
   display: flex;
   flex-direction: column;
   gap: 3em;
+  color: var(--splash-text-colour);
 }
 
 .Splash__text > h2 {
@@ -26,7 +32,7 @@
   margin-left: 2px;
   font-size: 2.5em;
   font-weight: normal;
-  border-left: 2px dotted black;
+  border-left: 2px dotted var(--splash-text-colour);
   text-transform: uppercase;
 }
 .fullstack-highlight {
@@ -35,7 +41,7 @@
 
 .Splash__text > h3 {
   font-weight: bold;
-  color: #404050;
+  color: var(--splash-small-header-text-colour);
 }
 
 .contact-links {
@@ -49,8 +55,8 @@
   position: absolute;
   top: 0;
   padding: 0.7em;
-  color: white;
-  background-color: darkgreen;
+  color: var(--splash-whatsapp-btn-text-colour);
+  background-color: var(--splash-whatsapp-btn-bg-colour);
   text-decoration: none;
 
   border-bottom: solid black;
@@ -61,5 +67,5 @@
 .contact-links__whatsapp:hover {
   top: 5px;
   border-width: 0;
-  background-color: green;
+  background-color: var(--splash-whatsapp-btn-hover-bg-colour);
 }

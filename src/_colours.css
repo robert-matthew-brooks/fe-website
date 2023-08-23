@@ -1,0 +1,28 @@
+:root {
+  --header-logo-colour: white;
+  --header-logo-hover-text-colour: black;
+  --header-link-colour: white;
+  --header-link-hover-colour: #c0c0c0;
+  --header-bg-colour: #000020;
+
+  --splash-text-colour: black;
+  --splash-small-header-text-colour: #404050;
+  --splash-inner-bg-colour: #c0c0a0;
+  --splash-outer-bg-colour: #c0c0c0;
+  --splash-whatsapp-btn-text-colour: white;
+  --splash-whatsapp-btn-bg-colour: darkgreen;
+  --splash-whatsapp-btn-hover-bg-colour: green;
+
+  --languages-bg-colour: white;
+  --languages-icon-bg-hover-colour: #eaeaea;
+  --languages-tooltip-bg-colour: lightgoldenrodyellow;
+  --languages-tooltip-border-colour: grey;
+
+  --footer-text-colour: white;
+  --footer-link-colour: white;
+  --footer-link-hover-colour: #c0c0c0;
+  --footer-sm-icon-colour: invert(100%);
+  --footer-sm-icon-hover-colour: invert(96%) sepia(6%) saturate(0%)
+    hue-rotate(318deg) brightness(83%) contrast(84%);
+  --footer-bg-colour: #000020;
+}

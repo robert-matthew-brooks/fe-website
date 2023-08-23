@@ -32,6 +32,7 @@ const hideTooltip = () => {
 };
 
 // GET THESE FROM BACKEND DB
+// order by # projects
 const languages = [
   {
     name: 'React',

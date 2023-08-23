@@ -1,20 +1,21 @@
 @import url('./_dimens.css');
+@import url('./_colours.css');
 
 footer {
   display: flex;
   align-items: center;
   justify-content: space-around;
   padding: 3.5em 0;
-  color: white;
-  background-color: #000020;
+  color: var(--footer-text-colour);
+  background-color: var(--footer-bg-colour);
 }
 
 .footer__email > a {
-  color: white;
+  color: var(--footer-link-colour);
   text-decoration: none;
 }
 .footer__email > a:hover {
-  color: #c0c0c0;
+  color: var(--footer-link-hover-colour);
   text-decoration: underline;
 }
 
@@ -26,9 +27,8 @@ footer {
 .sm-icon {
   width: 1.8em;
   aspect-ratio: 1;
-  filter: invert(100%);
+  filter: var(--footer-sm-icon-colour);
 }
 .sm-icon:hover {
-  filter: invert(96%) sepia(6%) saturate(0%) hue-rotate(318deg) brightness(83%)
-    contrast(84%);
+  filter: var(--footer-sm-icon-hover-colour);
 }
