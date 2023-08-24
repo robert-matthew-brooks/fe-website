@@ -1,5 +1,5 @@
 .PortfolioCard {
-  width: 650px;
+  width: 700px;
   overflow: hidden;
   border: 1px solid var(--portfolio-card-border-colour);
   border-radius: 0.3rem;
@@ -24,7 +24,9 @@
 .PortfolioCard__image {
   display: block;
   width: 80%;
-  margin: 1em auto;
+  aspect-ratio: 1.6;
+  object-fit: cover;
+  margin: 1.5em auto;
   border: 1px solid var(--portfolio-card-image-border-colour);
 }
 

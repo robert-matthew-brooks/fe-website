@@ -2,7 +2,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 3.5em 0;
+  padding: 3.5rem 0;
   color: var(--footer-text-colour);
   background-color: var(--footer-bg-colour);
 }
@@ -18,11 +18,11 @@ footer {
 
 .footer__sm-icons {
   display: flex;
-  gap: 2em;
+  gap: 2rem;
 }
 
 .sm-icon {
-  width: 1.8em;
+  width: 1.8rem;
   aspect-ratio: 1;
   filter: var(--footer-sm-icon-colour);
 }

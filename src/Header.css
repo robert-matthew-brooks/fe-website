@@ -5,7 +5,7 @@ header {
   justify-content: space-between;
   overflow: hidden;
   padding-right: 0.7rem;
-  padding-left: 1em;
+  padding-left: 1rem;
   background-color: var(--header-bg-colour);
 }
 
@@ -20,7 +20,7 @@ header {
   height: 100%;
   display: block;
   color: var(--header-link-colour);
-  padding: 1em;
+  padding: 1rem;
   text-decoration: none;
 }
 .desktop-nav > a:hover {

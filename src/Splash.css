@@ -14,21 +14,21 @@
   flex-direction: row;
   align-items: center;
   gap: 5%;
-  padding: 3em;
+  padding: 3rem;
 }
 
 .Splash__text {
   display: flex;
   flex-direction: column;
-  gap: 3em;
+  gap: 3rem;
   color: var(--splash-text-colour);
 }
 
 .Splash__text > h2 {
   width: fit-content;
-  padding-left: 0.5em;
+  padding-left: 0.5rem;
   margin-left: 2px;
-  font-size: 2.5em;
+  font-size: 2.5rem;
   font-weight: normal;
   border-left: 2px dotted var(--splash-text-colour);
   text-transform: uppercase;
@@ -44,7 +44,7 @@
 
 .contact-links {
   position: relative;
-  height: 2.5em;
+  height: 2.5rem;
   display: flex;
   justify-content: center;
 }
@@ -52,14 +52,14 @@
 .contact-links__whatsapp {
   position: absolute;
   top: 0;
-  padding: 0.7em;
+  padding: 0.7rem;
   color: var(--splash-whatsapp-btn-text-colour);
   background-color: var(--splash-whatsapp-btn-bg-colour);
   text-decoration: none;
 
   border-bottom: solid black;
   border-width: 5px;
-  border-radius: 1em;
+  border-radius: 1rem;
   transition: all 0.1s linear;
 }
 .contact-links__whatsapp:hover {
