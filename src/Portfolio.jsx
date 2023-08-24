@@ -24,20 +24,23 @@ export default function Portfolio() {
   return (
     <section className="Portfolio">
       <div className="Portfolio__inner">
-        <h1>All Projects</h1>
-        <div className="project-sort-options">
-          Sort by:
-          <select>
-            <option>All Languages</option>
-            <option>Javascript</option>
-            <option>Etc</option>
-          </select>
-          <button>
-            <img src={SortDescImg} />
-          </button>
-        </div>
+        <nav className="side-nav">Some side nav options</nav>
 
         <div className="PortfolioList">
+          <h1 className="PortfolioList__title">All Projects</h1>
+
+          <div className="project-sort-options">
+            Sort by:
+            <select>
+              <option>Date</option>
+              <option>Comments</option>
+              <option>Likes</option>
+            </select>
+            <button>
+              <img src={SortDescImg} />
+            </button>
+          </div>
+
           {projects.map((project, i) => {
             return (
               <PortfolioCard
