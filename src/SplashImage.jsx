@@ -6,13 +6,13 @@ import splashLights from './assets/splash-lights.png';
 import './SplashImage.css';
 
 const colours = [
-  'white',
-  'yellow',
-  'lavender',
-  'lightgreen',
-  'lightblue',
-  'aquamarine',
-  'bisque',
+  '#ffffff',
+  '#ffff00',
+  '#dcd0ff',
+  '#90ee90',
+  '#add8e6',
+  '#7fffd4',
+  '#ffe4c4',
 ];
 const tags = [
   '<html>',

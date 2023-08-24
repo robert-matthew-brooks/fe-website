@@ -1,23 +1,23 @@
 :root {
   /* header */
 
-  --header-logo-colour: white;
-  --header-logo-hover-text-colour: black;
-  --header-link-colour: white;
+  --header-logo-colour: #ffffff;
+  --header-logo-hover-text-colour: #000000;
+  --header-link-colour: #ffffff;
   --header-link-hover-colour: #c0c0c0;
   --header-bg-colour: #000020;
 
   /* home screen */
 
-  --splash-text-colour: black;
+  --splash-text-colour: #000000;
   --splash-small-header-text-colour: #404050;
   --splash-inner-bg-colour: #e0e0d0;
   --splash-outer-bg-colour: #e0e0e0;
-  --splash-whatsapp-btn-text-colour: white;
+  --splash-whatsapp-btn-text-colour: #ffffff;
   --splash-whatsapp-btn-bg-colour: darkgreen;
   --splash-whatsapp-btn-hover-bg-colour: green;
 
-  --languages-bg-colour: white;
+  --languages-bg-colour: #ffffff;
   --languages-icon-bg-hover-colour: #eaeaea;
   --languages-tooltip-bg-colour: lightgoldenrodyellow;
   --languages-tooltip-border-colour: grey;
@@ -26,18 +26,23 @@
 
   --portfolio-list-bg-colour: #e0e0e0;
 
-  --portfolio-card-text-colour: black;
-  --portfolio-card-bg-colour: white;
+  --portfolio-card-text-colour: #000000;
+  --portfolio-card-bg-colour: #ffffff;
   --portfolio-card-border-colour: #a0a0a0;
   --portfolio-card-hover-border-colour: #303030;
+
   --portfolio-card-timestamp-text-colour: #505050;
-  --portfolio-card-timestamp-bg-colour: #f0f0f0;
   --portfolio-card-image-border-colour: #a0a0a0;
+  --portfolio-card-timestamp-text-colour: #505050;
+  --portfolio-card-btn-text-colour: #202020; /* comment, like etc */
+  --portfolio-card-btn-bg-colour: #e0e0e0;
+  --portfolio-card-btn-hover-bg-colour: #d0d0d0;
+  --portfolio-card-bar-bg-colour: #f0f0f0; /* top bar (x days ago) and bottom bar (comment, like...) */
 
   /* footer */
 
-  --footer-text-colour: white;
-  --footer-link-colour: white;
+  --footer-text-colour: #ffffff;
+  --footer-link-colour: #ffffff;
   --footer-link-hover-colour: #c0c0c0;
   --footer-sm-icon-colour: invert(100%);
   --footer-sm-icon-hover-colour: invert(96%) sepia(6%) saturate(0%)
