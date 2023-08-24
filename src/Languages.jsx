@@ -97,7 +97,7 @@ export default function Languages() {
                 hideTooltip();
               }}
             >
-              <LanguageIcon src={language.iconSrc} size="4em" />
+              <LanguageIcon src={language.iconSrc} />
             </a>
           );
         })}

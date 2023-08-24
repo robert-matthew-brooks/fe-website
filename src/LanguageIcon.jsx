@@ -1,9 +1,3 @@
-export default function LanguageIcon({ src, size }) {
-  return (
-    <img
-      className="LanguageIcon"
-      src={src}
-      style={{ width: size, aspectRatio: 1 }}
-    />
-  );
+export default function LanguageIcon({ src }) {
+  return <img className="LanguageIcon" src={src} />;
 }

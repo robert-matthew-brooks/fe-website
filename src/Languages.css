@@ -28,8 +28,9 @@
   background-color: var(--languages-icon-bg-hover-colour);
 }
 
-.Languages__icon {
-  font-size: 4rem;
+.Languages__link > img {
+  height: 4rem;
+  aspect-ratio: 1;
 }
 
 #Languages__tooltip {

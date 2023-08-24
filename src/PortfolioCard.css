@@ -59,6 +59,8 @@
   background-color: var(--portfolio-card-btn-hover-bg-colour);
 }
 .PortfolioCard__bottom-bar > a > img {
+  height: 1.2rem;
+  aspect-ratio: 1;
   margin-right: 0.5rem;
 }
 
@@ -67,4 +69,9 @@
   justify-content: flex-end;
   gap: 0.5rem;
   margin-left: auto;
+}
+
+.PortfolioCard__bottom-bar__language-icons > img {
+  height: 2rem;
+  aspect-ratio: 1;
 }
