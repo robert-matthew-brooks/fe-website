@@ -1,7 +1,8 @@
 import { useEffect, useState, useRef } from 'react';
-import splashImg from './assets/splash-img.png';
+import splashImg from './assets/splash-image.png';
 import splashShadows from './assets/splash-shadows.png';
 import splashWisp from './assets/splash-wisp.png';
+import splashLights from './assets/splash-lights.png';
 import './SplashImage.css';
 
 const colours = [
@@ -123,6 +124,7 @@ export default function SplashImage() {
         <img id="splash-image__shadows" src={splashShadows} />
         <img src={splashImg} />
         <img id="splash-image__wisp" src={splashWisp} />
+        <img id="splash-image__lights" src={splashLights} />
         <div id="splash-image__monitor-code">
           {visibleTags.map((tag, i) => {
             return (

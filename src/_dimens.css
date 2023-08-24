@@ -1,4 +1,9 @@
 :root {
   --global-max-width: 1300px;
   --header-height: 6em;
+
+  --splash-image-width: 500px;
+  --splash-image-height: calc(
+    var(--splash-image-width) * 0.72
+  ); /* Image size is 1000px x 721px */
 }
