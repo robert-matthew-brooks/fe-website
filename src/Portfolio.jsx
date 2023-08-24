@@ -1,7 +1,5 @@
+import PortfolioCard from './PortfolioCard';
 import SortDescImg from './assets/sort-desc.svg';
-import LanguageIcon from './LanguageIcon.jsx';
-import commentIcon from './assets/comment-icon.png';
-import heartIcon from './assets/heart-icon.png';
 import './Portfolio.css';
 
 const exampleProject = {
@@ -27,7 +25,7 @@ export default function Portfolio() {
     <section className="Portfolio">
       <div className="Portfolio__inner">
         <h1>All Projects</h1>
-        <div class="project-sort-options">
+        <div className="project-sort-options">
           Sort by:
           <select>
             <option>All Languages</option>
@@ -42,30 +40,12 @@ export default function Portfolio() {
         <div className="PortfolioList">
           {projects.map((project, i) => {
             return (
-              <div key={i} className="PortfolioCard">
-                <a href="#">
-                  <div className="PortfolioCard__time-ago">
-                    <span>Posted 10 days ago</span>
-                  </div>
-                  <h2 className="PortfolioCard__title">{project.title}</h2>
-                  <img className="PortfolioCard__image" src={project.img_url} />
-                </a>
-
-                <div className="PortfolioCard__bottom-bar">
-                  <a href="#">
-                    <img src={commentIcon} alt="comments" />1
-                  </a>
-                  <a href="#">
-                    <img src={heartIcon} alt="likes" /> 1
-                  </a>
-                  <a href="#">Share</a>
-                  <div className="PortfolioCard__bottom-bar__language-icons">
-                    {project.languageIcons.map((icon) => (
-                      <LanguageIcon src={icon} size="2em" />
-                    ))}
-                  </div>
-                </div>
-              </div>
+              <PortfolioCard
+                key={i}
+                title={project.title}
+                imgUrl={project.img_url}
+                languageIcons={project.languageIcons}
+              />
             );
           })}
         </div>
