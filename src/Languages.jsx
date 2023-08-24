@@ -1,3 +1,4 @@
+import LanguageIcon from './LanguageIcon';
 import './Languages.css';
 
 // add tooltip to body (x/y needs to be relative to whole document)
@@ -36,37 +37,43 @@ const hideTooltip = () => {
 const languages = [
   {
     name: 'React',
-    icon: 'devicon-react-plain colored',
+    iconSrc:
+      'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
     projectCount: 2,
     href: '#',
   },
   {
     name: 'Postgresql',
-    icon: 'devicon-postgresql-plain colored',
+    iconSrc:
+      'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg',
     projectCount: 1,
     href: '#',
   },
   {
     name: 'JavaScript',
-    icon: 'devicon-javascript-plain colored',
+    iconSrc:
+      'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
     projectCount: 1,
     href: '#',
   },
   {
     name: 'HTML',
-    icon: 'devicon-html5-plain colored',
+    iconSrc:
+      'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
     projectCount: 1,
     href: '#',
   },
   {
     name: 'CSS',
-    icon: 'devicon-css3-plain colored',
+    iconSrc:
+      'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
     projectCount: 1,
     href: '#',
   },
   {
     name: 'Jest',
-    icon: 'devicon-jest-plain colored',
+    iconSrc:
+      'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg',
     projectCount: 1,
     href: '#',
   },
@@ -90,7 +97,7 @@ export default function Languages() {
                 hideTooltip();
               }}
             >
-              <i className={`Languages__icon ${language.icon}`}></i>
+              <LanguageIcon src={language.iconSrc} size="4em" />
             </a>
           );
         })}

@@ -1,6 +1,3 @@
-@import url('./_dimens.css');
-@import url('./_colours.css');
-
 header {
   height: var(--header-height);
   display: flex;

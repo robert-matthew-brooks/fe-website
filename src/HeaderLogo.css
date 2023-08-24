@@ -1,5 +1,3 @@
-@import url('./_colours.css');
-
 .Logo {
   display: block;
   color: var(--header-logo-colour);

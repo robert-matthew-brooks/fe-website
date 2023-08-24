@@ -1,5 +1,3 @@
-@import url('./_colours.css');
-
 .Splash {
   background: radial-gradient(
     var(--splash-inner-bg-colour),

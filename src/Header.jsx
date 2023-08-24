@@ -3,8 +3,8 @@ import './Header.css';
 
 const menuItems = [
   { text: 'Skills', link: '#' },
-  { text: 'Portfolio', link: '#' },
-  { text: 'Contact', link: '#' },
+  { text: 'Portfolio', link: './portfolio' },
+  { text: 'Contact', link: './contact' },
 ];
 
 export default function Header() {
@@ -23,5 +23,3 @@ export default function Header() {
     </header>
   );
 }
-
-/* <img src="./public/hex.svg" className="hex-img"/> */
