@@ -26,8 +26,7 @@
 
 .Splash__text > h2 {
   width: fit-content;
-  padding-left: 0.5rem;
-  margin-left: 2px;
+  padding-left: 1.4rem;
   font-size: 2.5rem;
   font-weight: normal;
   border-left: 2px dotted var(--splash-text-colour);
