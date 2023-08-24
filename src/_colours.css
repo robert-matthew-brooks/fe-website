@@ -1,14 +1,18 @@
 :root {
+  /* header */
+
   --header-logo-colour: white;
   --header-logo-hover-text-colour: black;
   --header-link-colour: white;
   --header-link-hover-colour: #c0c0c0;
   --header-bg-colour: #000020;
 
+  /* home screen */
+
   --splash-text-colour: black;
   --splash-small-header-text-colour: #404050;
-  --splash-inner-bg-colour: #c0c0a0;
-  --splash-outer-bg-colour: #c0c0c0;
+  --splash-inner-bg-colour: #e0e0d0;
+  --splash-outer-bg-colour: #e0e0e0;
   --splash-whatsapp-btn-text-colour: white;
   --splash-whatsapp-btn-bg-colour: darkgreen;
   --splash-whatsapp-btn-hover-bg-colour: green;
@@ -17,6 +21,20 @@
   --languages-icon-bg-hover-colour: #eaeaea;
   --languages-tooltip-bg-colour: lightgoldenrodyellow;
   --languages-tooltip-border-colour: grey;
+
+  /* portfolio list */
+
+  --portfolio-list-bg-colour: #e0e0e0;
+
+  --portfolio-card-text-colour: black;
+  --portfolio-card-bg-colour: white;
+  --portfolio-card-border-colour: #a0a0a0;
+  --portfolio-card-hover-border-colour: #303030;
+  --portfolio-card-timestamp-text-colour: #505050;
+  --portfolio-card-timestamp-bg-colour: #f0f0f0;
+  --portfolio-card-image-border-colour: #a0a0a0;
+
+  /* footer */
 
   --footer-text-colour: white;
   --footer-link-colour: white;

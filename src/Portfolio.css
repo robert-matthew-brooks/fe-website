@@ -1,4 +1,5 @@
 .Portfolio {
+  background-color: var(--portfolio-list-bg-colour);
 }
 
 .Portfolio__inner {
@@ -10,25 +11,84 @@
 }
 
 .project-sort-options > button > img {
-  width: 1.8em;
+  width: 1.8rem;
   aspect-ratio: 1;
 }
 
-.ProjectsList {
+.PortfolioList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  padding: 1em;
 }
 
-.Project {
-  border: 1px solid black;
+.PortfolioCard {
+  width: 650px;
+  overflow: hidden;
+  border: 1px solid var(--portfolio-card-border-colour);
+  border-radius: 0.3rem;
+
+  background-color: var(--portfolio-card-bg-colour);
+}
+.PortfolioCard:hover {
+  border-color: var(--portfolio-card-hover-border-colour);
 }
 
-.Project__info-bar {
+.PortfolioCard > a {
+  text-decoration: none;
+}
+
+.PortfolioCard__title {
+  margin: 1em;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--portfolio-card-text-colour);
+}
+
+.PortfolioCard__image {
+  display: block;
+  width: 80%;
+  margin: 1em auto;
+  border: 1px solid var(--portfolio-card-image-border-colour);
+}
+
+.PortfolioCard__time-ago {
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--portfolio-card-timestamp-text-colour);
+  background-color: var(--portfolio-card-timestamp-bg-colour);
+}
+
+.PortfolioCard__bottom-bar {
+  display: flex;
+  gap: 1rem;
+  padding: 0.7rem;
+  background-color: #f0f0f0;
+}
+
+.PortfolioCard__bottom-bar > a {
   display: flex;
   align-items: center;
-
-  padding: 0.2rem;
-  color: #303030;
-  background-color: lightgrey;
+  padding: 0.5rem 0.7rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #202020;
+  text-decoration: none;
+  border-radius: 1rem;
+  background-color: #e0e0e0;
+}
+.PortfolioCard__bottom-bar > a:hover {
+  background-color: #d0d0d0;
+}
+.PortfolioCard__bottom-bar > a > img {
+  margin-right: 0.5rem;
 }
 
-.Project__info-bar__language-icons {
+.PortfolioCard__bottom-bar__language-icons {
+  flex: 1;
+
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
 }
