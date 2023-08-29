@@ -3,7 +3,7 @@ import commentIcon from './assets/comment-icon.png';
 import heartIcon from './assets/heart-icon.png';
 import './PortfolioCard.css';
 
-export default function PortfolioCard({ title, imgUrl, languageIcons }) {
+export default function PortfolioCard({ title, imgUrl, languages }) {
   return (
     <div className="PortfolioCard">
       <a href="#">
@@ -23,9 +23,9 @@ export default function PortfolioCard({ title, imgUrl, languageIcons }) {
         </a>
         <a href="#">Share</a>
         <div className="PortfolioCard__bottom-bar__language-icons">
-          {languageIcons.map((icon, i) => (
+          {languages.map((language, i) => (
             <a key={i} href="#">
-              <LanguageIcon src={icon} />
+              <LanguageIcon src={language.icon_url} />
             </a>
           ))}
         </div>
