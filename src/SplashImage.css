@@ -4,7 +4,7 @@
 }
 
 .splash-image__outer {
-  display: flex;
+  display: none; /* flex */
   justify-content: flex-end;
 }
 
@@ -104,9 +104,15 @@
 
 #splash-image__monitor-code {
   position: absolute;
-  width: 150px;
-  top: 30px;
-  left: 210px;
-  font-size: 0.3rem;
+  width: calc(var(--splash-image-width) / 3.5);
+  top: calc(var(--splash-image-height) / 13);
+  left: calc(var(--splash-image-width) / 2.4);
+  font-size: calc(var(--splash-image-height) / 65);
   transform: rotate(-1deg);
+}
+
+@media (min-width: 768px) {
+  .splash-image__outer {
+    display: flex;
+  }
 }

@@ -1,5 +1,6 @@
 footer {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-around;
   padding: 3.5rem 0;
@@ -28,4 +29,11 @@ footer {
 }
 .sm-icon:hover {
   filter: var(--footer-sm-icon-hover-colour);
+}
+
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column-reverse;
+    gap: 3rem;
+  }
 }

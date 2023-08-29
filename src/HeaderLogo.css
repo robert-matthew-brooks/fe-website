@@ -68,3 +68,9 @@
     left: 0;
   }
 }
+
+@media (max-width: 768px) {
+  .Logo {
+    font-size: 0.7rem;
+  }
+}

@@ -1,9 +1,10 @@
 :root {
   --global-max-width: 1300px;
-  --header-height: 6em;
+  --header-height-desktop: 6em;
+  --header-height-mobile: 4em;
 
-  --splash-image-width: 500px;
+  --splash-image-width: 400px;
   --splash-image-height: calc(
     var(--splash-image-width) * 0.72
-  ); /* Image size is 1000px x 721px */
+  ); /* Image size is 1000px x 720px */
 }

@@ -1,28 +1,85 @@
-header {
-  height: var(--header-height);
+#Header {
+  height: var(--header-height-desktop);
   display: flex;
   align-items: center;
-  justify-content: space-between;
   overflow: hidden;
-  padding-right: 0.7rem;
-  padding-left: 1rem;
+  padding: 1rem;
   background-color: var(--header-bg-colour);
 }
 
-.desktop-nav {
+#Header__mobile-nav-btn {
+  display: none;
+  margin-left: auto;
+  background-color: transparent;
+  border: none;
+  z-index: 99;
+}
+#Header__mobile-nav-btn > img {
+  width: 1.8em;
+  filter: invert(100%);
+  cursor: pointer;
+}
+
+#Header__mobile-nav {
+  display: none; /* flex */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #000000f0;
+  backdrop-filter: blur(5px);
+  transition: left 0.3s;
+  z-index: 98;
+}
+
+#Header__mobile-nav > a {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.7rem;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+.Header__desktop-nav {
   display: flex;
-  margin-right: 2%;
+  margin-left: auto;
+  margin-right: 1rem;
   font-size: 1.1rem;
   font-weight: bold;
 }
 
-.desktop-nav > a {
+.Header__desktop-nav > a {
   height: 100%;
   display: block;
   color: var(--header-link-colour);
   padding: 1rem;
   text-decoration: none;
 }
-.desktop-nav > a:hover {
+.Header__desktop-nav > a:hover {
   color: var(--header-link-hover-colour);
+}
+
+@media (max-width: 768px) {
+  #Header {
+    height: var(--header-height-mobile);
+  }
+
+  #Header__mobile-nav-btn {
+    display: block;
+  }
+
+  #Header__mobile-nav {
+    display: flex;
+  }
+
+  .Header__desktop-nav {
+    display: none;
+  }
 }
