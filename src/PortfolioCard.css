@@ -71,7 +71,7 @@
   margin-left: auto;
 }
 
-.PortfolioCard__bottom-bar__language-icons > img {
+.PortfolioCard__bottom-bar__language-icons > a > img {
   height: 2rem;
   aspect-ratio: 1;
 }
