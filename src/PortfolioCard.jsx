@@ -7,11 +7,8 @@ export default function PortfolioCard({ title, imgUrl, languages }) {
   return (
     <div className="PortfolioCard">
       <a href="#">
-        <div className="PortfolioCard__time-ago">
-          <span>Posted 10 days ago</span>
-        </div>
-        <h2 className="PortfolioCard__title">{title}</h2>
         <img className="PortfolioCard__image" src={imgUrl} />
+        <h2 className="PortfolioCard__title">{title}</h2>
       </a>
 
       <div className="PortfolioCard__bottom-bar">
@@ -21,7 +18,6 @@ export default function PortfolioCard({ title, imgUrl, languages }) {
         <a href="#">
           <img src={heartIcon} alt="likes" /> 1
         </a>
-        <a href="#">Share</a>
         <div className="PortfolioCard__bottom-bar__language-icons">
           {languages.map((language, i) => (
             <a key={i} href="#">

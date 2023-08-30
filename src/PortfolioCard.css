@@ -1,5 +1,4 @@
 .PortfolioCard {
-  width: 700px;
   overflow: hidden;
   border: 1px solid var(--portfolio-card-border-colour);
   border-radius: 0.3rem;
@@ -15,26 +14,22 @@
 }
 
 .PortfolioCard__title {
-  margin: 1em;
-  font-size: 1.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+  font-size: 1rem;
   font-weight: bold;
   color: var(--portfolio-card-text-colour);
 }
 
 .PortfolioCard__image {
   display: block;
-  width: 80%;
-  aspect-ratio: 1.6;
+  width: calc(100% - 1em);
+  aspect-ratio: 1.7;
   object-fit: cover;
-  margin: 1.5em auto;
+  margin: 0.5em;
   border: 1px solid var(--portfolio-card-image-border-colour);
-}
-
-.PortfolioCard__time-ago {
-  padding: 0.5rem;
-  font-size: 0.8rem;
-  color: var(--portfolio-card-timestamp-text-colour);
-  background-color: var(--portfolio-card-bar-bg-colour);
 }
 
 .PortfolioCard__bottom-bar {

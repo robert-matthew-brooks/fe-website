@@ -9,7 +9,7 @@ if (location.hostname === 'localhost') {
 
 const api = axios.create({ baseURL });
 
-export async function fetchTopics() {
+export async function fetchProjects() {
   const { data } = await api.get('/api/projects');
   return data;
 }

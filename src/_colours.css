@@ -26,6 +26,10 @@
 
   --portfolio-list-bg-colour: #e0e0e0;
 
+  --portfolio-select-background-colour: #ffffff;
+  --portfolio-select-border-colour: #808080;
+  --portfolio-select-hover-border-colour: #000000;
+
   --portfolio-card-text-colour: #000000;
   --portfolio-card-bg-colour: #ffffff;
   --portfolio-card-border-colour: #a0a0a0;
@@ -33,7 +37,6 @@
 
   --portfolio-card-timestamp-text-colour: #505050;
   --portfolio-card-image-border-colour: #a0a0a0;
-  --portfolio-card-timestamp-text-colour: #505050;
   --portfolio-card-btn-text-colour: #202020; /* comment, like etc */
   --portfolio-card-btn-bg-colour: #e0e0e0;
   --portfolio-card-btn-hover-bg-colour: #d0d0d0;
