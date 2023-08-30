@@ -9,8 +9,8 @@ if (location.hostname === 'localhost') {
 
 const api = axios.create({ baseURL });
 
-export async function fetchProjects(limit, p) {
-  const { data } = await api.get('/api/projects', { params: { limit, p } });
+export async function fetchProjects(params) {
+  const { data } = await api.get('/api/projects', { params });
   return data;
 }
 

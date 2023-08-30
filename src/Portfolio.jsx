@@ -1,36 +1,54 @@
 import { useState, useEffect } from 'react';
+import { useParams, useSearchParams } from 'react-router-dom';
 import PortfolioCard from './PortfolioCard';
 import PortfolioPagination from './PortfolioPagination';
 import { fetchProjects, fetchLanguages } from './js/api';
 import './Portfolio.css';
 
+function handleLanguageChange(language) {
+  // if 'any' go to /portfolio#title, no smooth scroll
+
+  window.location = `${
+    window.location.origin
+  }/portfolio/${language.toLowerCase()}`;
+}
+
 export default function Portfolio() {
+  const [isInitialLoad, setIsInitialLoad] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
+
   const [projects, setProjects] = useState([]);
   const [languages, setLanguages] = useState([]);
+  let languageLookup;
 
-  const projectsPerPage = 6;
-  const [currentPage, setCurrentPage] = useState(1);
+  const limit = 6;
   const [totalProjects, setTotalProjects] = useState(0);
-
-  // initial loading languages data
-  useEffect(() => {
-    (async () => {
-      const { languages } = await fetchLanguages();
-      setLanguages(languages);
-    })();
-  }, []);
+  const [page, setPage] = useState(1);
+  const { language } = useParams();
 
   // loading of project data
   useEffect(() => {
     (async () => {
-      const { projects, project_count } = await fetchProjects(
-        projectsPerPage,
-        currentPage
-      );
-      setProjects(projects);
-      setTotalProjects(project_count);
+      try {
+        // initial loading languages data
+        if (isInitialLoad) {
+          const { languages } = await fetchLanguages();
+          setLanguages(languages);
+          setIsInitialLoad(false);
+        }
+
+        const params = { limit, page };
+        if (language) params.language = language;
+
+        const { projects, project_count } = await fetchProjects(params);
+        setProjects(projects);
+        setTotalProjects(project_count);
+      } catch (err) {
+        // UNABLE TO REACH DATABASE
+      }
     })();
-  }, [currentPage]);
+  }, [page]);
 
   return (
     <section className="Portfolio">
@@ -40,15 +58,15 @@ export default function Portfolio() {
         <div className="Portfolio__sort-options">
           <select
             onChange={(event) => {
-              console.log(event.target.value);
+              handleLanguageChange(event.target.value);
             }}
           >
-            <option>Any Language</option>
+            <option value="all">Any Language</option>
             {languages.map((language, i) => {
               return (
                 <option
                   key={i}
-                  value={language.id}
+                  value={language.name}
                 >{`${language.name} (${language.project_count})`}</option>
               );
             })}
@@ -76,10 +94,10 @@ export default function Portfolio() {
         </div>
 
         <PortfolioPagination
-          projectsPerPage={projectsPerPage}
-          currentPage={currentPage}
+          limit={limit}
           totalProjects={totalProjects}
-          setCurrentPage={setCurrentPage}
+          page={page}
+          setPage={setPage}
         />
       </div>
     </section>

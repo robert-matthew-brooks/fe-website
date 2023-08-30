@@ -14,6 +14,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/portfolio/:language" element={<Portfolio />} />
         </Routes>
       </main>
 

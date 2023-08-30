@@ -16,11 +16,11 @@ export default function PortfolioCard({ title, imgUrl, languages }) {
           <img src={commentIcon} alt="comments" />1
         </a>
         <a href="#">
-          <img src={heartIcon} alt="likes" /> 1
+          <img src={heartIcon} alt="likes" />1
         </a>
         <div className="PortfolioCard__bottom-bar__language-icons">
           {languages.map((language, i) => (
-            <a key={i} href="#">
+            <a key={i} href={`/portfolio/${language.name.toLowerCase()}`}>
               <LanguageIcon src={language.icon_url} />
             </a>
           ))}

@@ -1,28 +1,28 @@
 import './PortfolioPagination.css';
 
 export default function PortfolioPagination({
-  projectsPerPage,
-  currentPage,
+  limit,
+  page,
   totalProjects,
-  setCurrentPage,
+  setPage,
 }) {
   const pageNumbers = [];
-  for (let i = 0; i * projectsPerPage < totalProjects; i++) {
+  for (let i = 0; i * limit < totalProjects; i++) {
     pageNumbers.push(i + 1);
   }
 
-  const from = !totalProjects ? 0 : (currentPage - 1) * projectsPerPage + 1;
-  const to = Math.min(currentPage * projectsPerPage, totalProjects);
+  const from = !totalProjects ? 0 : (page - 1) * limit + 1;
+  const to = Math.min(page * limit, totalProjects);
 
-  const isFirstPage = currentPage === 1;
-  const isLastPage = currentPage === pageNumbers.length;
+  const isFirstPage = page === 1;
+  const isLastPage = page === pageNumbers.length;
 
   const prevPage = () => {
-    if (!isFirstPage) setCurrentPage(currentPage - 1);
+    if (!isFirstPage) setPage(page - 1);
   };
 
   const nextPage = () => {
-    if (!isLastPage) setCurrentPage(currentPage + 1);
+    if (!isLastPage) setPage(page + 1);
   };
 
   return (
@@ -43,9 +43,9 @@ export default function PortfolioPagination({
           return (
             <button
               key={i}
-              disabled={pageNumber === currentPage}
+              disabled={pageNumber === page}
               onClick={() => {
-                setCurrentPage(pageNumber);
+                setPage(pageNumber);
               }}
             >
               {pageNumber}
