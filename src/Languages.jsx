@@ -1,4 +1,6 @@
+import { useState, useEffect } from 'react';
 import LanguageIcon from './LanguageIcon';
+import { fetchLanguages } from './js/api';
 import './Languages.css';
 
 // add tooltip to body (x/y needs to be relative to whole document)
@@ -80,6 +82,19 @@ const languages = [
 ];
 
 export default function Languages() {
+  const [languages, setLanguages] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const { languages } = await fetchLanguages();
+        setLanguages(languages);
+      } catch (err) {
+        // HANDLE DB ERROR
+      }
+    })();
+  }, []);
+
   return (
     <section className="Languages">
       <h3>Experience in:</h3>
@@ -89,15 +104,15 @@ export default function Languages() {
             <a
               key={i}
               className="Languages__link"
-              href="#"
+              href={`/portfolio/${language.name.toLowerCase()}`}
               onMouseOver={() => {
-                showTooltip(language.name, language.projectCount);
+                showTooltip(language.name, language.project_count);
               }}
               onMouseOut={() => {
                 hideTooltip();
               }}
             >
-              <LanguageIcon src={language.iconSrc} />
+              <LanguageIcon src={language.icon_url} />
             </a>
           );
         })}
