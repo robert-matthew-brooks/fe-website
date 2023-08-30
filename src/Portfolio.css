@@ -18,7 +18,7 @@
   text-align: center;
 }
 .Portfolio__sort-options > select {
-  width: 15%;
+  width: 15rem;
   margin: 1rem 0.5rem;
   padding: 0.7rem;
   background-color: var(--portfolio-select-background-colour);

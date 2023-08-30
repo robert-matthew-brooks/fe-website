@@ -1,9 +1,9 @@
 import './PortfolioPagination.css';
 
 export default function PortfolioPagination({
-  totalProjects,
   projectsPerPage,
   currentPage,
+  totalProjects,
   setCurrentPage,
 }) {
   const pageNumbers = [];
@@ -11,11 +11,34 @@ export default function PortfolioPagination({
     pageNumbers.push(i + 1);
   }
 
+  const from = !totalProjects ? 0 : (currentPage - 1) * projectsPerPage + 1;
+  const to = Math.min(currentPage * projectsPerPage, totalProjects);
+
+  const isFirstPage = currentPage === 1;
+  const isLastPage = currentPage === pageNumbers.length;
+
+  const prevPage = () => {
+    if (!isFirstPage) setCurrentPage(currentPage - 1);
+  };
+
+  const nextPage = () => {
+    if (!isLastPage) setCurrentPage(currentPage + 1);
+  };
+
   return (
     <div className="PortfolioPagination">
       <div className="PortfolioPagination__button-wrapper">
-        <button>&lt;</button>
+        {/* prev << button */}
+        <button
+          onClick={() => {
+            prevPage();
+          }}
+          style={{ display: isFirstPage ? 'none' : 'initial' }}
+        >
+          &#171;
+        </button>
 
+        {/* page number buttons */}
         {pageNumbers.map((pageNumber, i) => {
           return (
             <button
@@ -30,9 +53,20 @@ export default function PortfolioPagination({
           );
         })}
 
-        <button>&gt;</button>
+        {/* next >> button */}
+        <button
+          onClick={() => {
+            nextPage();
+          }}
+          style={{ display: isLastPage ? 'none' : 'initial' }}
+        >
+          &#187;
+        </button>
       </div>
-      <span>Results 1-6 of 20</span>
+
+      <span>
+        Results {from} - {to} of {totalProjects}
+      </span>
     </div>
   );
 }
