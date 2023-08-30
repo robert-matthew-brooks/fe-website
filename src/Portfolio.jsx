@@ -1,11 +1,23 @@
 import { useState, useEffect } from 'react';
 import PortfolioCard from './PortfolioCard';
-import SortDescImg from './assets/sort-desc.svg';
-import { fetchProjects } from './js/api';
+import PortfolioPagination from './PortfolioPagination';
+import { fetchProjects, fetchLanguages } from './js/api';
 import './Portfolio.css';
 
 export default function Portfolio() {
   const [projects, setProjects] = useState([]);
+  const [languages, setLanguages] = useState([]);
+
+  const [totalProjects, setTotalProjects] = useState(30);
+  const projectsPerPage = 6;
+  const [currentPage, setCurrentPage] = useState(1);
+
+  useEffect(() => {
+    (async () => {
+      const { languages } = await fetchLanguages();
+      setLanguages(languages);
+    })();
+  }, []);
 
   useEffect(() => {
     (async () => {
@@ -22,8 +34,13 @@ export default function Portfolio() {
         <div className="Portfolio__sort-options">
           <select>
             <option>Any Language</option>
-            <option>HTML</option>
-            <option>JavaScript</option>
+            {languages.map((language, i) => {
+              return (
+                <option
+                  key={i}
+                >{`${language.name} (${language.project_count})`}</option>
+              );
+            })}
           </select>
 
           <select>
@@ -46,6 +63,13 @@ export default function Portfolio() {
             );
           })}
         </div>
+
+        <PortfolioPagination
+          totalProjects={totalProjects}
+          projectsPerPage={projectsPerPage}
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+        />
       </div>
     </section>
   );

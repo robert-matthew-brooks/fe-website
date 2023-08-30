@@ -1,5 +1,5 @@
 .Portfolio {
-  padding: 1rem;
+  padding: 1.5rem 1rem;
   background-color: var(--portfolio-list-bg-colour);
 }
 
@@ -37,5 +37,5 @@
 }
 .Portfolio__project-grid > div {
   width: calc(33.3% - 2rem);
-  margin: 1em;
+  margin: 1rem;
 }

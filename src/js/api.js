@@ -13,3 +13,8 @@ export async function fetchProjects() {
   const { data } = await api.get('/api/projects');
   return data;
 }
+
+export async function fetchLanguages() {
+  const { data } = await api.get('/api/languages');
+  return data;
+}
