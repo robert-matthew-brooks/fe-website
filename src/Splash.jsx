@@ -3,12 +3,12 @@ import './Splash.css';
 
 export default function Splash() {
   return (
-    <section className="Splash">
-      <div className="Splash__inner">
+    <section id="Splash">
+      <div id="Splash__inner">
         <SplashImage />
-        <div className="Splash__text">
+        <div id="Splash__text">
           <h3>Programming // Electronics // Music</h3>
-          <h2 className="temp">
+          <h2>
             Hi, I'm a
             <br />
             <span className="fullstack-highlight">
@@ -25,8 +25,8 @@ export default function Splash() {
             My mission is to help make <em>your</em> software work great and
             look professional.
           </p>
-          <div className="contact-links">
-            <a className="contact-links__whatsapp" href="#">
+          <div id="whatsapp-btn__wrapper">
+            <a id="whatsapp-btn" href="#">
               Let's Chat On WhatsApp
             </a>
           </div>

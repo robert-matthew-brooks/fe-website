@@ -3,8 +3,10 @@
 
   --header-logo-colour: #ffffff;
   --header-logo-hover-text-colour: #000000;
-  --header-link-colour: #ffffff;
-  --header-link-hover-colour: #c0c0c0;
+  --header-nav-link-colour: #ffffff;
+  --header-nav-link-hover-colour: #c0c0c0;
+  --header-mobile-nav-btn-colour: invert(100%);
+  --header-mobile-nav-link-colour: #ffffff;
   --header-bg-colour: #000020;
 
   /* home screen */
@@ -17,8 +19,9 @@
   --splash-whatsapp-btn-bg-colour: darkgreen;
   --splash-whatsapp-btn-hover-bg-colour: green;
 
-  --languages-bg-colour: #ffffff;
-  --languages-icon-bg-hover-colour: #eaeaea;
+  --skills-text-colour: #000000;
+  --skills-tick-colour: #008000;
+  --skills-bg-colour: #fafafa;
   --languages-tooltip-bg-colour: lightgoldenrodyellow;
   --languages-tooltip-border-colour: grey;
 

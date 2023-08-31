@@ -1,9 +1,8 @@
-import { useState, useEffect } from 'react';
 import LanguageIcon from './LanguageIcon';
-import { fetchLanguages } from './js/api';
 import './Languages.css';
 
-// add tooltip to body (x/y needs to be relative to whole document)
+// add tooltip to body, not this component
+// (x/y needs to be relative to whole document)
 let tooltip;
 addEventListener('load', (e) => {
   tooltip = document.createElement('div');
@@ -34,89 +33,26 @@ const hideTooltip = () => {
   tooltip.style.visibility = 'hidden';
 };
 
-// GET THESE FROM BACKEND DB
-// order by # projects
-const languages = [
-  {
-    name: 'React',
-    iconSrc:
-      'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
-    projectCount: 2,
-    href: '#',
-  },
-  {
-    name: 'Postgresql',
-    iconSrc:
-      'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg',
-    projectCount: 1,
-    href: '#',
-  },
-  {
-    name: 'JavaScript',
-    iconSrc:
-      'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
-    projectCount: 1,
-    href: '#',
-  },
-  {
-    name: 'HTML',
-    iconSrc:
-      'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
-    projectCount: 1,
-    href: '#',
-  },
-  {
-    name: 'CSS',
-    iconSrc:
-      'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
-    projectCount: 1,
-    href: '#',
-  },
-  {
-    name: 'Jest',
-    iconSrc:
-      'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg',
-    projectCount: 1,
-    href: '#',
-  },
-];
-
-export default function Languages() {
-  const [languages, setLanguages] = useState([]);
-
-  useEffect(() => {
-    (async () => {
-      try {
-        const { languages } = await fetchLanguages();
-        setLanguages(languages);
-      } catch (err) {
-        // HANDLE DB ERROR
-      }
-    })();
-  }, []);
-
+export default function Languages({ languages }) {
   return (
-    <section className="Languages">
-      <h3>Experience in:</h3>
-      <div className="Languages__icon-grid">
-        {languages.map((language, i) => {
-          return (
-            <a
-              key={i}
-              className="Languages__link"
-              href={`/portfolio/${language.name.toLowerCase()}`}
-              onMouseOver={() => {
-                showTooltip(language.name, language.project_count);
-              }}
-              onMouseOut={() => {
-                hideTooltip();
-              }}
-            >
-              <LanguageIcon src={language.icon_url} />
-            </a>
-          );
-        })}
-      </div>
-    </section>
+    <div id="Languages">
+      {languages.map((language, i) => {
+        return (
+          <a
+            key={i}
+            className="Languages__link"
+            href={`/portfolio/${language.name.toLowerCase()}`}
+            onMouseOver={() => {
+              showTooltip(language.name, language.project_count);
+            }}
+            onMouseOut={() => {
+              hideTooltip();
+            }}
+          >
+            <LanguageIcon src={language.icon_url} />
+          </a>
+        );
+      })}
+    </div>
   );
 }

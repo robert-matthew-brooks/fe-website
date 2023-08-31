@@ -1,32 +1,29 @@
-.Logo {
+#Logo {
   display: block;
+  font-size: 0.9rem;
   color: var(--header-logo-colour);
   border: 1px solid var(--header-logo-colour);
   text-decoration: none;
-  transition: 0.5s;
+  transition: background-color 0.5s;
 }
 
-.Logo > ul {
+#Logo > ul {
   overflow: hidden;
   padding: 2px;
   list-style-type: none;
 }
 
-.Logo:hover {
-  color: var(--header-logo-hover-text-colour);
-  background-color: var(--header-logo-colour);
-}
-
-.Logo > ul > li {
+#Logo > ul > li {
   position: relative;
   animation: move-logo-text-initial 0.4s ease-in-out;
 }
-.Logo > ul > li:nth-of-type(2) {
+#Logo > ul > li:nth-of-type(2) {
   animation-delay: 0.15s;
 }
-.Logo > ul > li:nth-of-type(3) {
+#Logo > ul > li:nth-of-type(3) {
   animation-delay: 0.3s;
 }
+/* hover effect in media query */
 
 @keyframes move-logo-text-initial {
   0% {
@@ -43,34 +40,43 @@
   }
 }
 
-.Logo:hover > ul > li {
-  position: relative;
-  animation: move-logo-text 0.4s ease-in-out;
-}
-.Logo:hover > ul > li:nth-of-type(2) {
-  animation-delay: 0.15s;
-}
-.Logo:hover > ul > li:nth-of-type(3) {
-  animation-delay: 0.3s;
-}
-
-@keyframes move-logo-text {
-  0% {
-    left: 0;
-  }
-  50% {
-    left: 120%;
-  }
-  51% {
-    left: -120%;
-  }
-  100% {
-    left: 0;
-  }
-}
-
 @media (max-width: 768px) {
-  .Logo {
+  #Logo {
     font-size: 0.7rem;
+  }
+}
+
+@media (min-width: 769px) {
+  /* hover colour change only for desktop screen */
+  #Logo:hover {
+    color: var(--header-logo-hover-text-colour);
+    background-color: var(--header-logo-colour);
+  }
+
+  #Logo:hover > ul > li {
+    position: relative;
+    animation: move-logo-text 0.4s ease-in-out;
+  }
+  #Logo:hover > ul > li:nth-of-type(2) {
+    animation-delay: 0.15s;
+  }
+  #Logo:hover > ul > li:nth-of-type(3) {
+    animation-delay: 0.3s;
+  }
+
+  /* text slide animation only for desktop screen */
+  @keyframes move-logo-text {
+    0% {
+      left: 0;
+    }
+    50% {
+      left: 120%;
+    }
+    51% {
+      left: -120%;
+    }
+    100% {
+      left: 0;
+    }
   }
 }

@@ -26,8 +26,8 @@ export default function PortfolioPagination({
   };
 
   return (
-    <div className="PortfolioPagination">
-      <div className="PortfolioPagination__button-wrapper">
+    <div id="PortfolioPagination">
+      <div id="PortfolioPagination__button-wrapper">
         {/* prev << button */}
         <button
           onClick={() => {

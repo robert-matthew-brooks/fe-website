@@ -51,7 +51,7 @@ export default function Header() {
         })}
       </nav>
 
-      <nav className="Header__desktop-nav">
+      <nav id="Header__desktop-nav">
         {menuItems.map((menuItem, i) => {
           return (
             <a key={i} href={menuItem.link}>

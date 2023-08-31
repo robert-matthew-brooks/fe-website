@@ -51,11 +51,11 @@ export default function Portfolio() {
   }, [page]);
 
   return (
-    <section className="Portfolio">
-      <div className="Portfolio__inner">
-        <h1 className="Portfolio__title">Portfolio Projects</h1>
+    <section id="Portfolio">
+      <div id="Portfolio__inner">
+        <h1 id="Portfolio__title">Portfolio Projects</h1>
 
-        <div className="Portfolio__sort-options">
+        <div id="Portfolio__sort-options">
           <select
             onChange={(event) => {
               handleLanguageChange(event.target.value);
@@ -80,7 +80,7 @@ export default function Portfolio() {
           </select>
         </div>
 
-        <div className="Portfolio__project-grid">
+        <div id="Portfolio__project-grid">
           {projects.map((project, i) => {
             return (
               <PortfolioCard

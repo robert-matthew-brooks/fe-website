@@ -1,5 +1,9 @@
 @import url('./_dimens.css');
 
-.App {
-  min-height: 100vh;
+/* <main> should always be big enough to push footer off screen */
+/* it may be smaller before api data has loaded */
+/* 5em is approx header size */
+
+#App > main {
+  min-height: calc(100vh - 5em);
 }

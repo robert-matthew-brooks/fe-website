@@ -1,37 +1,20 @@
-.Languages {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  padding: 2rem;
-  background-color: var(--languages-bg-colour);
-}
-
-.Languages > h3 {
-  font-size: 1.1rem;
-  font-weight: normal;
-  font-style: italic;
-}
-
-.Languages__icon-grid {
+#Languages {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
+  margin-bottom: 3em;
 }
 
-.Languages__link {
+#Languages > a {
   padding: 0.5rem;
   text-decoration: none;
 }
-.Languages__link:hover {
-  background-color: var(--languages-icon-bg-hover-colour);
-}
-
-.Languages__link > img {
+#Languages > a > img {
   height: 4rem;
   aspect-ratio: 1;
 }
+/* hover effect in media query */
 
 #Languages__tooltip {
   position: absolute;
@@ -45,5 +28,13 @@
 @media (max-width: 768px) {
   #Languages__tooltip {
     display: none;
+  }
+
+  #Languages {
+    gap: 1rem;
+  }
+
+  #Languages > a > img {
+    height: 3rem;
   }
 }

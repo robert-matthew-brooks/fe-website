@@ -1,30 +1,30 @@
-.Splash {
+#Splash {
   background: radial-gradient(
     var(--splash-inner-bg-colour),
     var(--splash-outer-bg-colour)
   );
 }
 
-.Splash__inner {
+#Splash__inner {
   max-width: var(--global-max-width);
   margin: auto;
 
-  min-height: calc(100vh - var(--header-height));
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 5%;
-  padding: 3rem;
+  justify-content: center;
+  gap: 2rem;
+  padding: 4rem 2rem;
 }
 
-.Splash__text {
+#Splash__text {
   display: flex;
   flex-direction: column;
   gap: 3rem;
   color: var(--splash-text-colour);
 }
 
-.Splash__text > h2 {
+#Splash__text > h2 {
   width: fit-content;
   padding-left: 1.4rem;
   font-size: 2.5rem;
@@ -36,19 +36,20 @@
   font-weight: bold;
 }
 
-.Splash__text > h3 {
+#Splash__text > h3 {
+  font-size: 1rem;
   font-weight: bold;
   color: var(--splash-small-header-text-colour);
 }
 
-.contact-links {
+#whatsapp-btn__wrapper {
   position: relative;
   height: 2.5rem;
   display: flex;
   justify-content: center;
 }
 
-.contact-links__whatsapp {
+#whatsapp-btn {
   position: absolute;
   top: 0;
   padding: 0.7rem;
@@ -61,8 +62,20 @@
   border-radius: 1rem;
   transition: all 0.1s linear;
 }
-.contact-links__whatsapp:hover {
+#whatsapp-btn:hover {
   top: 5px;
   border-width: 0;
   background-color: var(--splash-whatsapp-btn-hover-bg-colour);
+}
+
+@media (max-width: 1024px) {
+  #Splash__text > h2 {
+    font-size: 2.2rem;
+  }
+
+  #Splash__inner {
+    gap: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }

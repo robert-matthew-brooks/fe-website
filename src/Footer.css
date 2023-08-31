@@ -1,4 +1,4 @@
-footer {
+#Footer {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -8,16 +8,16 @@ footer {
   background-color: var(--footer-bg-colour);
 }
 
-.footer__email > a {
+#Footer__email > a {
   color: var(--footer-link-colour);
   text-decoration: none;
 }
-.footer__email > a:hover {
+#Footer__email > a:hover {
   color: var(--footer-link-hover-colour);
   text-decoration: underline;
 }
 
-.footer__sm-icons {
+#Footer__sm-icons {
   display: flex;
   gap: 2rem;
 }
@@ -32,8 +32,12 @@ footer {
 }
 
 @media (max-width: 768px) {
-  footer {
+  #Footer {
     flex-direction: column-reverse;
     gap: 3rem;
+  }
+
+  #Footer__email > a {
+    font-size: 0.9rem;
   }
 }

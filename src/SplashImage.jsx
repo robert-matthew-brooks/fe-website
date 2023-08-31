@@ -111,7 +111,17 @@ const addLetter = (visibleTags, setVisibleTags) => {
 };
 
 export default function SplashImage() {
-  const [visibleTags, setVisibleTags] = useState([]);
+  const initialTags = [];
+  for (let i = 0; i < 3; i++) {
+    const tag = randomTag();
+    initialTags.push({
+      text: tag,
+      colour: randomColour(),
+      indent: i,
+      visibleLetters: tag.length,
+    });
+  }
+  const [visibleTags, setVisibleTags] = useState(initialTags);
 
   useEffect(() => {
     const interval = handleMonitorUpdate(visibleTags, setVisibleTags);
@@ -119,8 +129,8 @@ export default function SplashImage() {
   }, [visibleTags]);
 
   return (
-    <div className="splash-image__outer">
-      <div className="splash-image__inner">
+    <div id="splash-image__outer">
+      <div id="splash-image__inner">
         <img id="splash-image__shadows" src={splashShadows} />
         <img src={splashImg} />
         <img id="splash-image__wisp" src={splashWisp} />

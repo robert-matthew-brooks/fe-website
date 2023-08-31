@@ -14,13 +14,13 @@ const smIcons = [
 
 export default function Footer() {
   return (
-    <footer>
-      <div className="footer__email">
+    <footer id="Footer">
+      <div id="Footer__email">
         <a href="mailto:robert.matthew.brooks@gmail.com?subject=Hello!">
           Robert.Matthew.Brooks@gmail.com
         </a>
       </div>
-      <div className="footer__sm-icons">
+      <div id="Footer__sm-icons">
         {smIcons.map((smIcon, i) => {
           return (
             <a key={i} href={smIcon.link}>

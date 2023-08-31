@@ -1,0 +1,65 @@
+#Skills {
+  background-color: var(--skills-bg-colour);
+}
+
+#Skills__inner {
+  max-width: var(--global-max-width);
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 4rem;
+}
+
+#Skills__inner > h3 {
+  font-size: 1.1rem;
+  font-weight: normal;
+  font-style: italic;
+}
+
+#Skills__soft-skills-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+#Skills__soft-skills-list > li {
+  position: relative;
+  padding-left: 2rem;
+  font-size: 1rem;
+  line-height: 2rem;
+  list-style: none;
+}
+#Skills__soft-skills-list > li::before {
+  content: '\2714';
+  position: absolute;
+  left: 0;
+  font-size: 1.8em;
+  color: var(--skills-tick-colour);
+}
+
+#Skills__soft-skills-list > li > strong {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 990px) {
+  #Skills__soft-skills-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  #Skills__inner {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  #Skills__soft-skills-list > li {
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+  }
+  #Skills__soft-skills-list > li > strong {
+    font-size: 1.1rem;
+  }
+}
