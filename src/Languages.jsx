@@ -41,7 +41,7 @@ export default function Languages({ languages }) {
           <a
             key={i}
             className="Languages__link"
-            href={`/portfolio/${language.name.toLowerCase()}`}
+            href={`/portfolio/${language.slug}`}
             onMouseOver={() => {
               showTooltip(language.name, language.project_count);
             }}

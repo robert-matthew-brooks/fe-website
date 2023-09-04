@@ -10,6 +10,8 @@ if (location.hostname === 'localhost') {
 const api = axios.create({ baseURL });
 
 export async function fetchProjects(params) {
+  if (params.language === 'all') delete params.language;
+  console.log(params);
   const { data } = await api.get('/api/projects', { params });
   return data;
 }

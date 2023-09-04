@@ -20,7 +20,7 @@ export default function PortfolioCard({ title, imgUrl, languages }) {
         </a>
         <div className="PortfolioCard__bottom-bar__language-icons">
           {languages.map((language, i) => (
-            <a key={i} href={`/portfolio/${language.name.toLowerCase()}`}>
+            <a key={i} href={`/portfolio/${language.slug}`}>
               <LanguageIcon src={language.icon_url} />
             </a>
           ))}

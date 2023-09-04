@@ -5,10 +5,10 @@ import menuCloseImg from './assets/menu-close.png';
 import './Header.css';
 
 const menuItems = [
-  { text: 'Home', link: './' },
+  { text: 'Home', link: '/' },
   { text: 'Skills', link: '#' },
-  { text: 'Portfolio', link: './portfolio' },
-  { text: 'Contact', link: './contact' },
+  { text: 'Portfolio', link: '/portfolio/all' },
+  { text: 'Contact', link: '/contact' },
 ];
 
 export default function Header() {

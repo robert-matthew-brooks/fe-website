@@ -4,7 +4,7 @@ export default function PortfolioPagination({
   limit,
   page,
   totalProjects,
-  setPage,
+  changeRequestParams,
 }) {
   const pageNumbers = [];
   for (let i = 0; i * limit < totalProjects; i++) {
@@ -18,11 +18,11 @@ export default function PortfolioPagination({
   const isLastPage = page === pageNumbers.length;
 
   const prevPage = () => {
-    if (!isFirstPage) setPage(page - 1);
+    if (!isFirstPage) changeRequestParams({ page: page - 1 });
   };
 
   const nextPage = () => {
-    if (!isLastPage) setPage(page + 1);
+    if (!isLastPage) changeRequestParams({ page: page + 1 });
   };
 
   return (
@@ -45,7 +45,7 @@ export default function PortfolioPagination({
               key={i}
               disabled={pageNumber === page}
               onClick={() => {
-                setPage(pageNumber);
+                changeRequestParams({ page: pageNumber });
               }}
             >
               {pageNumber}

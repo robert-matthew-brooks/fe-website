@@ -1,54 +1,89 @@
 import { useState, useEffect } from 'react';
-import { useParams, useSearchParams } from 'react-router-dom';
+import { useParams, useSearchParams, useNavigate } from 'react-router-dom';
 import PortfolioCard from './PortfolioCard';
 import PortfolioPagination from './PortfolioPagination';
 import { fetchProjects, fetchLanguages } from './js/api';
 import './Portfolio.css';
 
-function handleLanguageChange(language) {
-  // if 'any' go to /portfolio#title, no smooth scroll
-
-  window.location = `${
-    window.location.origin
-  }/portfolio/${language.toLowerCase()}`;
-}
-
 export default function Portfolio() {
   const [isInitialLoad, setIsInitialLoad] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
+  const [searchParams] = useSearchParams();
 
   const [projects, setProjects] = useState([]);
+  const [totalProjects, setTotalProjects] = useState(0);
   const [languages, setLanguages] = useState([]);
-  let languageLookup;
 
   const limit = 6;
-  const [totalProjects, setTotalProjects] = useState(0);
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(+searchParams.get('page') || 1);
   const { language } = useParams();
 
-  // loading of project data
+  const [selectedLanguage, setSelectedLanguage] = useState();
+  const [requestParams, setRequestParams] = useState({ language, limit, page });
+
+  const changeRequestParams = ({
+    language = null,
+    limit = null,
+    page = null,
+  }) => {
+    const newParams = { ...requestParams };
+
+    let newUrl;
+    let newUrlPath = window.location.pathname;
+    let newUrlSearchParams = new URLSearchParams(window.location.search);
+
+    if (language) {
+      newParams.language = language;
+      setSelectedLanguage(newParams.language);
+      newUrlPath = `/portfolio/${newParams.language}`;
+      page = 1;
+    }
+
+    if (page) {
+      newParams.page = page;
+      setPage(newParams.page);
+
+      if (newParams.page === 1) newUrlSearchParams.delete('page');
+      else newUrlSearchParams.set('page', newParams.page);
+    }
+
+    // update URL
+    if (newUrlSearchParams.size) {
+      newUrl = newUrlPath + `?${newUrlSearchParams.toString()}`;
+    } else {
+      newUrl = newUrlPath;
+    }
+    history.replaceState(null, '', newUrl);
+
+    setRequestParams(newParams);
+  };
+
+  // load data to display in grid
   useEffect(() => {
     (async () => {
       try {
-        // initial loading languages data
+        setIsLoading(true);
+        setIsError(false);
+
         if (isInitialLoad) {
           const { languages } = await fetchLanguages();
           setLanguages(languages);
           setIsInitialLoad(false);
         }
 
-        const params = { limit, page };
-        if (language) params.language = language;
-
-        const { projects, project_count } = await fetchProjects(params);
+        const { projects, project_count } = await fetchProjects(requestParams);
         setProjects(projects);
         setTotalProjects(project_count);
+
+        setIsLoading(false);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       } catch (err) {
+        setIsError(true);
         // UNABLE TO REACH DATABASE
       }
     })();
-  }, [page]);
+  }, [requestParams]);
 
   return (
     <section id="Portfolio">
@@ -57,16 +92,17 @@ export default function Portfolio() {
 
         <div id="Portfolio__sort-options">
           <select
+            value={selectedLanguage}
             onChange={(event) => {
-              handleLanguageChange(event.target.value);
+              changeRequestParams({ language: event.target.value });
             }}
           >
-            <option value="all">Any Language</option>
+            <option value="all">All Languages</option>
             {languages.map((language, i) => {
               return (
                 <option
                   key={i}
-                  value={language.name}
+                  value={language.slug}
                 >{`${language.name} (${language.project_count})`}</option>
               );
             })}
@@ -97,7 +133,7 @@ export default function Portfolio() {
           limit={limit}
           totalProjects={totalProjects}
           page={page}
-          setPage={setPage}
+          changeRequestParams={changeRequestParams}
         />
       </div>
     </section>
