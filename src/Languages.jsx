@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import LanguageIcon from './LanguageIcon';
 import './Languages.css';
 
@@ -38,10 +39,10 @@ export default function Languages({ languages }) {
     <div id="Languages">
       {languages.map((language, i) => {
         return (
-          <a
+          <Link
             key={i}
             className="Languages__link"
-            href={`/portfolio/${language.slug}`}
+            to={`/portfolio/${language.slug}`}
             onMouseOver={() => {
               showTooltip(language.name, language.project_count);
             }}
@@ -50,7 +51,7 @@ export default function Languages({ languages }) {
             }}
           >
             <LanguageIcon src={language.icon_url} />
-          </a>
+          </Link>
         );
       })}
     </div>

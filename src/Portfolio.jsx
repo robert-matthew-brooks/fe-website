@@ -156,6 +156,7 @@ export default function Portfolio() {
                   title={project.title}
                   imgUrl={project.img_url}
                   languages={project.languages}
+                  changeRequestParams={changeRequestParams}
                 />
               );
             })}

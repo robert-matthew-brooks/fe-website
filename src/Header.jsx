@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Logo from './HeaderLogo.jsx';
 import menuOpenImg from './assets/menu-open.svg';
 import menuCloseImg from './assets/menu-close.png';
@@ -36,17 +37,14 @@ export default function Header() {
         id="Header__mobile-nav"
         style={{ left: isMobileNavVisible ? '0' : '-100vw' }}
         onClick={(e) => {
-          // don't toggle menu on link clicked, only on bg clicked
-          if (e.target === e.currentTarget) {
-            toggleMenu();
-          }
+          toggleMenu();
         }}
       >
         {menuItems.map((menuItem, i) => {
           return (
-            <a key={i} href={menuItem.link}>
+            <Link key={i} to={menuItem.link}>
               {menuItem.text}
-            </a>
+            </Link>
           );
         })}
       </nav>
@@ -54,9 +52,9 @@ export default function Header() {
       <nav id="Header__desktop-nav">
         {menuItems.map((menuItem, i) => {
           return (
-            <a key={i} href={menuItem.link}>
+            <Link key={i} to={menuItem.link}>
               {menuItem.text}
-            </a>
+            </Link>
           );
         })}
       </nav>

@@ -1,15 +1,21 @@
+import { Link } from 'react-router-dom';
 import LanguageIcon from './LanguageIcon.jsx';
 import commentIcon from './assets/comment-icon.png';
 import heartIcon from './assets/heart-icon.png';
 import './PortfolioCard.css';
 
-export default function PortfolioCard({ title, imgUrl, languages }) {
+export default function PortfolioCard({
+  title,
+  imgUrl,
+  languages,
+  changeRequestParams,
+}) {
   return (
     <div className="PortfolioCard">
-      <a href="#">
+      <Link to={'/'}>
         <img className="PortfolioCard__image" src={imgUrl} />
         <h2 className="PortfolioCard__title">{title}</h2>
-      </a>
+      </Link>
 
       <div className="PortfolioCard__bottom-bar">
         <a href="#">
@@ -20,9 +26,14 @@ export default function PortfolioCard({ title, imgUrl, languages }) {
         </a>
         <div className="PortfolioCard__bottom-bar__language-icons">
           {languages.map((language, i) => (
-            <a key={i} href={`/portfolio/${language.slug}`}>
+            <button
+              key={i}
+              onClick={() => {
+                changeRequestParams({ language: language.slug });
+              }}
+            >
               <LanguageIcon src={language.icon_url} />
-            </a>
+            </button>
           ))}
         </div>
       </div>

@@ -1,13 +1,14 @@
+import { Link } from 'react-router-dom';
 import './HeaderLogo.css';
 
 export default function HeaderLogo() {
   return (
-    <a href="/" id="Logo">
+    <Link to={'/'} id="Logo">
       <ul>
         <li>Robert</li>
         <li>Matthew</li>
         <li>Brooks</li>
       </ul>
-    </a>
+    </Link>
   );
 }
