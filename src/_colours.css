@@ -53,4 +53,8 @@
   --footer-sm-icon-hover-colour: invert(96%) sepia(6%) saturate(0%)
     hue-rotate(318deg) brightness(83%) contrast(84%);
   --footer-bg-colour: #000020;
+
+  /* loading */
+  --loading-wheel-colour: invert(20%);
+  --loading-bg-colour: #c0c0c0f0;
 }

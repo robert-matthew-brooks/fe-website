@@ -14,8 +14,8 @@ export default function PortfolioPagination({
   const from = !totalProjects ? 0 : (page - 1) * limit + 1;
   const to = Math.min(page * limit, totalProjects);
 
-  const isFirstPage = page === 1;
-  const isLastPage = page === pageNumbers.length;
+  const isFirstPage = page <= 1;
+  const isLastPage = page >= pageNumbers.length;
 
   const prevPage = () => {
     if (!isFirstPage) changeRequestParams({ page: page - 1 });

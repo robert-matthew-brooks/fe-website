@@ -1,4 +1,6 @@
 #Portfolio {
+  position: relative;
+  min-height: calc(100vh - 5em);
   background-color: var(--portfolio-list-bg-colour);
 }
 
@@ -15,27 +17,6 @@
 #Portfolio__title {
   text-align: center;
   font-size: 1.7rem;
-}
-
-#Portfolio__sort-options {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-}
-#Portfolio__sort-options > select {
-  width: 15rem;
-  margin: 0 0.5rem;
-  padding: 0.7rem;
-  background-color: var(--portfolio-select-background-colour);
-  border: 1px solid var(--portfolio-select-border-colour);
-  border-radius: 5px;
-  cursor: pointer;
-}
-#Portfolio__sort-options > select:hover {
-  border-color: var(--portfolio-select-hover-border-colour);
 }
 
 #Portfolio__project-grid {

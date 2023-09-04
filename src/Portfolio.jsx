@@ -4,6 +4,8 @@ import PortfolioCard from './PortfolioCard';
 import PortfolioPagination from './PortfolioPagination';
 import { fetchProjects, fetchLanguages } from './js/api';
 import './Portfolio.css';
+import Loading from './Loading';
+import PortfolioSortOptions from './PortfolioSortOptions';
 
 const sortOptions = [
   { sortBy: 'date', order: 'desc' },
@@ -134,60 +136,39 @@ export default function Portfolio() {
 
   return (
     <section id="Portfolio">
-      <div id="Portfolio__inner">
-        <h1 id="Portfolio__title">Portfolio Projects</h1>
+      <Loading isLoading={isLoading}>
+        <div id="Portfolio__inner">
+          <h1 id="Portfolio__title">Portfolio Projects</h1>
 
-        <div id="Portfolio__sort-options">
-          <select
-            value={language}
-            onChange={(event) => {
-              changeRequestParams({ language: event.target.value });
-            }}
-          >
-            <option value="all">All Languages</option>
-            {languages.map((language, i) => {
+          <PortfolioSortOptions
+            language={language}
+            languages={languages}
+            sortOption={sortOption}
+            sortOptions={sortOptions}
+            changeRequestParams={changeRequestParams}
+          />
+
+          <div id="Portfolio__project-grid">
+            {projects.map((project, i) => {
               return (
-                <option
+                <PortfolioCard
                   key={i}
-                  value={language.slug}
-                >{`${language.name} (${language.project_count})`}</option>
+                  title={project.title}
+                  imgUrl={project.img_url}
+                  languages={project.languages}
+                />
               );
             })}
-          </select>
+          </div>
 
-          <select
-            value={sortOption}
-            onChange={(event) => {
-              changeRequestParams(sortOptions[+event.target.value]);
-            }}
-          >
-            <option value="0">Newest first</option>
-            <option value="1">Oldest first</option>
-            <option value="2">Alphabetical A-Z</option>
-            <option value="3">Alphabetical Z-A</option>
-          </select>
+          <PortfolioPagination
+            limit={limit}
+            totalProjects={totalProjects}
+            page={page}
+            changeRequestParams={changeRequestParams}
+          />
         </div>
-
-        <div id="Portfolio__project-grid">
-          {projects.map((project, i) => {
-            return (
-              <PortfolioCard
-                key={i}
-                title={project.title}
-                imgUrl={project.img_url}
-                languages={project.languages}
-              />
-            );
-          })}
-        </div>
-
-        <PortfolioPagination
-          limit={limit}
-          totalProjects={totalProjects}
-          page={page}
-          changeRequestParams={changeRequestParams}
-        />
-      </div>
+      </Loading>
     </section>
   );
 }
