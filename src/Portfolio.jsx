@@ -1,30 +1,55 @@
 import { useState, useEffect } from 'react';
-import { useParams, useSearchParams, useNavigate } from 'react-router-dom';
+import { useParams, useSearchParams } from 'react-router-dom';
 import PortfolioCard from './PortfolioCard';
 import PortfolioPagination from './PortfolioPagination';
 import { fetchProjects, fetchLanguages } from './js/api';
 import './Portfolio.css';
+
+const sortOptions = [
+  { sortBy: 'date', order: 'desc' },
+  { sortBy: 'date', order: 'asc' },
+  { sortBy: 'title', order: 'asc' },
+  { sortBy: 'title', order: 'desc' },
+];
+
+const getSortOption = (sortBy, order) => {
+  for (const i in sortOptions) {
+    if (sortOptions[i].sortBy === sortBy && sortOptions[i].order === order) {
+      return i;
+    }
+  }
+};
 
 export default function Portfolio() {
   const [isInitialLoad, setIsInitialLoad] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
   const [searchParams] = useSearchParams();
+  const params = useParams();
 
   const [projects, setProjects] = useState([]);
   const [totalProjects, setTotalProjects] = useState(0);
   const [languages, setLanguages] = useState([]);
 
+  const [language, setLanguage] = useState(params.language);
+  const [sortBy, setSortBy] = useState(searchParams.get('sort_by') || 'date');
+  const [order, setOrder] = useState(searchParams.get('order') || 'desc');
+  const [sortOption, setSortOption] = useState(getSortOption(sortBy, order));
   const limit = 6;
   const [page, setPage] = useState(+searchParams.get('page') || 1);
-  const { language } = useParams();
 
-  const [selectedLanguage, setSelectedLanguage] = useState();
-  const [requestParams, setRequestParams] = useState({ language, limit, page });
+  const [requestParams, setRequestParams] = useState({
+    language,
+    sort_by: sortBy,
+    order,
+    limit,
+    page,
+  });
 
   const changeRequestParams = ({
     language = null,
-    limit = null,
+    sortBy = null,
+    order = null,
     page = null,
   }) => {
     const newParams = { ...requestParams };
@@ -35,26 +60,43 @@ export default function Portfolio() {
 
     if (language) {
       newParams.language = language;
-      setSelectedLanguage(newParams.language);
+      setLanguage(newParams.language);
       newUrlPath = `/portfolio/${newParams.language}`;
-      page = 1;
+
+      newParams.page = 1;
+      setPage(newParams.page);
+      newUrlSearchParams.delete('page');
+    }
+
+    if (sortBy) {
+      newParams.sort_by = sortBy;
+      setSortBy(newParams.sort_by);
+      newUrlSearchParams.set('sort_by', newParams.sort_by);
+    }
+
+    if (order) {
+      newParams.order = order;
+      setOrder(newParams.order);
+      newUrlSearchParams.set('order', newParams.order);
     }
 
     if (page) {
       newParams.page = page;
       setPage(newParams.page);
+      newUrlSearchParams.set('page', newParams.page);
+    }
 
-      if (newParams.page === 1) newUrlSearchParams.delete('page');
-      else newUrlSearchParams.set('page', newParams.page);
+    // update dropdown menu AFTER setting individual states
+    if (sortBy || order) {
+      setSortOption(getSortOption(newParams.sort_by, newParams.order));
     }
 
     // update URL
+    newUrl = newUrlPath;
     if (newUrlSearchParams.size) {
-      newUrl = newUrlPath + `?${newUrlSearchParams.toString()}`;
-    } else {
-      newUrl = newUrlPath;
+      newUrl += `?${newUrlSearchParams.toString()}`;
     }
-    history.replaceState(null, '', newUrl);
+    history.replaceState(null, '', newUrl); // update URL without rendering page
 
     setRequestParams(newParams);
   };
@@ -69,6 +111,11 @@ export default function Portfolio() {
         if (isInitialLoad) {
           const { languages } = await fetchLanguages();
           setLanguages(languages);
+
+          // set drop down menus
+          setLanguage(language);
+          setSortOption(getSortOption(sortBy, order));
+
           setIsInitialLoad(false);
         }
 
@@ -92,7 +139,7 @@ export default function Portfolio() {
 
         <div id="Portfolio__sort-options">
           <select
-            value={selectedLanguage}
+            value={language}
             onChange={(event) => {
               changeRequestParams({ language: event.target.value });
             }}
@@ -108,11 +155,16 @@ export default function Portfolio() {
             })}
           </select>
 
-          <select>
-            <option>Newest first</option>
-            <option>Oldest first</option>
-            <option>Alphabetical A-Z</option>
-            <option>Alphabetical Z-A</option>
+          <select
+            value={sortOption}
+            onChange={(event) => {
+              changeRequestParams(sortOptions[+event.target.value]);
+            }}
+          >
+            <option value="0">Newest first</option>
+            <option value="1">Oldest first</option>
+            <option value="2">Alphabetical A-Z</option>
+            <option value="3">Alphabetical Z-A</option>
           </select>
         </div>
 
