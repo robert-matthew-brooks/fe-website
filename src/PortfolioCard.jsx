@@ -4,17 +4,12 @@ import commentIcon from './assets/comment-icon.png';
 import heartIcon from './assets/heart-icon.png';
 import './PortfolioCard.css';
 
-export default function PortfolioCard({
-  title,
-  imgUrl,
-  languages,
-  changeRequestParams,
-}) {
+export default function PortfolioCard({ project, changeRequestParams }) {
   return (
     <div className="PortfolioCard">
-      <Link to={'/'}>
-        <img className="PortfolioCard__image" src={imgUrl} />
-        <h2 className="PortfolioCard__title">{title}</h2>
+      <Link to={`/projects/${project.id}`}>
+        <img className="PortfolioCard__image" src={project.img_url} />
+        <h2 className="PortfolioCard__title">{project.title}</h2>
       </Link>
 
       <div className="PortfolioCard__bottom-bar">
@@ -25,7 +20,7 @@ export default function PortfolioCard({
           <img src={heartIcon} alt="likes" />1
         </a>
         <div className="PortfolioCard__bottom-bar__language-icons">
-          {languages.map((language, i) => (
+          {project.languages.map((language, i) => (
             <button
               key={i}
               onClick={() => {

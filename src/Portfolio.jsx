@@ -153,9 +153,7 @@ export default function Portfolio() {
               return (
                 <PortfolioCard
                   key={i}
-                  title={project.title}
-                  imgUrl={project.img_url}
-                  languages={project.languages}
+                  project={project}
                   changeRequestParams={changeRequestParams}
                 />
               );
