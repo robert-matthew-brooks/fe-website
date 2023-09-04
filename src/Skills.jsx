@@ -1,28 +1,12 @@
-import { useState, useEffect } from 'react';
 import Languages from './Languages';
-import { fetchLanguages } from './js/api';
-import tickImg from './assets/tick.png';
 import './Skills.css';
 
 export default function Skills() {
-  const [languages, setLanguages] = useState([]);
-
-  useEffect(() => {
-    (async () => {
-      try {
-        const { languages } = await fetchLanguages();
-        setLanguages(languages);
-      } catch (err) {
-        // HANDLE DB ERROR
-      }
-    })();
-  }, []);
-
   return (
     <section id="Skills">
       <div id="Skills__inner">
         <h3>Projects built using:</h3>
-        <Languages languages={languages} />
+        <Languages />
 
         <ul id="Skills__soft-skills-list">
           <li>

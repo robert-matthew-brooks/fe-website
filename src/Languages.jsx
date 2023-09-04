@@ -1,6 +1,9 @@
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { fetchLanguages } from './js/api';
 import LanguageIcon from './LanguageIcon';
 import './Languages.css';
+import Loading from './Loading';
 
 // add tooltip to body, not this component
 // (x/y needs to be relative to whole document)
@@ -34,26 +37,51 @@ const hideTooltip = () => {
   tooltip.style.visibility = 'hidden';
 };
 
-export default function Languages({ languages }) {
+export default function Languages() {
+  const [isLoading, setIsLoading] = useState(false);
+  const [languages, setLanguages] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        setIsLoading(true);
+
+        const { languages } = await fetchLanguages();
+        setLanguages(languages);
+
+        setIsLoading(false);
+      } catch (err) {
+        // HANDLE DB ERROR
+      }
+    })();
+  }, []);
+
+  useEffect(() => {}, []);
+
   return (
     <div id="Languages">
-      {languages.map((language, i) => {
-        return (
-          <Link
-            key={i}
-            className="Languages__link"
-            to={`/portfolio/${language.slug}`}
-            onMouseOver={() => {
-              showTooltip(language.name, language.project_count);
-            }}
-            onMouseOut={() => {
-              hideTooltip();
-            }}
-          >
-            <LanguageIcon src={language.icon_url} />
-          </Link>
-        );
-      })}
+      <Loading isLoading={isLoading}>
+        {languages.map((language, i) => {
+          return (
+            <Link
+              key={i}
+              className="Languages__link"
+              to={`/portfolio/${language.slug}`}
+              onMouseOver={() => {
+                showTooltip(language.name, language.project_count);
+              }}
+              onMouseOut={() => {
+                hideTooltip();
+              }}
+              onClick={() => {
+                hideTooltip();
+              }}
+            >
+              <LanguageIcon src={language.icon_url} />
+            </Link>
+          );
+        })}
+      </Loading>
     </div>
   );
 }

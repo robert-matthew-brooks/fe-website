@@ -17,8 +17,7 @@
 
 .Loading > img {
   display: inline-block;
-  max-width: 12%;
-  max-height: 12%;
+  width: 5em;
   aspect-ratio: 1;
   filter: var(--loading-wheel-colour);
   animation: spin 5s linear infinite;
