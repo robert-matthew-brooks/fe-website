@@ -12,14 +12,14 @@
   justify-content: center;
   align-items: center;
 
-  background-color: var(--loading-bg-colour);
+  background-color: rgba(var(--primary-900), 0.95);
 }
 
 .Loading > img {
   display: inline-block;
   width: 5em;
   aspect-ratio: 1;
-  filter: var(--loading-wheel-colour);
+  filter: var(--black-to-primary-300);
   animation: spin 5s linear infinite;
 }
 @keyframes spin {

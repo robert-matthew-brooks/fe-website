@@ -10,11 +10,12 @@
   width: 15rem;
   margin: 0 0.5rem;
   padding: 0.7rem;
-  background-color: var(--portfolio-select-background-colour);
-  border: 1px solid var(--portfolio-select-border-colour);
+  color: rgb(var(--primary-50));
+  background-color: rgb(var(--primary-900));
+  border: 1px solid rgb(var(--primary-500));
   border-radius: 5px;
   cursor: pointer;
 }
 #PortfolioSortOptions > select:hover {
-  border-color: var(--portfolio-select-hover-border-colour);
+  border-color: rgb(var(--primary-100));
 }

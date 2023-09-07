@@ -11,18 +11,19 @@
   gap: 0.5rem;
 }
 #PortfolioPagination__button-wrapper > button {
+  color: rgb(var(--primary-50));
   font-size: 1.2rem;
   padding: 0.5rem 0.7rem;
   background-color: white;
-  border: 1px solid #a0a0a0;
+  border: 1px solid rgb(var(--primary-500));
   border-radius: 5px;
 }
 #PortfolioPagination__button-wrapper > button:enabled:hover {
-  border-color: #606060;
+  border-color: rgb(var(--primary-100));
   cursor: pointer;
 }
 #PortfolioPagination__button-wrapper > button:disabled {
   font-weight: bold;
   color: white;
-  background-color: #808080;
+  background-color: rgb(var(--primary-400));
 }

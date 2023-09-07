@@ -1,70 +1,70 @@
 :root {
-  /* header */
+  /* anything outside colour scheme */
 
-  --header-logo-colour: #ffffff;
-  --header-logo-hover-text-colour: #000000;
-  --header-nav-link-colour: #ffffff;
-  --header-nav-link-hover-colour: #c0c0c0;
-  --header-mobile-nav-btn-colour: invert(100%);
-  --header-mobile-nav-link-colour: #ffffff;
-  --header-bg-colour: #000020;
-
-  /* home screen */
-
-  --splash-text-colour: #000000;
-  --splash-small-header-text-colour: #404050;
-  --splash-inner-bg-colour: #e0e0d0;
-  --splash-outer-bg-colour: #e0e0e0;
-  --splash-whatsapp-btn-text-colour: #ffffff;
-  --splash-whatsapp-btn-bg-colour: darkgreen;
-  --splash-whatsapp-btn-hover-bg-colour: green;
-
-  --skills-text-colour: #000000;
-  --skills-tick-colour: #008000;
-  --skills-bg-colour: #fafafa;
   --languages-tooltip-bg-colour: lightgoldenrodyellow;
-  --languages-tooltip-border-colour: grey;
+  --skills-tick-colour: green;
 
-  /* portfolio list */
+  --href-colour: blue;
+  --href-hover-colour: darkblue;
 
-  --portfolio-list-bg-colour: #e0e0e0;
+  /***********/
+  /* PRIMARY */
+  /***********/
 
-  --portfolio-select-background-colour: #ffffff;
-  --portfolio-select-border-colour: #808080;
-  --portfolio-select-hover-border-colour: #000000;
+  --primary-r: 256;
+  --primary-g: 256;
+  --primary-b: 256;
 
-  --portfolio-card-text-colour: #000000;
-  --portfolio-card-bg-colour: #ffffff;
-  --portfolio-card-bar-bg-colour: #f4f4f4;
-  --portfolio-card-border-colour: #a0a0a0;
-  --portfolio-card-hover-border-colour: #303030;
+  --primary-900: calc(var(--primary-r) * 1), calc(var(--primary-g) * 1),
+    calc(var(--primary-b) * 1);
+  --primary-850: calc(var(--primary-r) * 0.94), calc(var(--primary-g) * 0.94),
+    calc(var(--primary-b) * 0.94);
+  --primary-800: calc(var(--primary-r) * 0.88), calc(var(--primary-g) * 0.88),
+    calc(var(--primary-b) * 0.88);
+  --primary-700: calc(var(--primary-r) * 0.77), calc(var(--primary-g) * 0.77),
+    calc(var(--primary-b) * 0.77);
+  --primary-600: calc(var(--primary-r) * 0.66), calc(var(--primary-g) * 0.66),
+    calc(var(--primary-b) * 0.66);
+  --primary-500: calc(var(--primary-r) * 0.55), calc(var(--primary-g) * 0.55),
+    calc(var(--primary-b) * 0.55);
+  --primary-400: calc(var(--primary-r) * 0.44), calc(var(--primary-g) * 0.44),
+    calc(var(--primary-b) * 0.44);
+  --primary-300: calc(var(--primary-r) * 0.33), calc(var(--primary-g) * 0.33),
+    calc(var(--primary-b) * 0.33);
+  --primary-200: calc(var(--primary-r) * 0.22), calc(var(--primary-g) * 0.22),
+    calc(var(--primary-b) * 0.22);
+  --primary-100: calc(var(--primary-r) * 0.11), calc(var(--primary-g) * 0.11),
+    calc(var(--primary-b) * 0.11);
+  --primary-50: calc(var(--primary-r) * 0), calc(var(--primary-g) * 0),
+    calc(var(--primary-b) * 0);
 
-  --portfolio-card-image-border-colour: #a0a0a0;
-  --portfolio-card-bottom-bar-text-colour: #202020; /* comment, like etc */
+  /* filters for img/icons */
+  --black-to-primary-900: invert(100%);
+  --black-to-primary-700: invert(96%) sepia(6%) saturate(0%) hue-rotate(318deg)
+    brightness(83%) contrast(84%);
+  --black-to-primary-300: invert(20%);
 
-  /* project */
+  /*************/
+  /* SECONDARY */
+  /*************/
 
-  --project-bg-colour: #e0e0e0;
-  --project-article-bg-colour: #ffffff;
-  --project-border-colour: #808080;
-  --project-live-link-colour: #000000;
-  --project-live-link-bg-colour: #a0ffa0;
-  --project-live-link-hover-bg-colour: #80ff80;
-  --project-language-hover-bg-colour: #e0e0e0;
-  --project-link-colour: #2020ff;
-  --project-link-hover-colour: #0000ff;
+  --secondary-r: 0;
+  --secondary-g: 0;
+  --secondary-b: 256;
 
-  /* footer */
+  --secondary-150: calc(var(--secondary-r) * 0.16),
+    calc(var(--secondary-g) * 0.11), calc(var(--secondary-b) * 0.11);
 
-  --footer-text-colour: #ffffff;
-  --footer-link-colour: #ffffff;
-  --footer-link-hover-colour: #c0c0c0;
-  --footer-sm-icon-colour: invert(100%);
-  --footer-sm-icon-hover-colour: invert(96%) sepia(6%) saturate(0%)
-    hue-rotate(318deg) brightness(83%) contrast(84%);
-  --footer-bg-colour: #000020;
+  /***********/
+  /* BUTTONS */
+  /***********/
 
-  /* loading */
-  --loading-wheel-colour: invert(20%);
-  --loading-bg-colour: #c0c0c0f0;
+  --cta-r: 0;
+  --cta-g: 256;
+  --cta-b: 0;
+
+  --cta-300: calc(var(--cta-r) * 0.44), calc(var(--cta-g) * 0.44),
+    calc(var(--cta-b) * 0.44);
+  --cta-400: calc(var(--cta-r) * 0.55), calc(var(--cta-g) * 0.55),
+    calc(var(--cta-b) * 0.55);
 }

@@ -63,10 +63,9 @@ export default function Languages() {
       <Loading isLoading={isLoading}>
         {languages.map((language, i) => {
           return (
-            <Link
+            <LanguageIcon
               key={i}
-              className="Languages__link"
-              to={`/portfolio/${language.slug}`}
+              language={language}
               onMouseOver={() => {
                 showTooltip(language.name, language.project_count);
               }}
@@ -76,9 +75,7 @@ export default function Languages() {
               onClick={() => {
                 hideTooltip();
               }}
-            >
-              <LanguageIcon src={language.icon_url} />
-            </Link>
+            />
           );
         })}
       </Loading>

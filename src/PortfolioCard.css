@@ -1,12 +1,11 @@
 .PortfolioCard {
   overflow: hidden;
-  border: 1px solid var(--portfolio-card-border-colour);
+  background-color: rgb(var(--primary-900));
+  border: 1px solid rgb(var(--primary-500));
   border-radius: 0.3rem;
-
-  background-color: var(--portfolio-card-bg-colour);
 }
 .PortfolioCard:hover {
-  border-color: var(--portfolio-card-hover-border-colour);
+  border-color: rgb(var(--primary-100));
 }
 
 .PortfolioCard > a {
@@ -20,7 +19,7 @@
   margin: 1rem;
   font-size: 1rem;
   font-weight: bold;
-  color: var(--portfolio-card-text-colour);
+  color: rgb(var(--primary-50));
 }
 
 .PortfolioCard__image {
@@ -29,7 +28,7 @@
   aspect-ratio: 1.7;
   object-fit: cover;
   margin: 0.5em;
-  border: 1px solid var(--portfolio-card-image-border-colour);
+  border: 1px solid rgb(var(--primary-700));
 }
 
 .PortfolioCard__bottom-bar {
@@ -37,7 +36,7 @@
   flex-direction: row;
   align-items: center;
   padding: 0.5rem;
-  background-color: var(--portfolio-card-bar-bg-colour);
+  background-color: rgb(var(--primary-850));
 }
 
 .PortfolioCard__bottom-bar > span {
@@ -46,7 +45,7 @@
   margin: 0.5rem;
   font-size: 0.8rem;
   font-weight: bold;
-  color: var(--portfolio-card-bottom-bar-text-colour);
+  color: rgb(var(--primary-200));
   text-decoration: none;
 }
 .PortfolioCard__bottom-bar > span > img {
@@ -62,7 +61,7 @@
   margin-left: auto;
 }
 
-.PortfolioCard__bottom-bar__language-icons > img {
+.PortfolioCard__bottom-bar__language-icons img {
   height: 1.6rem;
   aspect-ratio: 1;
 }

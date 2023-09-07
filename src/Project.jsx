@@ -59,9 +59,7 @@ export default function Project() {
               <div id="Project__details__languages">
                 {project.languages &&
                   project.languages.map((language, i) => (
-                    <Link key={i} to={`/portfolio/${language.slug}`}>
-                      <LanguageIcon src={language.icon_url} />
-                    </Link>
+                    <LanguageIcon key={i} language={language} />
                   ))}
               </div>
             </div>

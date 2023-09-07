@@ -16,7 +16,7 @@
   text-decoration: none;
 }
 #ProjectSidebar > h2 {
-  color: #404040;
+  color: rgb(var(--primary-400));
   font-size: 0.9rem;
   font-weight: normal;
   font-style: italic;
@@ -26,18 +26,20 @@
   width: calc(var(--project-sidebar-width) - 2 * var(--project-sidebar-gutter));
   aspect-ratio: 1.5;
   background-size: cover;
-  border: 1px solid #c0c0c0;
+  border: 1px solid rgba(var(--primary-500));
 }
 .ProjectSidebar__card:hover {
-  border: 1px solid #808080;
+  border-color: rgba(var(--primary-100));
 }
 
-.ProjectSidebar__card > h3 {
+.ProjectSidebar__card__title {
+  padding: 0.3rem;
+  background-color: rgba(var(--primary-50), 0.8);
+}
+.ProjectSidebar__card__title > h3 {
   font-size: 0.9rem;
   font-weight: bold;
-  padding: 0.3rem;
-  color: white;
-  background-color: #000000e0;
+  color: rgb(var(--primary-900));
 }
 
 .ProjectSidebar__card > img {

@@ -1,5 +1,5 @@
 #Skills {
-  background-color: var(--skills-bg-colour);
+  background-color: rgb(var(--primary-900));
 }
 
 #Skills__inner {

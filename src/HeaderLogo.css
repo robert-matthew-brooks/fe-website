@@ -1,10 +1,10 @@
 #Logo {
   display: block;
   font-size: 0.9rem;
-  color: var(--header-logo-colour);
-  border: 1px solid var(--header-logo-colour);
+  color: rgb(var(--primary-900));
+  border: 1px solid rgb(var(--primary-900));
   text-decoration: none;
-  transition: background-color 0.5s;
+  transition: color 0.5s, background-color 0.5s;
 }
 
 #Logo > ul {
@@ -49,8 +49,8 @@
 @media (min-width: 769px) {
   /* hover colour change only for desktop screen */
   #Logo:hover {
-    color: var(--header-logo-hover-text-colour);
-    background-color: var(--header-logo-colour);
+    color: rgb(var(--primary-50));
+    background-color: rgb(var(--primary-900));
   }
 
   #Logo:hover > ul > li {

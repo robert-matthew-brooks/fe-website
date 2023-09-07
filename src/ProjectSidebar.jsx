@@ -41,7 +41,9 @@ export default function ProjectSidebar() {
               })`,
             }}
           >
-            <h3>{project.title}</h3>
+            <div className="ProjectSidebar__card__title">
+              <h3>{project.title}</h3>
+            </div>
           </div>
         </Link>
       ))}

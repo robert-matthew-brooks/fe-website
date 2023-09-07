@@ -82,15 +82,19 @@ export default function Portfolio() {
       newUrlSearchParams.set('order', newParams.order);
     }
 
-    if (page) {
-      newParams.page = page;
-      setPage(newParams.page);
-      newUrlSearchParams.set('page', newParams.page);
-    }
-
     // update dropdown menu AFTER setting individual states
     if (sortBy || order) {
       setSortOption(getSortOption(newParams.sort_by, newParams.order));
+
+      newParams.page = 1;
+      setPage(newParams.page);
+      newUrlSearchParams.delete('page');
+    }
+
+    if (page && !language && !sortBy && !order) {
+      newParams.page = page;
+      setPage(newParams.page);
+      newUrlSearchParams.set('page', newParams.page);
     }
 
     // update URL

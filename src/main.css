@@ -6,10 +6,11 @@
   padding: 0;
 
   box-sizing: border-box;
-
-  font-family: Verdana, sans-serif;
 }
 
 body {
   overflow-x: hidden;
+
+  color: rgb(var(--primary-50));
+  font-family: Verdana, sans-serif;
 }
