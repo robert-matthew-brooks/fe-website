@@ -26,7 +26,11 @@ export default function Splash() {
             look professional.
           </p>
           <div id="whatsapp-btn__wrapper">
-            <a id="whatsapp-btn" href="#">
+            <a
+              id="whatsapp-btn"
+              href="https://wa.me/447444239651?text=Hello!"
+              target="_new"
+            >
               Let's Chat On WhatsApp
             </a>
           </div>
