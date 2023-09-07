@@ -12,16 +12,17 @@ export default function PortfolioCard({ project, changeRequestParams }) {
         <img
           className="PortfolioCard__image"
           src={project.img_url || placeholderProjectImg}
+          alt={`Image for ${project.title}`}
         />
         <h2 className="PortfolioCard__title">{project.title}</h2>
       </Link>
 
       <div className="PortfolioCard__bottom-bar">
         <span>
-          <img src={commentIcon} alt="comments" />0
+          <img src={commentIcon} alt="Number of comments" />0
         </span>
         <span>
-          <img src={heartIcon} alt="likes" />0
+          <img src={heartIcon} alt="Number of likes" />0
         </span>
         <div className="PortfolioCard__bottom-bar__language-icons">
           {project.languages.map((language, i) => (

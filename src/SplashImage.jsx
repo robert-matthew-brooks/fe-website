@@ -131,10 +131,14 @@ export default function SplashImage() {
   return (
     <div id="splash-image__outer">
       <div id="splash-image__inner">
-        <img id="splash-image__shadows" src={splashShadows} />
-        <img src={splashImg} />
-        <img id="splash-image__wisp" src={splashWisp} />
-        <img id="splash-image__lights" src={splashLights} />
+        <img id="splash-image__shadows" src={splashShadows} alt="Shadows" />
+        <img src={splashImg} alt="Laptop, screen and mug of coffee" />
+        <img id="splash-image__wisp" src={splashWisp} alt="Coffee wisp" />
+        <img
+          id="splash-image__lights"
+          src={splashLights}
+          alt="Flashing laptop lights"
+        />
         <div id="splash-image__monitor-code">
           {visibleTags.map((tag, i) => {
             return (

@@ -8,7 +8,7 @@ export default function LanguageIcon({ language, ...actionProps }) {
       to={`/portfolio/${language.slug}`}
       {...actionProps} // allow onClick to be passed
     >
-      <img src={language.icon_url} />
+      <img src={language.icon_url} alt={language.name} />
     </Link>
   );
 }

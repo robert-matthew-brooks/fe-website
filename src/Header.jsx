@@ -30,7 +30,10 @@ export default function Header() {
       <Logo />
 
       <button id="Header__mobile-nav-btn" onClick={() => toggleMenu()}>
-        <img src={isMobileNavVisible ? menuCloseImg : menuOpenImg} />
+        <img
+          src={isMobileNavVisible ? menuCloseImg : menuOpenImg}
+          alt="Toggle menu"
+        />
       </button>
 
       <nav

@@ -68,7 +68,10 @@ export default function Project() {
               {project.video_url ? (
                 <iframe src={project.video_url}></iframe>
               ) : (
-                <img src={project.img_url || placeholderProjectImg} />
+                <img
+                  src={project.img_url || placeholderProjectImg}
+                  alt={`Image for ${project.title}`}
+                />
               )}
             </div>
 

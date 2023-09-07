@@ -7,9 +7,14 @@ const smIcons = [
   {
     image: linkedinLogo,
     link: 'https://www.linkedin.com/in/robert-matthew-brooks/',
+    alt: 'LinkedIn',
   },
-  { image: githubLogo, link: 'https://github.com/robert-matthew-brooks/' },
-  { image: youtubeLogo, link: '#' },
+  {
+    image: githubLogo,
+    link: 'https://github.com/robert-matthew-brooks/',
+    alt: 'GitHub',
+  },
+  { image: youtubeLogo, link: '#', alt: 'YouTube' },
 ];
 
 export default function Footer() {
@@ -24,7 +29,7 @@ export default function Footer() {
         {smIcons.map((smIcon, i) => {
           return (
             <a key={i} href={smIcon.link}>
-              <img className="sm-icon" src={smIcon.image} />
+              <img className="sm-icon" src={smIcon.image} alt={smIcon.alt} />
             </a>
           );
         })}

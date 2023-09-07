@@ -6,7 +6,7 @@ export default function Loading({ children, isLoading }) {
     <>
       {children}
       <div className="Loading" style={{ display: isLoading ? 'flex' : 'none' }}>
-        <img src={LoadingImg} alt="loading" />
+        <img src={LoadingImg} alt="Loading" />
       </div>
     </>
   );
