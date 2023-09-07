@@ -30,6 +30,7 @@
   gap: 1.5rem;
 }
 #Portfolio__project-grid > div {
+  width: 100%;
   max-width: 400px;
 }
 

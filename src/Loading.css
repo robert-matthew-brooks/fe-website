@@ -17,7 +17,7 @@
 
 .Loading > img {
   display: inline-block;
-  width: 5em;
+  height: 5em;
   aspect-ratio: 1;
   filter: var(--black-to-primary-300);
   animation: spin 5s linear infinite;
