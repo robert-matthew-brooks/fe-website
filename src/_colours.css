@@ -40,9 +40,12 @@
   --portfolio-card-hover-border-colour: #303030;
 
   --portfolio-card-image-border-colour: #a0a0a0;
-  --portfolio-card-btn-text-colour: #202020; /* comment, like etc */
-  --portfolio-card-btn-bg-colour: #e0e0e0;
-  --portfolio-card-btn-hover-bg-colour: #d0d0d0;
+  --portfolio-card-bottom-bar-text-colour: #202020; /* comment, like etc */
+
+  /* project */
+
+  --project-bg-colour: #e0e0e0;
+  --project-article-bg-colour: #ffffff;
 
   /* footer */
 

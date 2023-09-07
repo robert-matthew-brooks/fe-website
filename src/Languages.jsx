@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { fetchLanguages } from './js/api';
+import Loading from './Loading';
 import LanguageIcon from './LanguageIcon';
 import './Languages.css';
-import Loading from './Loading';
 
 // add tooltip to body, not this component
 // (x/y needs to be relative to whole document)

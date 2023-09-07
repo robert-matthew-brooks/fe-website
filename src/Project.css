@@ -1,0 +1,137 @@
+#Project {
+  position: relative;
+  min-height: calc(100vh - 5em);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--project-bg-colour);
+}
+
+#Project__inner {
+  max-width: var(--global-max-width);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 1rem;
+}
+#Project__inner > article {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 3rem;
+  background-color: var(--project-article-bg-colour);
+  border: 1px solid grey;
+  border-radius: 0.5rem;
+}
+#Project__inner > article p {
+  line-height: 2rem;
+}
+#Project__inner > article p > a {
+  color: #2020ff;
+  text-decoration: none;
+}
+#Project__inner > article p > a:hover {
+  color: #0000ff;
+  text-decoration: underline;
+}
+
+#Project__title {
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+#Project__details {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#Project__details__live-link {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.7rem;
+  color: black;
+  font-size: 0.9rem;
+  text-decoration: none;
+  background-color: #a0ffa0;
+  border-radius: 1rem;
+}
+#Project__details__live-link:hover {
+  background-color: #80ff80;
+}
+#Project__details__live-link > img {
+  width: 1rem;
+  aspect-ratio: 1;
+}
+
+#Project__details__date {
+  font-size: 0.8rem;
+}
+
+#Project__details__languages {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+#Project__details__languages > a {
+  display: flex;
+  padding: 0.2rem;
+}
+#Project__details__languages > a:hover {
+  background-color: #e0e0e0;
+}
+#Project__details__languages > a > img {
+  width: 2rem;
+  aspect-ratio: 1;
+}
+
+#Project__media {
+  width: 80%;
+  height: fit-content;
+}
+#Project__media > * {
+  /* yt video or image */
+  width: 100%;
+  border: none;
+}
+#Project__media > iframe {
+  aspect-ratio: 16/9;
+}
+
+#Project__body {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin: 1rem 0;
+}
+
+@media (max-width: 576px) {
+  #Project__inner {
+    margin: 0;
+  }
+  #Project__inner > article {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border: none;
+    border-radius: 0;
+  }
+
+  #Project__details__date {
+    display: none;
+  }
+  #Project__details__languages {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  #Project__media {
+    width: 100%;
+  }
+}

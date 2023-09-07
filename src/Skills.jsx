@@ -21,8 +21,8 @@ export default function Skills() {
           </li>
           <li>
             <strong>CI/CD</strong> - integrating updates quickly to avoid large
-            codebase changes, automated testing within git and version control
-            software
+            codebase changes, automated testing on GitHub pushes using YAML
+            scripts and Husky
           </li>
           <li>
             <strong>Pair Programming</strong> - driving and navigating to

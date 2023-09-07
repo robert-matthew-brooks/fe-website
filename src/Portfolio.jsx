@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 import { useParams, useSearchParams } from 'react-router-dom';
+import Loading from './Loading';
+import PortfolioSortOptions from './PortfolioSortOptions';
 import PortfolioCard from './PortfolioCard';
 import PortfolioPagination from './PortfolioPagination';
 import { fetchProjects, fetchLanguages } from './js/api';
 import './Portfolio.css';
-import Loading from './Loading';
-import PortfolioSortOptions from './PortfolioSortOptions';
 
 const sortOptions = [
   { sortBy: 'date', order: 'desc' },
@@ -129,7 +129,7 @@ export default function Portfolio() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       } catch (err) {
         setIsError(true);
-        // UNABLE TO REACH DATABASE
+        console.log(err);
       }
     })();
   }, [requestParams]);

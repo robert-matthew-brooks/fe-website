@@ -19,3 +19,8 @@ export async function fetchLanguages() {
   const { data } = await api.get('/api/languages');
   return data;
 }
+
+export async function fetchProject(project_id) {
+  const { data } = await api.get(`/api/projects/${project_id}`);
+  return data;
+}
