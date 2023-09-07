@@ -2,8 +2,9 @@ import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import parser from 'html-react-parser';
 import Loading from './Loading';
+import ProjectSidebar from './ProjectSidebar';
 import LanguageIcon from './LanguageIcon';
-import { fetchProject } from './js/api';
+import { fetchProject, fetchProjects } from './js/api';
 import { getShortDate } from './js/date';
 import linkNewWindowIcon from './assets/link-new-window-icon.png';
 import { placeholderProjectImg } from './js/placeholders';
@@ -23,6 +24,7 @@ export default function Project() {
 
       try {
         const { project } = await fetchProject(project_id);
+
         setProject(project);
 
         setIsLoading(false);
@@ -32,7 +34,7 @@ export default function Project() {
         console.log(err);
       }
     })();
-  }, []);
+  }, [project_id]);
 
   return (
     <section id="Project">
@@ -79,7 +81,8 @@ export default function Project() {
               </p>
             </div>
           </article>
-          {/* <aside>side</aside> */}
+
+          <ProjectSidebar />
         </div>
       </Loading>
     </section>

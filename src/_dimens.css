@@ -10,4 +10,8 @@
 
   --splash-image-smaller-width: 350px;
   --splash-image-smaller-height: calc(var(--splash-image-smaller-width) * 0.72);
+
+  --project-article-max-width: 800px;
+  --project-sidebar-width: 250px;
+  --project-sidebar-gutter: 1rem;
 }

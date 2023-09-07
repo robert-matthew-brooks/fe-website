@@ -46,6 +46,13 @@
 
   --project-bg-colour: #e0e0e0;
   --project-article-bg-colour: #ffffff;
+  --project-border-colour: #808080;
+  --project-live-link-colour: #000000;
+  --project-live-link-bg-colour: #a0ffa0;
+  --project-live-link-hover-bg-colour: #80ff80;
+  --project-language-hover-bg-colour: #e0e0e0;
+  --project-link-colour: #2020ff;
+  --project-link-hover-colour: #0000ff;
 
   /* footer */
 
