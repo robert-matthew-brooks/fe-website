@@ -70,7 +70,7 @@ export default function Project() {
               ) : (
                 <img
                   src={project.img_url || placeholderProjectImg}
-                  alt={project.img_alt}
+                  alt={project.img_alt || 'Placeholder'}
                 />
               )}
             </div>
