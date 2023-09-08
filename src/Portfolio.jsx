@@ -110,10 +110,11 @@ export default function Portfolio() {
   // load data to display in grid
   useEffect(() => {
     (async () => {
-      try {
-        setIsLoading(true);
-        setIsError(false);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setIsLoading(true);
+      setIsError(false);
 
+      try {
         if (isInitialLoad) {
           const { languages } = await fetchLanguages();
           setLanguages(languages);
@@ -130,7 +131,6 @@ export default function Portfolio() {
         setTotalProjects(project_count);
 
         setIsLoading(false);
-        window.scrollTo({ top: 0, behavior: 'smooth' });
       } catch (err) {
         setIsError(true);
         console.log(err);

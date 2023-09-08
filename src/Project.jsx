@@ -19,6 +19,7 @@ export default function Project() {
 
   useEffect(() => {
     (async () => {
+      window.scrollTo({ top: 0 });
       setIsLoading(true);
       setIsError(false);
 
@@ -28,7 +29,6 @@ export default function Project() {
         setProject(project);
 
         setIsLoading(false);
-        window.scrollTo({ top: 0 });
       } catch (err) {
         setIsError(true);
         console.log(err);
