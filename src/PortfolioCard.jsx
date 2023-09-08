@@ -12,7 +12,7 @@ export default function PortfolioCard({ project, changeRequestParams }) {
         <img
           className="PortfolioCard__image"
           src={project.img_url || placeholderProjectImg}
-          alt={`Image for ${project.title}`}
+          alt={project.img_alt}
         />
         <h2 className="PortfolioCard__title">{project.title}</h2>
       </Link>
