@@ -1,6 +1,8 @@
 :root {
   /* anything outside colour scheme */
 
+  --subtle-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+
   --languages-tooltip-bg-colour: lightgoldenrodyellow;
   --skills-tick-colour: green;
 

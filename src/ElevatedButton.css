@@ -17,6 +17,7 @@
   border-bottom: solid black;
   border-width: 5px;
   border-radius: 1rem;
+  box-shadow: var(--subtle-box-shadow);
   transition: top 0.1s, border-width 0.1s, background-color 0.1s;
 }
 #ElevatedButton__link > img {

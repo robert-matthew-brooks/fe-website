@@ -41,7 +41,7 @@ export default function Project() {
     <section id="Project">
       <Loading isLoading={isLoading}>
         <div id="Project__inner">
-          <article className="subtle-box-shadow">
+          <article>
             <h1 id="Project__title">{project.title}</h1>
 
             <div id="Project__details">
@@ -70,7 +70,7 @@ export default function Project() {
               </div>
             </div>
 
-            <div id="Project__media" className="subtle-box-shadow">
+            <div id="Project__media">
               {project.video_url ? (
                 <iframe src={project.video_url}></iframe>
               ) : (

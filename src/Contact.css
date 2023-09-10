@@ -31,14 +31,12 @@
   flex-direction: row;
   align-items: stretch;
   justify-content: space-around;
-  gap: 4rem;
-  padding: 0 3rem;
-}
-#Contact__methods > * {
-  flex: 1 1 0px;
+  gap: 2.5rem;
 }
 
 .Contact__method {
+  flex: 1 1 0px;
+
   max-width: 300px;
   display: flex;
   flex-direction: column;
@@ -47,6 +45,7 @@
 
   padding: 2rem;
   background-color: rgb(var(--primary-900));
+  box-shadow: var(--subtle-box-shadow);
 }
 
 .Contact__method > img {
@@ -72,9 +71,10 @@
   font-size: 0.8rem;
   font-weight: bold;
   color: rgb(var(--primary-900));
-  background-color: rgb(var(--secondary-600));
   text-decoration: none;
   text-transform: uppercase;
+  background-color: rgb(var(--secondary-600));
+  box-shadow: var(--subtle-box-shadow);
 }
 .Contact__method > a:hover {
   background-color: rgb(var(--secondary-850));
@@ -95,12 +95,15 @@
   gap: 0.3rem;
 
   background-color: rgb(var(--primary-900));
+  box-shadow: var(--subtle-box-shadow);
 }
 
 #Contact__form > h3 {
   width: fit-content;
   margin: auto;
   margin-bottom: 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 #Contact__form > label {
@@ -155,7 +158,6 @@
   padding: 0.1rem;
   font-size: 0.9rem;
   color: var(--contact-form-error-colour);
-  background-color: var(--contact-form-error-bg-colour);
 }
 
 #Contact__form__success-overlay {

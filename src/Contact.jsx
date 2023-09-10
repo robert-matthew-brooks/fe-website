@@ -85,7 +85,7 @@ export default function Contact() {
         <h1 id="Contact__title">Contact Me</h1>
 
         <div id="Contact__methods">
-          <div className="Contact__method subtle-box-shadow">
+          <div className="Contact__method">
             <img
               src={emailImg}
               style={{
@@ -95,15 +95,12 @@ export default function Contact() {
             />
             <h3>By Email</h3>
             <p>Send me your questions in an email</p>
-            <a
-              className="subtle-box-shadow"
-              href="mailto:robert.matthew.brooks@gmail.com?subject=Hello!"
-            >
+            <a href="mailto:robert.matthew.brooks@gmail.com?subject=Hello!">
               Send Email
             </a>
           </div>
 
-          <div className="Contact__method subtle-box-shadow">
+          <div className="Contact__method">
             <img
               src={whatsAppImg}
               style={{
@@ -116,15 +113,10 @@ export default function Contact() {
               Message me on WhatsApp and I'll get back to you as soon as
               possible
             </p>
-            <a
-              className="subtle-box-shadow"
-              href="https://wa.me/447444239651?text=Hello!"
-            >
-              Send Message
-            </a>
+            <a href="https://wa.me/447444239651?text=Hello!">Send Message</a>
           </div>
 
-          <div className="Contact__method subtle-box-shadow">
+          <div className="Contact__method">
             <img
               src={linkedInImg}
               style={{
@@ -134,10 +126,7 @@ export default function Contact() {
             />
             <h3>Via LinkedIn</h3>
             <p>Leave a message on my LinkedIn profile</p>
-            <a
-              className="subtle-box-shadow"
-              href="https://www.linkedin.com/in/robert-matthew-brooks/"
-            >
+            <a href="https://www.linkedin.com/in/robert-matthew-brooks/">
               View Profile
             </a>
           </div>
@@ -145,7 +134,6 @@ export default function Contact() {
 
         <form
           id="Contact__form"
-          className="subtle-box-shadow"
           autoComplete="on"
           onSubmit={(event) => {
             submitForm(event);

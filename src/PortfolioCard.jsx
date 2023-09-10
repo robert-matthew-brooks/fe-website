@@ -7,7 +7,7 @@ import './PortfolioCard.css';
 
 export default function PortfolioCard({ project, changeRequestParams }) {
   return (
-    <div className="PortfolioCard subtle-box-shadow">
+    <div className="PortfolioCard">
       <Link to={`/projects/${project.id}`}>
         <img
           className="PortfolioCard__image"

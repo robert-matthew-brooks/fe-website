@@ -25,6 +25,7 @@
   background-color: rgb(var(--primary-900));
   border: 1px solid rgb(var(--primary-500));
   border-radius: 0.5rem;
+  box-shadow: var(--subtle-box-shadow);
 }
 #Project__inner > article p {
   line-height: 2rem;
@@ -74,6 +75,7 @@
   /* yt video or image */
   width: 100%;
   border: none;
+  box-shadow: var(--subtle-box-shadow);
 }
 #Project__media > iframe {
   aspect-ratio: 16/9;
