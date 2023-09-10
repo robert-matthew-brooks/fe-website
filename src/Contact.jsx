@@ -113,7 +113,7 @@ export default function Contact() {
               Message me on WhatsApp and I'll get back to you as soon as
               possible
             </p>
-            <a href="https://wa.me/447444239651?text=Hello!">Send Message</a>
+            <a href="https://wa.me/447444239651?text=Hello!">Use WhatsApp</a>
           </div>
 
           <div className="Contact__method">
