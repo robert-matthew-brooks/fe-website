@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import parser from 'html-react-parser';
 import Loading from './Loading';
 import ProjectSidebar from './ProjectSidebar';
+import ElevatedButton from './ElevatedButton';
 import LanguageIcon from './LanguageIcon';
 import { fetchProject, fetchProjects } from './js/api';
 import { getShortDate } from './js/date';
@@ -40,21 +41,26 @@ export default function Project() {
     <section id="Project">
       <Loading isLoading={isLoading}>
         <div id="Project__inner">
-          <article>
+          <article className="subtle-box-shadow">
             <h1 id="Project__title">{project.title}</h1>
 
             <div id="Project__details">
-              <a
+              {/* <a
                 id="Project__details__live-link"
                 href={project.link}
                 target="_new"
               >
                 Live version <img src={linkNewWindowIcon} />
-              </a>
+              </a> */}
 
               <div id="Project__details__date">
                 {getShortDate(project.created_at)}
               </div>
+
+              <ElevatedButton
+                text={`Live version <img src="${linkNewWindowIcon}" />`}
+                href={project.link}
+              />
 
               <div id="Project__details__languages">
                 {project.languages &&
@@ -64,7 +70,7 @@ export default function Project() {
               </div>
             </div>
 
-            <div id="Project__media">
+            <div id="Project__media" className="subtle-box-shadow">
               {project.video_url ? (
                 <iframe src={project.video_url}></iframe>
               ) : (
@@ -76,7 +82,7 @@ export default function Project() {
             </div>
 
             <div id="Project__body">
-              {project.body && parser(project.body)}{' '}
+              {project.body && parser(project.body)}
               <p>
                 Live version: <a href={project.link}>{project.link}</a>
               </p>

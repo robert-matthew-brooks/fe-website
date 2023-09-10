@@ -11,12 +11,18 @@
   padding: 0.7rem;
   color: rgb(var(--primary-900));
   background-color: rgb(var(--cta-300));
+  white-space: nowrap;
   text-decoration: none;
 
   border-bottom: solid black;
   border-width: 5px;
   border-radius: 1rem;
   transition: top 0.1s, border-width 0.1s, background-color 0.1s;
+}
+#ElevatedButton__link > img {
+  height: 1em;
+  aspect-ratio: 1;
+  filter: var(--black-to-primary-900);
 }
 #ElevatedButton__link:hover {
   top: 5px;
