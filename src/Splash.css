@@ -38,32 +38,6 @@
   color: rgb(var(--primary-400));
 }
 
-#whatsapp-btn__wrapper {
-  position: relative;
-  height: 2.5rem;
-  display: flex;
-  justify-content: center;
-}
-
-#whatsapp-btn {
-  position: absolute;
-  top: 0;
-  padding: 0.7rem;
-  color: rgb(var(--primary-900));
-  background-color: rgb(var(--cta-300));
-  text-decoration: none;
-
-  border-bottom: solid black;
-  border-width: 5px;
-  border-radius: 1rem;
-  transition: top 0.1s, border-width 0.1s, background-color 0.1s;
-}
-#whatsapp-btn:hover {
-  top: 5px;
-  border-width: 0;
-  background-color: rgb(var(--cta-400));
-}
-
 @media (max-width: 1024px) {
   #Splash__text > h2 {
     font-size: 2.2rem;

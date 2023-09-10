@@ -7,6 +7,10 @@
   --href-colour: blue;
   --href-hover-colour: darkblue;
 
+  --contact-form-error-colour: red;
+  --contact-form-error-bg-colour: #ffd0d0;
+  --contact-form-success-bg-colour: lightgreen;
+
   /***********/
   /* PRIMARY */
   /***********/
@@ -48,12 +52,16 @@
   /* SECONDARY */
   /*************/
 
-  --secondary-r: 0;
-  --secondary-g: 0;
+  --secondary-r: 64;
+  --secondary-g: 128;
   --secondary-b: 256;
 
+  --secondary-850: calc(var(--secondary-r) * 0.94),
+    calc(var(--secondary-g) * 0.94), calc(var(--secondary-b) * 0.94);
+  --secondary-600: calc(var(--secondary-r) * 0.66),
+    calc(var(--secondary-g) * 0.66), calc(var(--secondary-b) * 0.66);
   --secondary-150: calc(var(--secondary-r) * 0.16),
-    calc(var(--secondary-g) * 0.11), calc(var(--secondary-b) * 0.11);
+    calc(var(--secondary-g) * 0.16), calc(var(--secondary-b) * 0.16);
 
   /***********/
   /* BUTTONS */
@@ -63,8 +71,10 @@
   --cta-g: 256;
   --cta-b: 0;
 
-  --cta-300: calc(var(--cta-r) * 0.44), calc(var(--cta-g) * 0.44),
-    calc(var(--cta-b) * 0.44);
+  --cta-900: calc(var(--cta-r) * 0.94), calc(var(--cta-g) * 0.94),
+    calc(var(--cta-b) * 0.94);
   --cta-400: calc(var(--cta-r) * 0.55), calc(var(--cta-g) * 0.55),
     calc(var(--cta-b) * 0.55);
+  --cta-300: calc(var(--cta-r) * 0.44), calc(var(--cta-g) * 0.44),
+    calc(var(--cta-b) * 0.44);
 }

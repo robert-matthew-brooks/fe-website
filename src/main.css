@@ -14,3 +14,7 @@ body {
   color: rgb(var(--primary-50));
   font-family: Verdana, sans-serif;
 }
+
+.subtle-box-shadow {
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}

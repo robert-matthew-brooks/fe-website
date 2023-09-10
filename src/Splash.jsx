@@ -1,5 +1,6 @@
 import SplashImage from './SplashImage.jsx';
 import './Splash.css';
+import ElevatedButton from './ElevatedButton.jsx';
 
 export default function Splash() {
   return (
@@ -25,15 +26,11 @@ export default function Splash() {
             My mission is to help make <em>your</em> software work great and
             look professional.
           </p>
-          <div id="whatsapp-btn__wrapper">
-            <a
-              id="whatsapp-btn"
-              href="https://wa.me/447444239651?text=Hello!"
-              target="_new"
-            >
-              Let's Chat On WhatsApp
-            </a>
-          </div>
+
+          <ElevatedButton
+            text="Let's Chat On WhatsApp"
+            href="https://wa.me/447444239651?text=Hello!"
+          />
         </div>
       </div>
     </section>
