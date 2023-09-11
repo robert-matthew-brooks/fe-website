@@ -3,13 +3,24 @@
 :root {
   --global-max-width: 1300px;
 
+  --splash-image-aspect-ratio: calc(1000 / 720);
+  /* Image size is 1000px x 720px */
+  /* make a bit smaller because bottom of image is empty */
+
   --splash-image-width: 500px;
   --splash-image-height: calc(
-    var(--splash-image-width) * 0.72
-  ); /* Image size is 1000px x 720px */
+    var(--splash-image-width) / var(--splash-image-aspect-ratio)
+  );
 
   --splash-image-smaller-width: 350px;
-  --splash-image-smaller-height: calc(var(--splash-image-smaller-width) * 0.72);
+  --splash-image-smaller-height: calc(
+    var(--splash-image-smaller-width) / var(--splash-image-aspect-ratio)
+  );
+
+  --splash-image-smallest-width: 280px;
+  --splash-image-smallest-height: calc(
+    var(--splash-image-smallest-width) / var(--splash-image-aspect-ratio)
+  );
 
   --project-article-max-width: 800px;
   --project-sidebar-width: 250px;

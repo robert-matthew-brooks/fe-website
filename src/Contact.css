@@ -16,9 +16,10 @@
 }
 
 #Contact__title {
-  font-size: 2rem;
-  font-weight: normal;
+  font-size: 1.3rem;
+  font-weight: bold;
   text-shadow: var(--heading-shadow);
+  text-transform: uppercase;
 }
 
 /********************/

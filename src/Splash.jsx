@@ -15,7 +15,7 @@ export default function Splash() {
             <span className="fullstack-highlight">
               full stack
               <br />
-              developer
+              developer<span className="blinking-underscore">_</span>
             </span>
             <br />
             and

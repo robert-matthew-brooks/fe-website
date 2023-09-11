@@ -13,9 +13,10 @@
 }
 
 #Skills__title {
-  font-size: 1.7rem;
-  font-weight: normal;
+  font-size: 1.2rem;
+  font-weight: bold;
   text-shadow: var(--heading-shadow);
+  text-transform: uppercase;
 }
 
 #Skills__soft-skills-list {

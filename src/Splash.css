@@ -31,6 +31,23 @@
 .fullstack-highlight {
   font-weight: bold;
 }
+.blinking-underscore {
+  animation: blinking-underscore 1.5s linear infinite;
+}
+@keyframes blinking-underscore {
+  0% {
+    opacity: 0.3;
+  }
+  49% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 
 #Splash__text > h3 {
   font-size: 1rem;
@@ -47,5 +64,29 @@
     gap: 1rem;
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #Splash__inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding-top: 2rem;
+  }
+
+  #Splash__text {
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  #Splash__text > h2 {
+    font-size: 1.8rem;
+  }
+
+  #Splash__text > h3,
+  #Splash__text > p {
+    font-size: 0.8rem;
+    text-align: center;
   }
 }

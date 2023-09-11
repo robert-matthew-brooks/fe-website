@@ -125,8 +125,16 @@
   }
 }
 
-/* @media (max-width: 768px) {
-  .splash-image__outer {
-    display: none;
+@media (max-width: 425px) {
+  #splash-image__inner {
+    width: var(--splash-image-smallest-width);
+    height: var(--splash-image-smallest-height);
   }
-} */
+
+  #splash-image__monitor-code {
+    width: calc(var(--splash-image-smallest-width) / 3.5);
+    top: calc(var(--splash-image-smallest-height) / 13);
+    left: calc(var(--splash-image-smallest-width) / 2.4);
+    font-size: calc(var(--splash-image-smallest-height) / 65);
+  }
+}
