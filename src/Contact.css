@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: radial-gradient(rgb(var(--primary-900)), rgb(var(--primary-800)));
+  background: radial-gradient(rgb(var(--primary-800)), rgb(var(--primary-900)));
 }
 
 #Contact__inner {
@@ -89,8 +89,8 @@
 /********/
 
 #Contact__form {
-  width: 700px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 600px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -144,6 +144,7 @@
   background-color: rgb(var(--cta-300));
   border: none;
   text-transform: uppercase;
+  box-shadow: var(--subtle-box-shadow);
   cursor: pointer;
 }
 #Contact__form > button:enabled:hover {
@@ -187,11 +188,7 @@
   font-size: 1rem;
 }
 
-@media (max-width: 900px) {
-  #Contact__inner {
-    width: 100%;
-  }
-
+@media (max-width: 990px) {
   #Contact__methods {
     gap: 1rem;
   }
@@ -217,7 +214,6 @@
 
 @media (max-width: 480px) {
   #Contact__form {
-    width: 100%;
     padding-left: 0;
     padding-right: 0;
     background-color: transparent;

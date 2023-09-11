@@ -82,7 +82,7 @@ export default function Contact() {
   return (
     <section id="Contact">
       <div id="Contact__inner">
-        <h1 id="Contact__title">Contact Me</h1>
+        <h1 id="Contact__title">Contact Me...</h1>
 
         <div id="Contact__methods">
           <div className="Contact__method">
@@ -93,7 +93,7 @@ export default function Contact() {
                   'invert(45%) sepia(52%) saturate(2265%) hue-rotate(15deg) brightness(102%) contrast(105%)',
               }}
             />
-            <h3>By Email</h3>
+            <h3>...By Email</h3>
             <p>Send me your questions in an email</p>
             <a href="mailto:robert.matthew.brooks@gmail.com?subject=Hello!">
               Send Email
@@ -108,7 +108,7 @@ export default function Contact() {
                   'invert(39%) sepia(89%) saturate(570%) hue-rotate(74deg) brightness(104%) contrast(92%)',
               }}
             />
-            <h3>On WhatsApp</h3>
+            <h3>...On WhatsApp</h3>
             <p>
               Message me on WhatsApp and I'll get back to you as soon as
               possible
@@ -124,7 +124,7 @@ export default function Contact() {
                   'invert(25%) sepia(25%) saturate(1745%) hue-rotate(191deg) brightness(90%) contrast(90%)',
               }}
             />
-            <h3>Via LinkedIn</h3>
+            <h3>...Via LinkedIn</h3>
             <p>Leave a message on my LinkedIn profile</p>
             <a href="https://www.linkedin.com/in/robert-matthew-brooks/">
               View Profile
@@ -139,7 +139,7 @@ export default function Contact() {
             submitForm(event);
           }}
         >
-          <h3>Or send me a message:</h3>
+          <h3>...or send me a message:</h3>
 
           <label htmlFor="formName">Your Name</label>
           <input

@@ -9,7 +9,7 @@ const menuItems = [
   { text: 'Home', link: '/' },
   { text: 'Skills', link: '/#Skills' },
   { text: 'Portfolio', link: '/portfolio' },
-  { text: 'Contact', link: '/contact' },
+  { text: 'Contact', link: '/#Contact' },
 ];
 
 export default function Header() {

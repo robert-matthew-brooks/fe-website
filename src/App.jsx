@@ -16,9 +16,10 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/portfolio" element={<Navigate to="/portfolio/all" />} />
+          <Route path="/skills" element={<Navigate to="/#Skills" />} />
           <Route path="/portfolio/:language" element={<Portfolio />} />
           <Route path="/projects/:project_id" element={<Project />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/contact" element={<Navigate to="/#Contact" />} />
         </Routes>
       </main>
 
