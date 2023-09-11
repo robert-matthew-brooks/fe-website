@@ -11,14 +11,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3em;
-  padding: 3rem;
+  gap: 4em;
+  padding: 5rem 3rem;
 }
 
 #Contact__title {
-  text-align: center;
-  font-size: 1.7rem;
-  font-weight: bold;
+  font-size: 2rem;
+  font-weight: normal;
+  text-shadow: var(--heading-shadow);
 }
 
 /********************/
@@ -106,8 +106,9 @@
   width: fit-content;
   margin: auto;
   margin-bottom: 2rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 #Contact__form > label {
@@ -189,6 +190,11 @@
 }
 
 @media (max-width: 990px) {
+  #Contact__inner {
+    width: 100%;
+    max-width: 700px;
+  }
+
   #Contact__methods {
     gap: 1rem;
   }

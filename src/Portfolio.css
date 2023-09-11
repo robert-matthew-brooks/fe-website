@@ -12,14 +12,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5em;
+  gap: 2em;
   margin: 3rem 1rem;
 }
 
 #Portfolio__title {
-  text-align: center;
-  font-size: 1.7rem;
+  font-size: 2rem;
   font-weight: bold;
+  text-shadow: var(--heading-shadow);
 }
 
 #Portfolio__project-grid {

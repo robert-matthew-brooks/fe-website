@@ -5,7 +5,7 @@ export default function Skills() {
   return (
     <section id="Skills">
       <div id="Skills__inner">
-        <h3>Projects built using:</h3>
+        <h2 id="Skills__title">Experienced In:</h2>
         <Languages />
 
         <ul id="Skills__soft-skills-list">

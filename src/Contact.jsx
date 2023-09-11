@@ -82,7 +82,7 @@ export default function Contact() {
   return (
     <section id="Contact">
       <div id="Contact__inner">
-        <h1 id="Contact__title">Contact Me...</h1>
+        <h2 id="Contact__title">Contact Me...</h2>
 
         <div id="Contact__methods">
           <div className="Contact__method">
