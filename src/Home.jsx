@@ -5,7 +5,7 @@ import Skills from './Skills';
 import Contact from './Contact';
 
 export default function Home() {
-  const { hash } = useLocation();
+  const { pathname, hash, key } = useLocation();
 
   useEffect(() => {
     // scroll to #Skills only when page loaded
@@ -17,7 +17,7 @@ export default function Home() {
       const element = document.getElementById(id);
       element.scrollIntoView({ behavior: 'smooth' });
     }
-  }, [hash]);
+  }, [pathname, hash, key]);
 
   return (
     <>
