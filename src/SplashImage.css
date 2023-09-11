@@ -65,6 +65,7 @@
 
 #splash-image__wisp {
   animation: flicker-wisp 6s infinite;
+  filter: invert(30%);
 }
 @keyframes flicker-wisp {
   0% {
