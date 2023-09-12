@@ -20,11 +20,6 @@
   box-shadow: var(--subtle-box-shadow);
   transition: top 0.1s, border-width 0.1s, background-color 0.1s;
 }
-#ElevatedButton__link > img {
-  height: 1em;
-  aspect-ratio: 1;
-  filter: var(--black-to-primary-900);
-}
 #ElevatedButton__link:hover {
   top: 5px;
   border-width: 0;

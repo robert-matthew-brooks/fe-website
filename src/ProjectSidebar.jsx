@@ -32,7 +32,7 @@ export default function ProjectSidebar() {
     <aside id="ProjectSidebar">
       <h2>Recent Projects:</h2>
       {projects.map((project, i) => (
-        <Link key={i} to={`/projects/${project.id}`}>
+        <Link key={i} to={`/projects/${project.slug}`}>
           <div
             className="ProjectSidebar__card"
             style={{

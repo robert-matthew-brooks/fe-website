@@ -10,7 +10,7 @@
   flex-flow: column wrap;
   align-items: center;
   gap: 1.5rem;
-  padding: var(--project-sidebar-gutter);
+  padding: var(--project-sidebar-padding);
 }
 #ProjectSidebar > a {
   text-decoration: none;
@@ -23,7 +23,9 @@
 }
 
 .ProjectSidebar__card {
-  width: calc(var(--project-sidebar-width) - 2 * var(--project-sidebar-gutter));
+  width: calc(
+    var(--project-sidebar-width) - 2 * var(--project-sidebar-padding)
+  );
   aspect-ratio: 1.5;
   background-size: cover;
   border: 1px solid rgba(var(--primary-500));

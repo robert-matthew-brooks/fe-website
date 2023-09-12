@@ -22,7 +22,9 @@
     var(--splash-image-smallest-width) / var(--splash-image-aspect-ratio)
   );
 
-  --project-article-max-width: 800px;
+  --project-article-media-max-width: 1330px;
+
+  --project-article-sidebar-gap: 1rem;
   --project-sidebar-width: 250px;
-  --project-sidebar-gutter: 1rem;
+  --project-sidebar-padding: 1rem;
 }

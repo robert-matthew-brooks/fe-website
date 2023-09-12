@@ -5,7 +5,7 @@ import Loading from './Loading';
 import ProjectSidebar from './ProjectSidebar';
 import ElevatedButton from './ElevatedButton';
 import LanguageIcon from './LanguageIcon';
-import { fetchProject, fetchProjects } from './js/api';
+import { fetchProject } from './js/api';
 import { getShortDate } from './js/date';
 import linkNewWindowIcon from './assets/link-new-window-icon.png';
 import { placeholderProjectImg } from './js/placeholders';
@@ -49,11 +49,6 @@ export default function Project() {
                 {getShortDate(project.created_at)}
               </div>
 
-              <ElevatedButton
-                text={`Live version <img src="${linkNewWindowIcon}" />`}
-                href={project.link}
-              />
-
               <div id="Project__details__languages">
                 {project.languages &&
                   project.languages.map((language, i) => (
@@ -70,6 +65,28 @@ export default function Project() {
                   src={project.img_url || placeholderProjectImg}
                   alt={project.img_alt || 'Placeholder'}
                 />
+              )}
+            </div>
+
+            <div id="Project__details__links__wrapper">
+              {project.live_link && (
+                <a
+                  className="Project__details__link"
+                  href={project.live_link}
+                  target="_new"
+                >
+                  Live Version <img src={linkNewWindowIcon} />
+                </a>
+              )}
+
+              {project.github_link && (
+                <a
+                  className="Project__details__link"
+                  href={project.github_link}
+                  target="_new"
+                >
+                  Github Project <img src={linkNewWindowIcon} />
+                </a>
               )}
             </div>
 
