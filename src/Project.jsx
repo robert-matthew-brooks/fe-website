@@ -45,14 +45,6 @@ export default function Project() {
             <h1 id="Project__title">{project.title}</h1>
 
             <div id="Project__details">
-              {/* <a
-                id="Project__details__live-link"
-                href={project.link}
-                target="_new"
-              >
-                Live version <img src={linkNewWindowIcon} />
-              </a> */}
-
               <div id="Project__details__date">
                 {getShortDate(project.created_at)}
               </div>
@@ -82,10 +74,10 @@ export default function Project() {
             </div>
 
             <div id="Project__body">
-              {project.body && parser(project.body)}
-              <p>
-                Live version: <a href={project.link}>{project.link}</a>
-              </p>
+              {project.body &&
+                parser(
+                  project.body.replace('<a href=', '<a target="_new" href=')
+                )}
             </div>
           </article>
 

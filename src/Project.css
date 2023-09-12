@@ -27,17 +27,6 @@
   border-radius: 0.5rem;
   box-shadow: var(--subtle-box-shadow);
 }
-#Project__inner > article p {
-  line-height: 2rem;
-}
-#Project__inner > article p > a {
-  color: var(--href-colour);
-  text-decoration: none;
-}
-#Project__inner > article p > a:hover {
-  color: var(--href-hover-colour);
-  text-decoration: underline;
-}
 
 #Project__title {
   text-align: center;
@@ -81,12 +70,77 @@
   aspect-ratio: 16/9;
 }
 
+/***************************/
+/* Project body formatting */
+/***************************/
+
 #Project__body {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-  margin: 1rem 0;
+  margin: 1rem 0.5rem;
+  font-family: Arial;
 }
+#Project__body > *:first-child {
+  margin-top: 0 !important;
+}
+
+/* Subtitle */
+#Project__body > h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+
+  margin-top: 4rem;
+}
+#Project__body > h3::before {
+  content: '// ';
+}
+
+/* Main text */
+#Project__body > p {
+  font-size: 1rem;
+  line-height: 1.8rem;
+  margin-top: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+/* Links */
+
+#Project__body > p > a {
+  color: var(--href-colour);
+  text-decoration: none;
+}
+#Project__body > p > a:hover {
+  text-decoration: underline;
+}
+
+/* Quote */
+#Project__body > p.quote {
+  padding: 0.5rem;
+  font-style: italic;
+  background: rgb(var(--primary-850));
+  border-left: 10px solid rgb(var(--primary-700));
+}
+#Project__body > p.quote::before {
+  content: open-quote;
+  color: rgb(var(--primary-700));
+  font-size: 4rem;
+  line-height: 0.1rem;
+  vertical-align: -0.4em;
+  margin-right: 1rem;
+}
+#Project__body > p > .language {
+  padding: 0.2rem 0.3rem;
+  border-radius: 0.5rem;
+  background-color: lightblue;
+}
+#Project__body > p > .yellow {
+  padding: 0.2rem 0.3rem;
+  border-radius: 0.5rem;
+  background-color: lightgoldenrodyellow;
+}
+
+/**************************/
+/* End article formatting */
+/**************************/
 
 @media (max-width: 992px) {
   #Project__inner {
@@ -117,5 +171,11 @@
   }
   #Project__details__languages {
     display: none;
+  }
+}
+
+@media (max-width: 425px) {
+  #Project__body > p {
+    font-size: 0.9rem;
   }
 }

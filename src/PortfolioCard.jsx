@@ -8,7 +8,7 @@ import './PortfolioCard.css';
 export default function PortfolioCard({ project, changeRequestParams }) {
   return (
     <div className="PortfolioCard">
-      <Link to={`/projects/${project.id}`}>
+      <Link to={`/projects/${project.slug}`}>
         <img
           className="PortfolioCard__image"
           src={project.img_url || placeholderProjectImg}

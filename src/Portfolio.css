@@ -25,8 +25,6 @@
 #Portfolio__project-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  justify-items: center;
-  flex-wrap: wrap;
   gap: 1.5rem;
 }
 #Portfolio__project-grid > div {
