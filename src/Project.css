@@ -107,7 +107,7 @@
 /***************************/
 
 #Project__body {
-  margin: 1rem 0.5rem;
+  margin: 1rem;
   font-family: Arial;
 }
 #Project__body > *:first-child {
@@ -116,7 +116,7 @@
 
 /* Subtitle */
 #Project__body > h3 {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: bold;
 
   margin-top: 4rem;
@@ -159,15 +159,25 @@
   vertical-align: -0.4em;
   margin-right: 1rem;
 }
-#Project__body > p > .language {
+
+/* Highlights */
+#Project__body > p > .hl {
   padding: 0.2rem 0.3rem;
   border-radius: 0.5rem;
-  background-color: lightblue;
 }
-#Project__body > p > .yellow {
-  padding: 0.2rem 0.3rem;
-  border-radius: 0.5rem;
-  background-color: lightgoldenrodyellow;
+#Project__body > p > .bold {
+  font-weight: bold;
+  background-color: #e8e8e8;
+}
+#Project__body > p > .snippet {
+  white-space: nowrap;
+  background-color: #f7bab3;
+}
+#Project__body > p > .language {
+  background-color: #add8e6;
+}
+#Project__body > p > .function {
+  background-color: #ebeb56;
 }
 
 /**************************/
@@ -204,15 +214,16 @@
     border-radius: 0;
   }
 
-  #Project__details__date {
-    display: none;
-  }
-  #Project__details__languages {
-    display: none;
+  #Project__body > p {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
 @media (max-width: 425px) {
+  #Project__body {
+    margin: 0.5rem;
+  }
   #Project__body > p {
     font-size: 0.9rem;
   }

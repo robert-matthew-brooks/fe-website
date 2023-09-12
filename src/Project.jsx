@@ -73,7 +73,7 @@ export default function Project() {
                 <a
                   className="Project__details__link"
                   href={project.live_link}
-                  target="_new"
+                  target="_blank"
                 >
                   Live Version <img src={linkNewWindowIcon} />
                 </a>
@@ -83,7 +83,7 @@ export default function Project() {
                 <a
                   className="Project__details__link"
                   href={project.github_link}
-                  target="_new"
+                  target="_blank"
                 >
                   Github Project <img src={linkNewWindowIcon} />
                 </a>
@@ -93,7 +93,10 @@ export default function Project() {
             <div id="Project__body">
               {project.body &&
                 parser(
-                  project.body.replace('<a href=', '<a target="_new" href=')
+                  project.body.replaceAll(
+                    '<a href=',
+                    '<a target="_blank" href='
+                  )
                 )}
             </div>
           </article>
