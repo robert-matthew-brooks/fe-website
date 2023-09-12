@@ -5,7 +5,7 @@ import linkedInImg from './assets/contact-form-linkedin-icon.png';
 import './Contact.css';
 
 export default function Contact() {
-  const [formName, setFormName] = useState('');
+  /*   const [formName, setFormName] = useState('');
   const [formEmail, setFormEmail] = useState('');
   const [formMessage, setFormMessage] = useState('');
 
@@ -77,7 +77,7 @@ export default function Contact() {
     document
       .getElementById('Contact__form')
       .scrollIntoView({ behavior: 'smooth' });
-  };
+  }; */
 
   return (
     <section id="Contact">
@@ -132,7 +132,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <form
+        {/* <form
           id="Contact__form"
           autoComplete="on"
           onSubmit={(event) => {
@@ -215,7 +215,7 @@ export default function Contact() {
             <h2>Thank You!</h2>
             <p>Your message has been sent</p>
           </div>
-        </form>
+        </form> */}
       </div>
     </section>
   );

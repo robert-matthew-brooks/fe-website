@@ -88,8 +88,11 @@
 /********/
 /* Form */
 /********/
+/**********************/
+/* Not in use for now */
+/**********************/
 
-#Contact__form {
+/* #Contact__form {
   width: 100%;
   max-width: 600px;
   position: relative;
@@ -188,7 +191,7 @@
 }
 #Contact__form__success-overlay > p {
   font-size: 1rem;
-}
+} */
 
 @media (max-width: 990px) {
   #Contact__inner {
