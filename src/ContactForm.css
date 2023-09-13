@@ -98,3 +98,16 @@
 #ContactForm__success-overlay > p {
   font-size: 1rem;
 }
+
+@media (max-width: 480px) {
+  #Contact__form {
+    padding-left: 0;
+    padding-right: 0;
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .Contact__form__input {
+    font-size: 1rem;
+    background-color: rgb(var(--primary-900));
+  }
+}

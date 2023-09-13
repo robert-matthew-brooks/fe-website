@@ -57,6 +57,7 @@
   font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .Contact__method > p {
@@ -77,6 +78,7 @@
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  white-space: nowrap;
   background-color: rgb(var(--secondary-600));
   box-shadow: var(--subtle-box-shadow);
 }
@@ -84,51 +86,12 @@
   background-color: rgb(var(--secondary-850));
 }
 
-@media (max-width: 990px) {
-  #Contact__inner {
-    width: 100%;
-    max-width: 700px;
-  }
-
+@media (max-width: 768px) {
   #Contact__methods {
-    gap: 1rem;
+    flex-direction: column;
   }
 
   .Contact__method {
-    gap: 1rem;
-    padding: 0rem;
-    background-color: transparent;
-    box-shadow: none;
-  }
-  .Contact__method > h3,
-  .Contact__method > p {
-    display: none;
-  }
-  .Contact__method > img {
-    width: 4rem;
-  }
-  .Contact__method > a {
-    font-size: 0.7rem;
-    height: 3rem;
-  }
-}
-
-@media (max-width: 480px) {
-  #Contact__form {
-    padding-left: 0;
-    padding-right: 0;
-    background-color: transparent;
-    box-shadow: none;
-  }
-  .Contact__form__input {
-    font-size: 1rem;
-    background-color: rgb(var(--primary-900));
-  }
-
-  .Contact__method > img {
-    width: 3rem;
-  }
-  .Contact__method > a {
-    padding: 0.1rem 0.5rem;
+    max-width: 400px;
   }
 }
