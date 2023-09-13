@@ -126,32 +126,36 @@
 }
 
 /* Main text */
-#Project__body > p {
+#Project__body p,
+#Project__body ul {
   font-size: 1rem;
-  line-height: 1.8rem;
+  line-height: 1.6rem;
   margin-top: 2rem;
   margin-left: 1rem;
   margin-right: 1rem;
 }
+#Project__body ul > li:not(:first-child) {
+  margin-top: 1.5rem;
+}
 
 /* Links */
 
-#Project__body > p > a {
+#Project__body a {
   color: var(--href-colour);
   text-decoration: none;
 }
-#Project__body > p > a:hover {
+#Project__body a:hover {
   text-decoration: underline;
 }
 
 /* Quote */
-#Project__body > p.quote {
+#Project__body p.quote {
   padding: 0.5rem;
   font-style: italic;
   background: rgb(var(--primary-850));
   border-left: 10px solid rgb(var(--primary-700));
 }
-#Project__body > p.quote::before {
+#Project__body p.quote::before {
   content: open-quote;
   color: rgb(var(--primary-700));
   font-size: 4rem;
@@ -161,22 +165,22 @@
 }
 
 /* Highlights */
-#Project__body > p > .hl {
+#Project__body .hl {
   padding: 0.2rem 0.3rem;
   border-radius: 0.5rem;
 }
-#Project__body > p > .bold {
+#Project__body .bold {
   font-weight: bold;
   background-color: #e8e8e8;
 }
-#Project__body > p > .snippet {
+#Project__body .snippet {
   white-space: nowrap;
   background-color: #f7bab3;
 }
-#Project__body > p > .language {
+#Project__body .language {
   background-color: #add8e6;
 }
-#Project__body > p > .function {
+#Project__body .function {
   background-color: #ebeb56;
 }
 
@@ -214,7 +218,8 @@
     border-radius: 0;
   }
 
-  #Project__body > p {
+  #Project__body p,
+  #Project__body ul {
     margin-left: 0;
     margin-right: 0;
   }
@@ -224,7 +229,8 @@
   #Project__body {
     margin: 0.5rem;
   }
-  #Project__body > p {
+  #Project__body p,
+  #Project__body ul {
     font-size: 0.9rem;
   }
 }
