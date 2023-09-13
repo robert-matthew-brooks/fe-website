@@ -184,6 +184,12 @@
   background-color: #ebeb56;
 }
 
+#Project__body .side-note {
+  color: rgb(var(--primary-300));
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
 /**************************/
 /* End article formatting */
 /**************************/
