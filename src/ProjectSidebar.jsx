@@ -4,7 +4,7 @@ import { fetchProjects } from './js/api';
 import { placeholderProjectImg } from './js/placeholders';
 import './ProjectSidebar.css';
 
-export default function ProjectSidebar() {
+export default function ProjectSidebar({ currentProjectSlug }) {
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
 
@@ -31,22 +31,26 @@ export default function ProjectSidebar() {
   return (
     <aside id="ProjectSidebar">
       <h2>Recent Projects:</h2>
-      {projects.map((project, i) => (
-        <Link key={i} to={`/projects/${project.slug}`}>
-          <div
-            className="ProjectSidebar__card"
-            style={{
-              backgroundImage: `url(${
-                project.img_url || placeholderProjectImg
-              })`,
-            }}
-          >
-            <div className="ProjectSidebar__card__title">
-              <h3>{project.title}</h3>
+      {projects
+        .filter((project) => {
+          return project.slug !== currentProjectSlug;
+        })
+        .map((project, i) => (
+          <Link key={i} to={`/projects/${project.slug}`}>
+            <div
+              className="ProjectSidebar__card"
+              style={{
+                backgroundImage: `url(${
+                  project.img_url || placeholderProjectImg
+                })`,
+              }}
+            >
+              <div className="ProjectSidebar__card__title">
+                <h3>{project.title}</h3>
+              </div>
             </div>
-          </div>
-        </Link>
-      ))}
+          </Link>
+        ))}
     </aside>
   );
 }

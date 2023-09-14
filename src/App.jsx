@@ -17,7 +17,7 @@ export default function App() {
           <Route path="/portfolio" element={<Navigate to="/portfolio/all" />} />
           <Route path="/skills" element={<Navigate to="/#Skills" />} />
           <Route path="/portfolio/:language" element={<Portfolio />} />
-          <Route path="/projects/:project_id" element={<Project />} />
+          <Route path="/projects/:project_slug" element={<Project />} />
           <Route path="/contact" element={<Navigate to="/#Contact" />} />
         </Routes>
       </main>
