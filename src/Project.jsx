@@ -19,16 +19,20 @@ const tagReplaceList = [
   ['<a href=', '<a target="_blank" href='],
 
   // note
-  ['<note>', '<span class="note">'],
-  ['</note>', '</span>'],
-
-  // bold
-  ['<b>', '<span class="hl bold">'],
-  ['</b>', '</span>'],
+  ['<note>', '<p class="note">'],
+  ['</note>', '</p>'],
 
   // quote
   ['<quote>', '<p class="quote">'],
   ['</quote>', '</p>'],
+
+  // caption
+  ['<caption>', '<p class="caption">'],
+  ['</caption>', '</p>'],
+
+  // bold
+  ['<b>', '<span class="hl bold">'],
+  ['</b>', '</span>'],
 
   // language
   ['<l>', '<span class="hl language">'],
@@ -71,17 +75,23 @@ export default function Project() {
         }
 
         // replace formatted code
-        const codeMatches = project.body.matchAll(/<code>[\s\S]+?<\/code>/g);
+        const codeMatches = project.body.matchAll(/<!--code[\s\S]+?code-->/g);
 
         for (const codeMatch of codeMatches) {
           const codeBlock = codeMatch[0];
-          const innerCodeBlock = codeBlock
-            .replace(/^<code>/, '')
-            .replace(/\s+<\/code>$/, '');
 
-          const formattedCodeBlock = `<div class="code-block-wrapper"><pre class="prettyprint prettyprinted">${PR.prettyPrintOne(
-            innerCodeBlock,
-            'js'
+          const innerCodeBlock = codeBlock
+            // strip pre tags
+            .replace(/^<!--code/, '')
+            .replace(/\s+code-->$/, '')
+            // strip the leading space on each line that is added by Prettier
+            .replaceAll(codeBlock.match(/\n\s+/), '\n')
+            // replace < > so no interpreted as html
+            .replaceAll('<', '&lt;')
+            .replaceAll('>', '&gt;');
+
+          const formattedCodeBlock = `<div class="code-block-wrapper"><pre class="prettyprint linenums">${PR.prettyPrintOne(
+            innerCodeBlock
           )}</pre></div>`;
 
           project.body = project.body.replaceAll(codeBlock, formattedCodeBlock);
