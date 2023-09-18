@@ -1,13 +1,22 @@
+:root {
+  --scroll-to-top-btn-font-size: 0.8rem;
+  --scroll-to-top-btn-padding: 0.6rem;
+  --scroll-to-top-btn-margin: 1rem;
+}
+
 #ScrollToTopBtn {
   position: fixed;
-  right: var(--scroll-to-top-btn-padding);
-  top: calc(100vh - 2rem - var(--scroll-to-top-btn-padding));
+  right: var(--scroll-to-top-btn-margin);
+  top: calc(
+    100vh - var(--scroll-to-top-btn-font-size) -
+      (2 * var(--scroll-to-top-btn-padding)) - var(--scroll-to-top-btn-margin)
+  );
 
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.6rem;
-  font-size: 0.8rem;
+  padding: var(--scroll-to-top-btn-padding);
+  font-size: var(--scroll-to-top-btn-font-size);
   color: rgb(var(--primary-800));
 
   background-color: rgb(var(--primary-400));
