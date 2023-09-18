@@ -9,6 +9,7 @@
   grid-column: 1 / span 3;
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
@@ -20,9 +21,9 @@
   height: 5em;
   aspect-ratio: 1;
   filter: var(--black-to-primary-300);
-  animation: spin 5s linear infinite;
+  animation: loading-spin 5s linear infinite;
 }
-@keyframes spin {
+@keyframes loading-spin {
   100% {
     transform: rotate(360deg);
   }
