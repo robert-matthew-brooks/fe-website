@@ -33,11 +33,17 @@
   list-style: none;
 }
 #Skills__soft-skills-list > li::before {
-  content: '\2714 \fe0e';
+  background-image: url('./assets/check.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  content: '';
+  width: 1.6rem;
+  height: 1.6rem;
   position: absolute;
   left: 0;
-  font-size: 1.8em;
-  color: var(--skills-tick-colour);
+  top: 0;
+  filter: var(--skills-tick-filter);
 }
 
 #Skills__soft-skills-list > li > strong {

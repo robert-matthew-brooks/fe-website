@@ -5,7 +5,8 @@
   --heading-shadow: 1px 1px 0px #ffffff, 2px 2px 0px rgba(0, 0, 0, 0.15);
 
   --languages-tooltip-bg-colour: lightgoldenrodyellow;
-  --skills-tick-colour: green;
+  --skills-tick-filter: invert(22%) sepia(44%) saturate(4798%)
+    hue-rotate(104deg) brightness(104%) contrast(104%); /* green */
 
   --href-colour: blue;
   --href-hover-colour: darkblue;
