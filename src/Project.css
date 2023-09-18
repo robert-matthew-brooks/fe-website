@@ -290,6 +290,11 @@
 }
 
 @media (max-width: 425px) {
+  #Project__inner > article {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   #Project__body {
     margin: 0.5rem;
   }
