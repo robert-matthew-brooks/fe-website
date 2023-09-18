@@ -159,7 +159,8 @@
 /* Images */
 #Project__body img {
   display: block;
-  width: 70%;
+  max-width: 70%;
+  max-height: 70vh;
   margin: 3rem auto;
   border: 1px solid rgb(var(--primary-300));
   box-shadow: var(--subtle-box-shadow);

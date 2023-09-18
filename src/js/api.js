@@ -4,7 +4,7 @@ let baseURL;
 if (location.hostname === 'localhost') {
   baseURL = 'http://localhost:9090';
 } else {
-  baseURL = ''; // TODO add hosted backend api
+  baseURL = 'https://be-website.onrender.com/';
 }
 
 const api = axios.create({ baseURL });
