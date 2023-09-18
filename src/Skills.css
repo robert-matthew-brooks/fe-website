@@ -33,7 +33,7 @@
   list-style: none;
 }
 #Skills__soft-skills-list > li::before {
-  content: '\2714';
+  content: '\2714 \fe0e';
   position: absolute;
   left: 0;
   font-size: 1.8em;
