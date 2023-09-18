@@ -1,8 +1,9 @@
-import { useRef, useEffect } from 'react';
+import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Splash from './Splash';
 import Skills from './Skills';
 import Contact from './Contact';
+import ScrollToTopBtn from './ScrollToTopBtn';
 
 export default function Home() {
   const { pathname, hash, key } = useLocation();

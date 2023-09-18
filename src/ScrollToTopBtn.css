@@ -1,0 +1,23 @@
+#ScrollToTopBtn {
+  position: fixed;
+  right: var(--scroll-to-top-btn-padding);
+  top: calc(100vh - 2rem - var(--scroll-to-top-btn-padding));
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem;
+  font-size: 0.8rem;
+  color: rgb(var(--primary-800));
+
+  background-color: rgb(var(--primary-400));
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: var(--subtle-box-shadow);
+  cursor: pointer;
+
+  transition: opacity 0.5s;
+}
+#ScrollToTopBtn:hover {
+  background-color: rgb(var(--primary-300));
+}

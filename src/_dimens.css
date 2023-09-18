@@ -27,4 +27,7 @@
   --project-article-sidebar-gap: 1rem;
   --project-sidebar-width: 250px;
   --project-sidebar-padding: 1rem;
+
+  --scroll-to-top-btn-size: 3rem;
+  --scroll-to-top-btn-padding: 1rem;
 }
