@@ -33,17 +33,16 @@
   list-style: none;
 }
 #Skills__soft-skills-list > li::before {
-  background-image: url('./assets/check.png');
+  background-image: url('./assets/check.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   content: '';
-  width: 1.6rem;
-  height: 1.6rem;
+  width: 1.2rem;
+  height: 1.2rem;
   position: absolute;
   left: 0;
-  top: 0;
-  filter: var(--skills-tick-filter);
+  top: 0.4rem;
 }
 
 #Skills__soft-skills-list > li > strong {
@@ -65,6 +64,9 @@
   #Skills__soft-skills-list > li {
     font-size: 0.9rem;
     line-height: 1.4rem;
+  }
+  #Skills__soft-skills-list > li::before {
+    top: 0.25rem;
   }
   #Skills__soft-skills-list > li > strong {
     font-size: 1.1rem;
