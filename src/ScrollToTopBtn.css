@@ -7,10 +7,6 @@
 #ScrollToTopBtn {
   position: fixed;
   right: var(--scroll-to-top-btn-margin);
-  top: calc(
-    100vh - var(--scroll-to-top-btn-font-size) -
-      (2 * var(--scroll-to-top-btn-padding)) - var(--scroll-to-top-btn-margin)
-  );
 
   display: flex;
   align-items: center;
@@ -25,8 +21,20 @@
   box-shadow: var(--subtle-box-shadow);
   cursor: pointer;
 
-  transition: opacity 0.5s;
+  transition: top 0.5s, opacity 1s;
 }
 #ScrollToTopBtn:hover {
   background-color: rgb(var(--primary-300));
+}
+
+.ScrollToTopBtn--hidden {
+  top: calc(100vh + 1rem);
+  opacity: 0.3;
+}
+.ScrollToTopBtn--visible {
+  top: calc(
+    100vh - var(--scroll-to-top-btn-font-size) -
+      (2 * var(--scroll-to-top-btn-padding)) - var(--scroll-to-top-btn-margin)
+  );
+  opacity: 1;
 }
