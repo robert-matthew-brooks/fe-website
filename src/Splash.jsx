@@ -22,7 +22,7 @@ export default function Splash() {
             <br />
             app designer
           </h2>
-          <p style={{ visibility: 'hidden' }}>
+          <p>
             My mission is to help make <em>your</em> software work great and
             look professional.
           </p>

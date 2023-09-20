@@ -16,7 +16,7 @@ export default function App() {
         <meta property="og:title" content="Robert Matthew Brooks" />
         <meta
           property="og:description"
-          content="Portfolio // Full Stack - Javascript, Node.js, HTML, CSS, Express.js, PostgreSQL, Jest"
+          content="Portfolio // Full Stack Dev - Javascript, Node.js, HTML, CSS, Express.js, PostgreSQL, Jest"
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`${baseUrl}/`} />
