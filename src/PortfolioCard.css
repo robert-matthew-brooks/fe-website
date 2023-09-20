@@ -53,6 +53,7 @@
   height: 1.2rem;
   aspect-ratio: 1;
   margin-right: 0.5rem;
+  filter: var(--black-to-primary-50);
 }
 
 .PortfolioCard__bottom-bar__language-icons {

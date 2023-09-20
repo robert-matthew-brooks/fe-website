@@ -144,6 +144,7 @@
   /* filters for img/icons */
   --black-to-primary-300: invert(20%);
   --black-to-primary-900: invert(100%);
+  --black-to-primary-50: invert(0%);
 }
 
 /* dark mode - seed approaches white */
@@ -189,7 +190,8 @@
       calc(var(--primary-b) + var(--primary-diff-b) * 1);
 
     /* filters for img/icons */
-    --black-to-primary-300: invert(80%);
     --black-to-primary-900: invert(0%);
+    --black-to-primary-300: invert(80%);
+    --black-to-primary-50: invert(100%);
   }
 }
