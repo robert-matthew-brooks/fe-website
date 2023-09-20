@@ -1,4 +1,6 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
+import { baseUrl } from './js/base-url.js';
 import Header from './Header.jsx';
 import Footer from './Footer.jsx';
 import ScrollToTopBtn from './ScrollToTopBtn.jsx';
@@ -10,6 +12,16 @@ import './App.css';
 export default function App() {
   return (
     <div id="App">
+      <Helmet>
+        <meta property="og:title" content="RMB - Full Stack Developer" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`${baseUrl}/`} />
+        <meta
+          property="og:image"
+          content="https://i.ibb.co/K9yNpMY/meta-image.png"
+        />
+      </Helmet>
+
       <Header />
 
       <main>

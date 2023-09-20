@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import parser from 'html-react-parser';
 import Loading from './Loading';
 import ProjectSidebar from './ProjectSidebar';
@@ -7,6 +8,7 @@ import LanguageIcon from './LanguageIcon';
 import { fetchProject } from './js/api';
 import { getShortDate } from './js/date';
 import { parseProjectBody } from './js/parseProjectBody';
+import { baseUrl } from './js/base-url';
 import linkNewWindowIcon from './assets/link-new-window-icon.png';
 import placeholderArticleImg from './assets/placeholder-article-image.jpeg';
 import './Project.css';
@@ -41,6 +43,15 @@ export default function Project() {
   return (
     <section id="Project">
       <Loading isLoading={isLoading}>
+        <Helmet>
+          <meta property="og:title" content={project.title} />
+          <meta
+            property="og:url"
+            content={`${baseUrl}/projects/${project.slug}/`}
+          />
+          <meta property="og:image" content={project.img_url} />
+        </Helmet>
+
         <div id="Project__inner">
           <article>
             <h1 id="Project__title">{project.title}</h1>
