@@ -3,7 +3,7 @@ import './ElevatedButton.css';
 
 export default function ElevatedButton({ text, href }) {
   return (
-    <div id="ElevatedButton">
+    <div id="ElevatedButton" style={{ visibility: 'hidden' }}>
       <a id="ElevatedButton__link" href={href} target="_new">
         {parser(text)}
       </a>
