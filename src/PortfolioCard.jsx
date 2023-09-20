@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import LanguageIcon from './LanguageIcon.jsx';
 import commentIcon from './assets/comment-icon.png';
 import heartIcon from './assets/heart-icon.png';
-import { placeholderProjectImg } from './js/placeholders';
+import placeholderArticleImg from './assets/placeholder-article-image.jpeg';
 import './PortfolioCard.css';
 
 export default function PortfolioCard({ project, changeRequestParams }) {
@@ -11,7 +11,7 @@ export default function PortfolioCard({ project, changeRequestParams }) {
       <Link to={`/projects/${project.slug}`}>
         <img
           className="PortfolioCard__image"
-          src={project.img_url || placeholderProjectImg}
+          src={project.img_url || placeholderArticleImg}
           alt={project.img_alt || 'Placeholder'}
         />
         <h2 className="PortfolioCard__title">{project.title}</h2>

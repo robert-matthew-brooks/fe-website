@@ -4,15 +4,15 @@
   align-items: center;
   justify-content: space-around;
   padding: 3.5rem 0;
-  background-color: rgb(var(--secondary-150));
+  background-color: var(--hf-bg-colour);
 }
 
 #Footer__email > a {
-  color: rgb(var(--primary-900));
+  color: var(--hf-link-colour);
   text-decoration: none;
 }
 #Footer__email > a:hover {
-  color: rgb(var(--primary-700));
+  color: var(--hf-link-hover-colour);
   text-decoration: underline;
 }
 
@@ -24,10 +24,10 @@
 .sm-icon {
   width: 1.8rem;
   aspect-ratio: 1;
-  filter: var(--black-to-primary-900);
+  filter: var(--hf-icon-colour);
 }
 .sm-icon:hover {
-  filter: var(--black-to-primary-700);
+  filter: var(--hf-icon-hover-colour);
 }
 
 @media (max-width: 768px) {

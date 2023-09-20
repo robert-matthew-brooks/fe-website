@@ -79,11 +79,11 @@
   text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap;
-  background-color: rgb(var(--secondary-600));
+  background-color: var(--contact-btn-bg-colour);
   box-shadow: var(--subtle-box-shadow);
 }
 .Contact__method > a:hover {
-  background-color: rgb(var(--secondary-850));
+  background-color: var(--contact-btn-hover-bg-colour);
 }
 
 @media (max-width: 768px) {

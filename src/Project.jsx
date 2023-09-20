@@ -7,7 +7,7 @@ import LanguageIcon from './LanguageIcon';
 import { fetchProject } from './js/api';
 import { getShortDate } from './js/date';
 import linkNewWindowIcon from './assets/link-new-window-icon.png';
-import { placeholderProjectImg } from './js/placeholders';
+import placeholderArticleImg from './assets/placeholder-article-image.jpeg';
 import './Project.css';
 
 const tagReplaceList = [
@@ -132,7 +132,7 @@ export default function Project() {
                 <iframe src={project.video_url}></iframe>
               ) : (
                 <img
-                  src={project.img_url || placeholderProjectImg}
+                  src={project.img_url || placeholderArticleImg}
                   alt={project.img_alt || 'Placeholder'}
                 />
               )}

@@ -10,7 +10,7 @@
   top: 0;
   padding: 0.7rem;
   color: rgb(var(--primary-900));
-  background-color: rgb(var(--cta-300));
+  background-color: var(--cta-bg-colour);
   white-space: nowrap;
   text-decoration: none;
 
@@ -23,5 +23,5 @@
 #ElevatedButton__link:hover {
   top: 5px;
   border-width: 0;
-  background-color: rgb(var(--cta-400));
+  background-color: var(--cta-hover-bg-colour);
 }

@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   padding: 2%;
-  background-color: transparent;
+  background-color: var(--language-icon-bg-colour);
 }
 .LanguageIcon__link:hover {
   background-color: rgba(var(--primary-700));

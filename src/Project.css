@@ -35,6 +35,7 @@
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-decoration-color: rgb(var(--primary-700));
+  text-shadow: var(--heading-shadow);
 }
 
 /* Details bar - date, languages, links */
@@ -76,7 +77,7 @@
   font-size: 0.9rem;
   color: rgb(var(--primary-900));
   text-decoration: none;
-  background-color: rgb(var(--cta-300));
+  background-color: var(--cta-bg-colour);
   border-radius: 0.5rem;
   box-shadow: var(--subtle-box-shadow);
 }
@@ -86,7 +87,7 @@
   filter: var(--black-to-primary-900);
 }
 .Project__details__link:hover {
-  background-color: rgb(var(--cta-400));
+  background-color: var(--cta-hover-bg-colour);
 }
 
 /* End details bar */
@@ -231,17 +232,17 @@
 }
 #Project__body .bold {
   font-weight: bold;
-  background-color: #e8e8e8;
+  background-color: var(--project-bold-bg);
 }
 #Project__body .snippet {
   white-space: nowrap;
-  background-color: #f7bab3;
+  background-color: var(--project-snippet-bg);
 }
 #Project__body .language {
-  background-color: #add8e6;
+  background-color: var(--project-language-bg);
 }
 #Project__body .function {
-  background-color: #ebeb56;
+  background-color: var(--project-function-bg);
 }
 
 /**************************/

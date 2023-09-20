@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { fetchProjects } from './js/api';
-import { placeholderProjectImg } from './js/placeholders';
+import placeholderArticleImg from './assets/placeholder-article-image.jpeg';
 import './ProjectSidebar.css';
 
 export default function ProjectSidebar({ currentProjectSlug }) {
@@ -41,7 +41,7 @@ export default function ProjectSidebar({ currentProjectSlug }) {
               className="ProjectSidebar__card"
               style={{
                 backgroundImage: `url(${
-                  project.img_url || placeholderProjectImg
+                  project.img_url || placeholderArticleImg
                 })`,
               }}
             >
