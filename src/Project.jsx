@@ -6,7 +6,7 @@ import ProjectSidebar from './ProjectSidebar';
 import LanguageIcon from './LanguageIcon';
 import { fetchProject } from './js/api';
 import { getShortDate } from './js/date';
-import { replaceProjectTags } from './js/replaceProjectTags';
+import { parseProjectBody } from './js/parseProjectBody';
 import linkNewWindowIcon from './assets/link-new-window-icon.png';
 import placeholderArticleImg from './assets/placeholder-article-image.jpeg';
 import './Project.css';
@@ -27,35 +27,7 @@ export default function Project() {
       try {
         const { project } = await fetchProject(project_slug);
 
-        // remove excess spaces inside tags added by prettier
-        project.body = project.body.replace(/(<\w+)(\s+)/g, '$1 ');
-
-        // replace tags
-        project.body = replaceProjectTags(project.body);
-
-        // replace formatted code
-        const codeMatches = project.body.matchAll(/<!--code[\s\S]+?code-->/g);
-
-        for (const codeMatch of codeMatches) {
-          const codeBlock = codeMatch[0];
-
-          const innerCodeBlock = codeBlock
-            // strip pre tags
-            .replace(/^<!--code/, '')
-            .replace(/\s+code-->$/, '')
-            // strip the leading space on each line that is added by Prettier
-            .replaceAll(codeBlock.match(/\n\s+/), '\n')
-            // replace < > so no interpreted as html
-            .replaceAll('<', '&lt;')
-            .replaceAll('>', '&gt;');
-
-          const formattedCodeBlock = `<div class="code-block-wrapper"><pre class="prettyprint linenums">${PR.prettyPrintOne(
-            innerCodeBlock
-          )}</pre></div>`;
-
-          project.body = project.body.replaceAll(codeBlock, formattedCodeBlock);
-        }
-
+        project.body = parseProjectBody(project.body);
         setProject(project);
 
         setIsLoading(false);
