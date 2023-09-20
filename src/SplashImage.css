@@ -23,6 +23,12 @@
 
 #splash-image__shadows {
   animation: flicker-shadows 3s infinite;
+  background: radial-gradient(
+    closest-side,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  filter: var(--splash-shadow-colour);
 }
 @keyframes flicker-shadows {
   0% {

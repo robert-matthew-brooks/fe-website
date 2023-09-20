@@ -45,6 +45,8 @@
   --href-colour: blue;
   --href-hover-colour: darkblue;
 
+  --splash-shadow-colour: invert(0%);
+
   --language-icon-bg-colour: transparent;
   --languages-tooltip-bg-colour: lightgoldenrodyellow;
 
@@ -69,6 +71,8 @@
 
     --href-colour: lightblue;
     --href-hover-colour: blue;
+
+    --splash-shadow-colour: invert(40%);
 
     --language-icon-bg-colour: rgb(32, 32, 32);
     --languages-tooltip-bg-colour: rgb(30, 20, 20);
