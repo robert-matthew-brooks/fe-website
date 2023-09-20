@@ -14,7 +14,7 @@
   white-space: nowrap;
   text-decoration: none;
 
-  border-bottom: solid black;
+  border-bottom: solid var(--cta-border-colour);
   border-width: 5px;
   border-radius: 1rem;
   box-shadow: var(--subtle-box-shadow);
