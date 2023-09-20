@@ -6,46 +6,10 @@ import ProjectSidebar from './ProjectSidebar';
 import LanguageIcon from './LanguageIcon';
 import { fetchProject } from './js/api';
 import { getShortDate } from './js/date';
+import { replaceProjectTags } from './js/replaceProjectTags';
 import linkNewWindowIcon from './assets/link-new-window-icon.png';
 import placeholderArticleImg from './assets/placeholder-article-image.jpeg';
 import './Project.css';
-
-const tagReplaceList = [
-  //header
-  ['<h>', '<h3>'],
-  ['</h>', '</h3>'],
-
-  // link open in new window
-  ['<a href=', '<a target="_blank" href='],
-
-  // note
-  ['<note>', '<p class="note">'],
-  ['</note>', '</p>'],
-
-  // quote
-  ['<quote>', '<p class="quote">'],
-  ['</quote>', '</p>'],
-
-  // caption
-  ['<caption>', '<p class="caption">'],
-  ['</caption>', '</p>'],
-
-  // bold
-  ['<b>', '<span class="hl bold">'],
-  ['</b>', '</span>'],
-
-  // language
-  ['<l>', '<span class="hl language">'],
-  ['</l>', '</span>'],
-
-  // function
-  ['<f>', '<span class="hl function">'],
-  ['</f>', '</span>'],
-
-  // code snippet
-  ['<c>', '<span class="hl snippet">'],
-  ['</c>', '</span>'],
-];
 
 export default function Project() {
   const [isLoading, setIsLoading] = useState(false);
@@ -67,12 +31,7 @@ export default function Project() {
         project.body = project.body.replace(/(<\w+)(\s+)/g, '$1 ');
 
         // replace tags
-        for (const tagReplacement of tagReplaceList) {
-          project.body = project.body.replaceAll(
-            tagReplacement[0],
-            tagReplacement[1]
-          );
-        }
+        project.body = replaceProjectTags(project.body);
 
         // replace formatted code
         const codeMatches = project.body.matchAll(/<!--code[\s\S]+?code-->/g);
