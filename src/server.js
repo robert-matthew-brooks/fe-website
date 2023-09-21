@@ -1,24 +1,28 @@
-import express, { Router } from 'express';
+import express from 'express';
+import serverless from 'serverless-http';
 import cors from 'cors';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { fetchProject } from './src/js/api.js';
+import { fetchProject } from './js/api.js';
 
 const app = express();
-app.use(cors());
+const router = express.Router();
+
+router.use(cors());
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+router.use(express.static(path.resolve(__dirname, '../dist')));
 
-app.use(express.static(path.resolve(__dirname, './dist')));
+/* project (update og data) */
 
-app.get('/projects/:project_slug', async function (req, res) {
+router.get('/projects/:project_slug', async function (req, res) {
   const { project_slug: projectSlug } = req.params;
 
   const { project } = await fetchProject(projectSlug);
 
-  const filePath = path.resolve(__dirname, './dist', 'index.html');
+  const filePath = path.resolve(__dirname, '../dist', 'index.html');
   fs.readFile(filePath, 'utf8', function (err, data) {
     if (err) {
       return console.error();
@@ -37,8 +41,10 @@ app.get('/projects/:project_slug', async function (req, res) {
   });
 });
 
-app.get('*', function (req, res) {
-  const filePath = path.resolve(__dirname, './dist', 'index.html');
+/* all other endpoints (no dynamic og data) */
+
+router.get('*', function (req, res) {
+  const filePath = path.resolve(__dirname, '../dist', 'index.html');
   fs.readFile(filePath, 'utf8', function (err, data) {
     if (err) {
       return console.error(err);
@@ -62,5 +68,9 @@ app.get('*', function (req, res) {
   });
 });
 
-const port = process.env.PORT || 5000;
-app.listen(port, () => console.log(`Listening on port ${port}`));
+app.use('/api', router);
+
+// const port = process.env.PORT || 5000;
+// app.listen(port, () => console.log(`Listening on port ${port}`));
+
+export const handler = serverless(app);

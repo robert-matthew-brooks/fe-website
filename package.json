@@ -8,17 +8,21 @@
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "listen": "node server.js"
+    "listen": "node ./src/server.js",
+    "start-prod": "./node_modules/.bin/netlify-lambda serve src",
+    "build-prod": "./node_modules/.bin/netlify-lambda build src"
   },
   "dependencies": {
     "axios": "^1.5.0",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "html-react-parser": "^4.2.2",
+    "netlify-lambda": "^2.0.16",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
-    "react-router-dom": "^6.15.0"
+    "react-router-dom": "^6.15.0",
+    "serverless-http": "^3.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

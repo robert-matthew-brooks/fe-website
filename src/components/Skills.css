@@ -33,7 +33,7 @@
   list-style: none;
 }
 #Skills__soft-skills-list > li::before {
-  background-image: url('./assets/check.svg');
+  background-image: url('../assets/check.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
