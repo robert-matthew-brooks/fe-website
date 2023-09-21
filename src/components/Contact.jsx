@@ -1,6 +1,6 @@
-import whatsAppIcon from './assets/contact-whatsapp-icon.svg';
-import emailIcon from './assets/contact-email-icon.svg';
-import linkedInIcon from './assets/contact-linkedin-icon.svg';
+import whatsAppIcon from '../assets/contact-whatsapp-icon.svg';
+import emailIcon from '../assets/contact-email-icon.svg';
+import linkedInIcon from '../assets/contact-linkedin-icon.svg';
 // import ContactForm from './ContactForm';
 import './Contact.css';
 

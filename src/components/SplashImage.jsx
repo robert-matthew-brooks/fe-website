@@ -1,8 +1,8 @@
 import { useEffect, useState, useRef } from 'react';
-import splashImg from './assets/splash-image.png';
-import splashShadows from './assets/splash-shadows.png';
-import splashWisp from './assets/splash-wisp.png';
-import splashLights from './assets/splash-lights.png';
+import splashImg from '../assets/splash-image.png';
+import splashShadows from '../assets/splash-shadows.png';
+import splashWisp from '../assets/splash-wisp.png';
+import splashLights from '../assets/splash-lights.png';
 import './SplashImage.css';
 
 const colours = [

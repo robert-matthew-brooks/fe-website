@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import LanguageIcon from './LanguageIcon.jsx';
-import commentIcon from './assets/comment-icon.png';
-import heartIcon from './assets/heart-icon.png';
-import placeholderArticleImg from './assets/placeholder-article-image.jpeg';
+import commentIcon from '../assets/comment-icon.png';
+import heartIcon from '../assets/heart-icon.png';
+import placeholderArticleImg from '../assets/placeholder-article-image.jpeg';
 import './PortfolioCard.css';
 
 export default function PortfolioCard({ project, changeRequestParams }) {

@@ -1,5 +1,3 @@
-@import url('./_dimens.css');
-
 /* <main> should always be big enough to push footer off screen */
 /* it may be smaller before api data has loaded */
 /* 5em is approx header size */

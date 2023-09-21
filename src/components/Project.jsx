@@ -1,14 +1,15 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import parser from 'html-react-parser';
 import Loading from './Loading';
 import ProjectSidebar from './ProjectSidebar';
 import LanguageIcon from './LanguageIcon';
-import { fetchProject } from './js/api';
-import { getShortDate } from './js/date';
-import { parseProjectBody } from './js/parseProjectBody';
-import linkNewWindowIcon from './assets/link-new-window-icon.png';
-import placeholderArticleImg from './assets/placeholder-article-image.jpeg';
+import { fetchProject } from '../js/api';
+import { getShortDate } from '../js/date';
+import { parseProjectBody } from '../js/parseProjectBody';
+import linkNewWindowIcon from '../assets/link-new-window-icon.png';
+import placeholderArticleImg from '../assets/placeholder-article-image.jpeg';
 import './Project.css';
 
 export default function Project() {
@@ -40,6 +41,10 @@ export default function Project() {
 
   return (
     <section id="Project">
+      <Helmet>
+        <title>{project.title}</title>
+      </Helmet>
+
       <Loading isLoading={isLoading}>
         <div id="Project__inner">
           <article>

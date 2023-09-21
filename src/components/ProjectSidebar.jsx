@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { fetchProjects } from './js/api';
-import placeholderArticleImg from './assets/placeholder-article-image.jpeg';
+import { fetchProjects } from '../js/api';
+import placeholderArticleImg from '../assets/placeholder-article-image.jpeg';
 import './ProjectSidebar.css';
 
 export default function ProjectSidebar({ currentProjectSlug }) {

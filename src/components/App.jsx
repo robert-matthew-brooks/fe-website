@@ -14,7 +14,8 @@ export default function App() {
 
       <main>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Navigate to="/home" />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/portfolio" element={<Navigate to="/portfolio/all" />} />
           <Route path="/skills" element={<Navigate to="/#Skills" />} />
           <Route path="/portfolio/:language" element={<Portfolio />} />

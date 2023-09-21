@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from './HeaderLogo.jsx';
-import menuOpenImg from './assets/menu-open.svg';
-import menuCloseImg from './assets/menu-close.png';
+import menuOpenImg from '../assets/menu-open.svg';
+import menuCloseImg from '../assets/menu-close.png';
 import './Header.css';
 
 const menuItems = [
-  { text: 'Home', link: '/' },
+  { text: 'Home', link: '/home' },
   { text: 'Skills', link: '/#Skills' },
   { text: 'Portfolio', link: '/portfolio' },
   { text: 'Contact', link: '/#Contact' },

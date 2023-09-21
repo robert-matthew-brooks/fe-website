@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
 import { useParams, useSearchParams } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import Loading from './Loading';
 import PortfolioSortOptions from './PortfolioSortOptions';
 import PortfolioCard from './PortfolioCard';
 import PortfolioPagination from './PortfolioPagination';
-import { fetchProjects, fetchLanguages } from './js/api';
+import { fetchProjects, fetchLanguages } from '../js/api';
 import './Portfolio.css';
 
 const sortOptions = [
@@ -140,6 +141,10 @@ export default function Portfolio() {
 
   return (
     <section id="Portfolio">
+      <Helmet>
+        <title>RBM - Full Stack Developer</title>
+      </Helmet>
+
       <Loading isLoading={isLoading}>
         <div id="Portfolio__inner">
           <h1 id="Portfolio__title">Portfolio Projects</h1>

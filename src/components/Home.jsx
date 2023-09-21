@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import Splash from './Splash';
 import Skills from './Skills';
 import Contact from './Contact';
@@ -22,6 +23,10 @@ export default function Home() {
 
   return (
     <>
+      <Helmet>
+        <title>RBM - Full Stack Developer</title>
+      </Helmet>
+
       <Splash />
       <Skills />
       <Contact />

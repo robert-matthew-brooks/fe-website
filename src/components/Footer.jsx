@@ -1,6 +1,6 @@
-import linkedinLogo from './assets/linkedin-logo.png';
-import githubLogo from './assets/github-logo.png';
-import youtubeLogo from './assets/youtube-logo.png';
+import linkedinLogo from '../assets/linkedin-logo.png';
+import githubLogo from '../assets/github-logo.png';
+import youtubeLogo from '../assets/youtube-logo.png';
 import './Footer.css';
 
 const smIcons = [

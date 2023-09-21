@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { fetchLanguages } from './js/api';
+import { fetchLanguages } from '../js/api';
 import Loading from './Loading';
 import LanguageIcon from './LanguageIcon';
 import './Languages.css';

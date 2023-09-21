@@ -1,4 +1,4 @@
-import LoadingImg from './assets/loading.png';
+import LoadingImg from '../assets/loading.png';
 import './Loading.css';
 
 export default function Loading({ children, isLoading }) {
