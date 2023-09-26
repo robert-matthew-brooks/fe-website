@@ -1,12 +1,13 @@
 import axios from 'axios';
+import { prodBackendUrl, devBackendUrl } from './backend-urls';
 
 const env = process.env.NODE_ENV || 'development';
 
 let baseURL;
 if (env === 'production') {
-  baseURL = 'https://be-website.onrender.com';
+  baseURL = prodBackendUrl;
 } else {
-  baseURL = 'http://localhost:9090';
+  baseURL = devBackendUrl;
 }
 
 const api = axios.create({ baseURL });

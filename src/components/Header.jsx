@@ -6,7 +6,7 @@ import menuCloseImg from '../assets/menu-close.png';
 import './Header.css';
 
 const menuItems = [
-  { text: 'Home', link: '/home' },
+  { text: 'Home', link: '/' },
   { text: 'Skills', link: '/#Skills' },
   { text: 'Portfolio', link: '/portfolio' },
   { text: 'Contact', link: '/#Contact' },
