@@ -1,10 +1,10 @@
-import axios from 'npm:axios@^1.5.0';
+import axiod from 'https://deno.land/x/axiod@0.26.2/mod.ts';
 import { prodBackendUrl } from '../../src/js/backend-urls.js';
 
 export default async (request, context) => {
   const slug = request.url.split('/').pop();
 
-  const { data } = await axios.get(`${prodBackendUrl}/api/projects/${slug}`);
+  const { data } = await axiod.get(`${prodBackendUrl}/api/projects/${slug}`);
   const project = data.project;
 
   const response = await context.next();
