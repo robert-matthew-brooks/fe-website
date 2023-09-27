@@ -13,7 +13,7 @@ export default async (request, context) => {
   updatedPage = updatedPage.replace(/\$OG_URL/g, request.url);
   updatedPage = updatedPage.replace(/\$OG_TYPE/g, 'article');
   updatedPage = updatedPage.replace(/\$OG_TITLE/g, project.title);
-  updatedPage = updatedPage.replace(/\$OG_DESCRIPTION/g, 'DESCRIPTION');
+  updatedPage = updatedPage.replace(/\$OG_DESCRIPTION/g, project.description);
   updatedPage = updatedPage.replace(/\$OG_IMAGE/g, project.img_url);
 
   return new Response(updatedPage, response);
