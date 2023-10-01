@@ -6,6 +6,7 @@ import placeholderArticleImg from '../assets/placeholder-article-image.jpeg';
 import './PortfolioCard.css';
 
 export default function PortfolioCard({ project, changeRequestParams }) {
+  console.log(project);
   return (
     <div className="PortfolioCard">
       <Link to={`/projects/${project.slug}`}>
@@ -22,7 +23,8 @@ export default function PortfolioCard({ project, changeRequestParams }) {
           <img src={commentIcon} alt="Number of comments" />0
         </span>
         <span>
-          <img src={heartIcon} alt="Number of likes" />0
+          <img src={heartIcon} alt="Number of likes" />
+          {project.total_likes}
         </span>
         <div className="PortfolioCard__bottom-bar__language-icons">
           {project.languages.map((language, i) => (
