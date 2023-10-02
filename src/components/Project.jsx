@@ -3,9 +3,11 @@ import { useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import parser from 'html-react-parser';
 import Loading from './Loading';
+import ProjectVotes from './ProjectVotes';
 import ProjectSidebar from './ProjectSidebar';
 import LanguageIcon from './LanguageIcon';
 import { fetchProject } from '../js/api';
+import { getIp } from '../js/get-ip';
 import { getShortDate } from '../js/date';
 import { parseProjectBody } from '../js/parseProjectBody';
 import linkNewWindowIcon from '../assets/link-new-window-icon.png';
@@ -16,8 +18,10 @@ export default function Project() {
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
 
-  const { project_slug } = useParams();
+  const { project_slug: projectSlug } = useParams();
   const [project, setProject] = useState({});
+
+  const [userIp, setUserIp] = useState();
 
   useEffect(() => {
     (async () => {
@@ -26,7 +30,7 @@ export default function Project() {
       setIsError(false);
 
       try {
-        const { project } = await fetchProject(project_slug);
+        const { project } = await fetchProject(projectSlug);
 
         project.body = parseProjectBody(project.body);
         setProject(project);
@@ -37,7 +41,18 @@ export default function Project() {
         console.log(err);
       }
     })();
-  }, [project_slug]);
+  }, [projectSlug]);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const userIp = await getIp();
+        setUserIp(userIp);
+      } catch (err) {
+        console.log(err);
+      }
+    })();
+  }, []);
 
   return (
     <section id="Project">
@@ -97,9 +112,11 @@ export default function Project() {
             </div>
 
             <div id="Project__body">{project.body && parser(project.body)}</div>
+
+            <ProjectVotes projectId={project.id} userIp={userIp} />
           </article>
 
-          <ProjectSidebar currentProjectSlug={project_slug} />
+          <ProjectSidebar projectId={project.id} />
         </div>
       </Loading>
     </section>

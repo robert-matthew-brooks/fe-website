@@ -23,7 +23,22 @@ export async function fetchProjects(params) {
   return data;
 }
 
-export async function fetchProject(projectSlug) {
-  const { data } = await api.get(`/api/projects/${projectSlug}`);
+export async function fetchProject(projectId) {
+  const { data } = await api.get(`/api/projects/${projectId}`);
+  return data;
+}
+
+export async function fetchVotes(projectId, userIp) {
+  const { data } = await api.get(`/api/votes/${projectId}`, {
+    params: { user_ip: userIp },
+  });
+  return data;
+}
+
+export async function putVote(projectId, userIp, value) {
+  const { data } = await api.put(`/api/votes/${projectId}`, {
+    user_ip: userIp,
+    value,
+  });
   return data;
 }

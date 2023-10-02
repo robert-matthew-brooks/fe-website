@@ -4,7 +4,7 @@ import { fetchProjects } from '../js/api';
 import placeholderArticleImg from '../assets/placeholder-article-image.jpeg';
 import './ProjectSidebar.css';
 
-export default function ProjectSidebar({ currentProjectSlug }) {
+export default function ProjectSidebar({ projectId }) {
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
 
@@ -33,7 +33,7 @@ export default function ProjectSidebar({ currentProjectSlug }) {
       <h2>Recent Projects:</h2>
       {projects
         .filter((project) => {
-          return project.slug !== currentProjectSlug;
+          return project.id !== projectId;
         })
         .map((project, i) => (
           <Link key={i} to={`/projects/${project.slug}`}>

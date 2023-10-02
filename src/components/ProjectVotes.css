@@ -1,0 +1,70 @@
+:root {
+  --vote-btn-size: 3rem;
+}
+
+#ProjectVotes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+#ProjectVotes > figcaption {
+  font-size: 1.4rem;
+  font-style: italic;
+  color: rgb(var(--primary-400));
+}
+
+#ProjectVotes > figure {
+  height: var(--vote-btn-size);
+  display: flex;
+  flex-direction: row;
+}
+#ProjectVotes > figure > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#ProjectVotes__up-btn,
+#ProjectVotes__down-btn {
+  padding: 1rem;
+  background-color: rgb(var(--primary-800));
+  border: none;
+  cursor: pointer;
+}
+#ProjectVotes__up-btn {
+  border-right: 1px dashed rgb(var(--primary-400));
+  border-radius: var(--vote-btn-size) 0 0 var(--vote-btn-size);
+}
+#ProjectVotes__down-btn {
+  width: var(--vote-btn-size);
+  border-radius: 0 var(--vote-btn-size) var(--vote-btn-size) 0;
+}
+
+#ProjectVotes__up-btn > img,
+#ProjectVotes__down-btn > img {
+  width: 1.3rem;
+  aspect-ratio: 1;
+}
+#ProjectVotes__down-btn > img {
+  transform: rotate(180deg);
+}
+
+#ProjectVotes__up-btn:hover,
+#ProjectVotes__down-btn:hover {
+  background-color: rgb(var(--primary-700));
+}
+
+.ProjectVotes__up-btn--active {
+  background-color: var(--vote-up-bg-colour) !important;
+}
+.ProjectVotes__down-btn--active {
+  background-color: var(--vote-down-bg-colour) !important;
+}
+
+#ProjectVotes__votes {
+  margin-left: 1rem;
+  font-size: 1.8rem;
+  color: rgb(var(--primary-50));
+}
