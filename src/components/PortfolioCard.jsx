@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import LanguageIcon from './LanguageIcon.jsx';
 import commentIcon from '../assets/comment-icon.png';
-import heartIcon from '../assets/heart-icon.png';
+import thumbIcon from '../assets/thumb-icon.png';
 import placeholderArticleImg from '../assets/placeholder-article-image.jpeg';
 import './PortfolioCard.css';
 
@@ -22,7 +22,7 @@ export default function PortfolioCard({ project, changeRequestParams }) {
           <img src={commentIcon} alt="Number of comments" />0
         </span>
         <span>
-          <img src={heartIcon} alt="Number of likes" />
+          <img src={thumbIcon} alt="Number of likes" />
           {project.votes_sum}
         </span>
         <div className="PortfolioCard__bottom-bar__language-icons">
