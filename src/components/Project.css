@@ -1,3 +1,7 @@
+:root {
+  --code-font: Monospace, Courier New;
+}
+
 #Project {
   position: relative;
   min-height: calc(100vh - 5em);
@@ -235,6 +239,8 @@
   background-color: var(--project-bold-bg);
 }
 #Project__body .snippet {
+  font-family: var(--code-font);
+  font-size: 0.9rem;
   white-space: nowrap;
   background-color: var(--project-snippet-bg);
 }
@@ -242,6 +248,8 @@
   background-color: var(--project-language-bg);
 }
 #Project__body .function {
+  font-family: var(--code-font);
+  font-size: 0.9rem;
   background-color: var(--project-function-bg);
 }
 
