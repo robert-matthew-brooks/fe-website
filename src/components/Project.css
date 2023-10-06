@@ -147,7 +147,8 @@
 
 /* Main text */
 #Project__body p,
-#Project__body ul {
+#Project__body ul,
+#Project__body div.quote {
   font-size: 1rem;
   line-height: 1.6rem;
   margin-top: 2rem;
@@ -203,13 +204,13 @@
 }
 
 /* Quote */
-#Project__body p.quote {
+#Project__body div.quote {
   padding: 0.5rem;
   font-style: italic;
   background: rgb(var(--primary-850));
   border-left: 10px solid rgb(var(--primary-700));
 }
-#Project__body p.quote::before {
+#Project__body div.quote::before {
   content: open-quote;
   color: rgb(var(--primary-700));
   font-size: 4rem;

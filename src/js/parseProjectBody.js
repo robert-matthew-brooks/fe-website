@@ -11,8 +11,8 @@ const tagReplaceList = [
   ['</note>', '</p>'],
 
   // quote
-  ['<quote>', '<p class="quote">'],
-  ['</quote>', '</p>'],
+  ['<quote>', '<div class="quote">'],
+  ['</quote>', '</div>'],
 
   // caption
   ['<caption>', '<p class="caption">'],
