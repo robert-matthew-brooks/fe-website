@@ -23,7 +23,7 @@ export default function PortfolioCard({ project, changeRequestParams }) {
         </span>
         <span>
           <img src={thumbIcon} alt="Number of likes" />
-          {project.votes_sum}
+          {project.votes_sum || 0}
         </span>
         <div className="PortfolioCard__bottom-bar__language-icons">
           {project.languages.map((language, i) => (
