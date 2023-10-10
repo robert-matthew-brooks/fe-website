@@ -66,6 +66,7 @@ export default function Languages() {
             <LanguageIcon
               key={i}
               language={language}
+              height={'5rem'}
               onMouseOver={() => {
                 showTooltip(language.name, language.project_count);
               }}

@@ -8,3 +8,7 @@
 .LanguageIcon__link:hover {
   background-color: rgba(var(--primary-700));
 }
+.LanguageIcon__link > svg {
+  height: 100%;
+  width: 100%;
+}

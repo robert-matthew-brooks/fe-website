@@ -30,6 +30,7 @@ export default function PortfolioCard({ project, changeRequestParams }) {
             <LanguageIcon
               key={i}
               language={language}
+              height={'1.8rem'}
               onClick={() => {
                 changeRequestParams({ language: language.slug });
               }}
