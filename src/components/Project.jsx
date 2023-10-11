@@ -96,7 +96,7 @@ export default function Project() {
                   href={project.live_link}
                   target="_blank"
                 >
-                  Live Version <img src={linkNewWindowIcon} />
+                  Live Project <img src={linkNewWindowIcon} />
                 </a>
               )}
 
@@ -106,7 +106,7 @@ export default function Project() {
                   href={project.github_link}
                   target="_blank"
                 >
-                  Github Project <img src={linkNewWindowIcon} />
+                  Github Repo <img src={linkNewWindowIcon} />
                 </a>
               )}
             </div>
