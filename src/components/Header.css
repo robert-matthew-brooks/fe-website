@@ -12,7 +12,6 @@
   justify-content: center;
   align-items: center;
   background-color: var(--hf-bg-colour);
-
   z-index: 9;
 }
 
@@ -27,7 +26,6 @@
   align-items: center;
   overflow: hidden;
   padding: 0 1rem;
-  background-color: var(--hf-bg-colour);
 }
 
 #Header__mobile-nav-btn {
