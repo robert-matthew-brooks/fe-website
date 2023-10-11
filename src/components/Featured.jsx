@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { fetchProjects } from '../js/api';
-import './Featured.css';
 import FeaturedProject from './FeaturedProject';
+import './Featured.css';
 
 const observer = new IntersectionObserver(
   (intersections) => {

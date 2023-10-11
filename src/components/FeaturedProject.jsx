@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import './FeaturedProject.css';
 import LanguageIcon from './LanguageIcon';
+import './FeaturedProject.css';
 
 export default function FeaturedProject({ project }) {
   return (

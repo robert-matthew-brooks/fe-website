@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import splashComputer from '../assets/splash-img/computer.png';
 import splashShadows from '../assets/splash-img/shadows.png';
 import splashWisp from '../assets/splash-img/wisp.png';

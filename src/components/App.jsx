@@ -1,10 +1,10 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Header from './Header.jsx';
-import Footer from './Footer.jsx';
-import ScrollToTopBtn from './ScrollToTopBtn.jsx';
 import Home from './Home.jsx';
 import Portfolio from './Portfolio.jsx';
 import Project from './Project.jsx';
+import Footer from './Footer.jsx';
+import ScrollToTopBtn from './ScrollToTopBtn.jsx';
 import './App.css';
 
 export default function App() {

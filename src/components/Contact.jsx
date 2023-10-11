@@ -1,7 +1,6 @@
 import whatsAppIcon from '../assets/contact-icons/whatsapp-icon.svg';
 import emailIcon from '../assets/contact-icons/email-icon.svg';
 import linkedInIcon from '../assets/contact-icons/linkedin-icon.svg';
-// import ContactForm from './ContactForm';
 import './Contact.css';
 
 export default function Contact() {
