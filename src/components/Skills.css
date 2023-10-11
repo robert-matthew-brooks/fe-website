@@ -57,11 +57,6 @@
 }
 
 @media (max-width: 768px) {
-  #Skills__inner {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
   #Skills__soft-skills-list > li {
     font-size: 0.9rem;
     line-height: 1.4rem;

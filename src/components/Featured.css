@@ -43,3 +43,6 @@
 #Featured__inner > a:hover {
   background-color: rgb(var(--primary-700));
 }
+
+@media (max-width: 768px) {
+}

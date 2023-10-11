@@ -31,3 +31,10 @@
   --prj-sidebar-width: 250px;
   --prj-sidebar-padding: 1rem;
 }
+
+@media (max-width: 768px) {
+  :root {
+    --section-v-padding: 4rem;
+    --section-h-padding: 2rem;
+  }
+}

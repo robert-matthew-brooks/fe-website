@@ -12,7 +12,7 @@ addEventListener('load', (_evt) => {
   tooltip = document.createElement('div');
   tooltip.id = 'Languages__tooltip';
   tooltip.classList.add('Languages__tooltip');
-  tooltip.style.visibility = 'hidden';
+  tooltip.style.display = 'none';
   document.body.appendChild(tooltip);
 });
 
@@ -30,11 +30,11 @@ const showTooltip = (languageName, projectCount) => {
   tooltip.innerHTML = `${languageName} <br /> ${projectCount} ${
     projectCount > 1 ? 'projects' : 'project'
   }`;
-  tooltip.style.visibility = 'visible';
+  tooltip.style.display = 'block';
 };
 
 const hideTooltip = () => {
-  tooltip.style.visibility = 'hidden';
+  tooltip.style.display = 'none';
 };
 
 export default function Languages() {
