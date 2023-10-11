@@ -17,7 +17,6 @@ export default function Header() {
 
   function toggleMenu() {
     if (!isMobileNavVisible) {
-      window.scrollTo(0, 0);
       document.body.style.overflowY = 'hidden';
     } else {
       document.body.style.overflowY = 'scroll';
