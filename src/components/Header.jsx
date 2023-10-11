@@ -27,40 +27,42 @@ export default function Header() {
 
   return (
     <header id="Header">
-      <Logo />
+      <div id="Header__inner">
+        <Logo />
 
-      <button id="Header__mobile-nav-btn" onClick={() => toggleMenu()}>
-        <img
-          src={isMobileNavVisible ? menuCloseImg : menuOpenImg}
-          alt="Toggle menu"
-        />
-      </button>
+        <button id="Header__mobile-nav-btn" onClick={() => toggleMenu()}>
+          <img
+            src={isMobileNavVisible ? menuCloseImg : menuOpenImg}
+            alt="Toggle menu"
+          />
+        </button>
 
-      <nav
-        id="Header__mobile-nav"
-        style={{ left: isMobileNavVisible ? '0' : '-100vw' }}
-        onClick={(e) => {
-          toggleMenu();
-        }}
-      >
-        {menuItems.map((menuItem, i) => {
-          return (
-            <Link key={i} to={menuItem.link}>
-              {menuItem.text}
-            </Link>
-          );
-        })}
-      </nav>
+        <nav
+          id="Header__mobile-nav"
+          style={{ left: isMobileNavVisible ? '0' : '-100vw' }}
+          onClick={(e) => {
+            toggleMenu();
+          }}
+        >
+          {menuItems.map((menuItem, i) => {
+            return (
+              <Link key={i} to={menuItem.link}>
+                {menuItem.text}
+              </Link>
+            );
+          })}
+        </nav>
 
-      <nav id="Header__desktop-nav">
-        {menuItems.map((menuItem, i) => {
-          return (
-            <Link key={i} to={menuItem.link}>
-              {menuItem.text}
-            </Link>
-          );
-        })}
-      </nav>
+        <nav id="Header__desktop-nav">
+          {menuItems.map((menuItem, i) => {
+            return (
+              <Link key={i} to={menuItem.link}>
+                {menuItem.text}
+              </Link>
+            );
+          })}
+        </nav>
+      </div>
     </header>
   );
 }

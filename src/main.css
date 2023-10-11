@@ -9,6 +9,8 @@
 }
 
 body {
+  position: relative;
+  min-height: 10vh;
   overflow-x: hidden;
 
   color: rgb(var(--primary-50));

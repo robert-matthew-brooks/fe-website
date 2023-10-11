@@ -1,8 +1,25 @@
 #Header {
+  position: sticky;
+  top: -2rem; /* difference between inner and outer */
+  height: 6rem;
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--hf-bg-colour);
+
+  z-index: 9;
+}
+
+#Header__inner {
+  position: sticky;
+  top: 0;
+  height: 4rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
   align-items: center;
   overflow: hidden;
-  padding: 1rem;
+  padding: 0 1rem;
   background-color: var(--hf-bg-colour);
 }
 
