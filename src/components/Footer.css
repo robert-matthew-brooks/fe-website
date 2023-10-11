@@ -6,6 +6,7 @@
 }
 
 #Footer__inner {
+  width: 100%;
   max-width: var(--global-max-width);
   min-height: 9rem;
   display: flex;
