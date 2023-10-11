@@ -6,8 +6,8 @@
 }
 
 #Footer__inner {
-  width: var(--global-max-width);
-  height: 9rem;
+  max-width: var(--global-max-width);
+  min-height: 9rem;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -39,9 +39,10 @@
 }
 
 @media (max-width: 768px) {
-  #Footer {
+  #Footer__inner {
     flex-direction: column-reverse;
     gap: 3rem;
+    padding: 3rem 0;
   }
 
   #Footer__email > a {
