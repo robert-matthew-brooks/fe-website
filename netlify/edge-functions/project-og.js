@@ -10,11 +10,11 @@ export default async (request, context) => {
   const response = await context.next();
   let updatedPage = await response.text();
 
-  updatedPage = updatedPage.replace(/\$OG_URL/g, request.url);
-  updatedPage = updatedPage.replace(/\$OG_TYPE/g, 'article');
-  updatedPage = updatedPage.replace(/\$OG_TITLE/g, project.title);
-  updatedPage = updatedPage.replace(/\$OG_DESCRIPTION/g, project.description);
-  updatedPage = updatedPage.replace(/\$OG_IMAGE/g, project.img_url);
+  updatedPage = updatedPage.replaceAll(/\$URL/g, request.url);
+  updatedPage = updatedPage.replaceAll(/\$TYPE/g, 'article');
+  updatedPage = updatedPage.replaceAll(/\$TITLE/g, project.title);
+  updatedPage = updatedPage.replaceAll(/\$DESCRIPTION/g, project.description);
+  updatedPage = updatedPage.replaceAll(/\$IMAGE/g, project.img_url);
 
   return new Response(updatedPage, response);
 };
