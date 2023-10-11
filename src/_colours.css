@@ -49,8 +49,8 @@
 
   --splash-shadow-colour: invert(0%);
 
-  --language-icon-bg-colour: transparent;
-  --languages-tooltip-bg-colour: lightgoldenrodyellow;
+  --lng-icon-bg-colour: transparent;
+  --lng-tooltip-bg-colour: lightgoldenrodyellow;
 
   --icon-grey-filter: brightness(0) saturate(100%) invert(100%) sepia(0%)
     saturate(2631%) hue-rotate(356deg) brightness(83%) contrast(76%); /* #c0c0c0 */
@@ -59,12 +59,12 @@
   --cta-hover-bg-colour: rgb(0, 141, 0);
   --cta-border-colour: black;
 
-  --project-bold-bg: rgb(232, 232, 232);
-  --project-snippet-bg: rgb(247, 186, 179);
-  --project-language-bg: rgb(173, 216, 230);
-  --project-function-bg: rgb(235, 235, 86);
+  --prj-bold-bg: rgb(232, 232, 232);
+  --prj-snippet-bg: rgb(247, 186, 179);
+  --prj-language-bg: rgb(173, 216, 230);
+  --prj-function-bg: rgb(235, 235, 86);
 
-  --project-code-background-colour: lightgoldenrodyellow;
+  --prj-code-background-colour: lightgoldenrodyellow;
 }
 
 /*************/
@@ -83,19 +83,19 @@
 
     --splash-shadow-colour: invert(40%);
 
-    --language-icon-bg-colour: rgb(32, 32, 32);
-    --languages-tooltip-bg-colour: rgb(30, 20, 20);
+    --lng-icon-bg-colour: rgb(32, 32, 32);
+    --lng-tooltip-bg-colour: rgb(30, 20, 20);
 
     --cta-bg-colour: rgb(0, 192, 0);
     --cta-hover-bg-colour: rgb(0, 240, 0);
     --cta-border-colour: black;
 
-    --project-bold-bg: rgb(68, 68, 68);
-    --project-snippet-bg: rgb(68, 28, 23);
-    --project-language-bg: rgb(25, 70, 85);
-    --project-function-bg: rgb(80, 80, 12);
+    --prj-bold-bg: rgb(68, 68, 68);
+    --prj-snippet-bg: rgb(68, 28, 23);
+    --prj-language-bg: rgb(25, 70, 85);
+    --prj-function-bg: rgb(80, 80, 12);
 
-    --project-code-background-colour: rgb(30, 30, 30);
+    --prj-code-background-colour: rgb(30, 30, 30);
   }
 
   .com {

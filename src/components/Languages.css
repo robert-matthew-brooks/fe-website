@@ -9,7 +9,7 @@
   flex-direction: column;
   align-items: center;
   gap: 2.5rem;
-  padding: var(--home-section-v-padding) var(--home-section-h-padding);
+  padding: var(--section-v-padding) var(--section-h-padding);
 
   padding-bottom: 1rem; /* reduce between icons/ticks */
 }
@@ -43,7 +43,7 @@
   position: absolute;
   padding: 0.6rem;
   font-size: 0.8rem;
-  background-color: var(--languages-tooltip-bg-colour);
+  background-color: var(--lng-tooltip-bg-colour);
   border: 1px dashed rgba(var(--primary-600));
   box-shadow: 2px 2px 10px rgba(var(--primary-800));
 }

@@ -3,8 +3,8 @@
 :root {
   --global-max-width: 1300px;
 
-  --home-section-v-padding: 6rem;
-  --home-section-h-padding: 3rem;
+  --section-v-padding: 6rem;
+  --section-h-padding: 3rem;
 
   --splash-image-aspect-ratio: calc(1000 / 720);
   /* Image size is 1000px x 720px */
@@ -25,9 +25,9 @@
     var(--splash-image-smallest-width) / var(--splash-image-aspect-ratio)
   );
 
-  --project-article-media-max-width: 1330px;
+  --prj-article-media-max-width: 1330px;
 
-  --project-article-sidebar-gap: 1rem;
-  --project-sidebar-width: 250px;
-  --project-sidebar-padding: 1rem;
+  --prj-article-sidebar-gap: 1rem;
+  --prj-sidebar-width: 250px;
+  --prj-sidebar-padding: 1rem;
 }

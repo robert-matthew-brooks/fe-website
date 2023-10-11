@@ -1,5 +1,5 @@
 #ProjectSidebar {
-  width: var(--project-sidebar-width);
+  width: var(--prj-sidebar-width);
   height: 0;
   min-height: 100%;
   overflow: hidden;
@@ -10,7 +10,7 @@
   flex-flow: column wrap;
   align-items: center;
   gap: 1.5rem;
-  padding: var(--project-sidebar-padding);
+  padding: var(--prj-sidebar-padding);
 }
 #ProjectSidebar > a {
   text-decoration: none;
@@ -23,9 +23,7 @@
 }
 
 .ProjectSidebar__card {
-  width: calc(
-    var(--project-sidebar-width) - 2 * var(--project-sidebar-padding)
-  );
+  width: calc(var(--prj-sidebar-width) - 2 * var(--prj-sidebar-padding));
   aspect-ratio: 1.5;
   background-size: cover;
   border: 1px solid rgba(var(--primary-500));
