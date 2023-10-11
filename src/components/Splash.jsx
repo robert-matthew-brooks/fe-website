@@ -1,6 +1,6 @@
-import SplashImage from './SplashImage.jsx';
-import './Splash.css';
+import SplashImage from './SplashImg.jsx';
 import ElevatedButton from './ElevatedButton.jsx';
+import './Splash.css';
 
 export default function Splash() {
   return (

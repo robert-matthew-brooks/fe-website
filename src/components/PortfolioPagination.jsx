@@ -3,16 +3,16 @@ import './PortfolioPagination.css';
 export default function PortfolioPagination({
   limit,
   page,
-  totalProjects,
+  projectCount,
   changeRequestParams,
 }) {
   const pageNumbers = [];
-  for (let i = 0; i * limit < totalProjects; i++) {
+  for (let i = 0; i * limit < projectCount; i++) {
     pageNumbers.push(i + 1);
   }
 
-  const from = !totalProjects ? 0 : (page - 1) * limit + 1;
-  const to = Math.min(page * limit, totalProjects);
+  const from = !projectCount ? 0 : (page - 1) * limit + 1;
+  const to = Math.min(page * limit, projectCount);
 
   const isFirstPage = page <= 1;
   const isLastPage = page >= pageNumbers.length;
@@ -65,7 +65,7 @@ export default function PortfolioPagination({
       </div>
 
       <span>
-        Results {from} - {to} of {totalProjects}
+        Results {from} - {to} of {projectCount}
       </span>
     </div>
   );

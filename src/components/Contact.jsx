@@ -1,6 +1,6 @@
-import whatsAppIcon from '../assets/contact-whatsapp-icon.svg';
-import emailIcon from '../assets/contact-email-icon.svg';
-import linkedInIcon from '../assets/contact-linkedin-icon.svg';
+import whatsAppIcon from '../assets/contact-icons/whatsapp-icon.svg';
+import emailIcon from '../assets/contact-icons/email-icon.svg';
+import linkedInIcon from '../assets/contact-icons/linkedin-icon.svg';
 // import ContactForm from './ContactForm';
 import './Contact.css';
 
@@ -11,7 +11,10 @@ export default function Contact() {
         <h2 id="Contact__title">Contact Me...</h2>
 
         <div id="Contact__methods">
-          <div className="Contact__method">
+          <a
+            href="mailto:robert.matthew.brooks@gmail.com?subject=Hello!"
+            className="Contact__method"
+          >
             <img
               src={emailIcon}
               style={{
@@ -21,12 +24,13 @@ export default function Contact() {
             />
             <h3>...By Email</h3>
             <p>Send me your questions in an email</p>
-            <a href="mailto:robert.matthew.brooks@gmail.com?subject=Hello!">
-              Send Email
-            </a>
-          </div>
+            <span className="Contact__method__cta-btn">Send Email</span>
+          </a>
 
-          <div className="Contact__method">
+          <a
+            href="https://wa.me/447444239651?text=Hello!"
+            className="Contact__method"
+          >
             <img
               src={whatsAppIcon}
               style={{
@@ -39,10 +43,13 @@ export default function Contact() {
               Message me on WhatsApp and I'll get back to you as soon as
               possible
             </p>
-            <a href="https://wa.me/447444239651?text=Hello!">Use WhatsApp</a>
-          </div>
+            <span className="Contact__method__cta-btn">Use WhatsApp</span>
+          </a>
 
-          <div className="Contact__method">
+          <a
+            href="https://www.linkedin.com/in/robert-matthew-brooks/"
+            className="Contact__method"
+          >
             <img
               src={linkedInIcon}
               style={{
@@ -52,10 +59,8 @@ export default function Contact() {
             />
             <h3>...Via LinkedIn</h3>
             <p>Leave a message on my LinkedIn profile</p>
-            <a href="https://www.linkedin.com/in/robert-matthew-brooks/">
-              View Profile
-            </a>
-          </div>
+            <span className="Contact__method__cta-btn">View Profile</span>
+          </a>
         </div>
 
         {/* <ContactForm /> */}

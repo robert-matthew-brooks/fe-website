@@ -21,6 +21,9 @@
   --skills-tick-filter: invert(22%) sepia(44%) saturate(4798%)
     hue-rotate(104deg) brightness(104%) contrast(104%); /* green */
 
+  --featured-project-img-overlay-bg-colour: rgba(0, 0, 0, 0.9);
+  --featured-project-img-overlay-text-colour: white;
+
   --vote-up-bg-colour: rgb(119, 221, 119);
   --vote-down-bg-colour: rgb(221, 119, 119);
 
@@ -48,6 +51,9 @@
 
   --language-icon-bg-colour: transparent;
   --languages-tooltip-bg-colour: lightgoldenrodyellow;
+
+  --icon-grey-filter: brightness(0) saturate(100%) invert(100%) sepia(0%)
+    saturate(2631%) hue-rotate(356deg) brightness(83%) contrast(76%); /* #c0c0c0 */
 
   --cta-bg-colour: rgb(0, 113, 0);
   --cta-hover-bg-colour: rgb(0, 141, 0);

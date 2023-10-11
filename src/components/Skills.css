@@ -8,12 +8,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2.5rem;
-  padding: 5rem 3rem;
+  gap: 5rem;
+  padding: var(--home-section-v-padding) var(--home-section-h-padding);
 }
 
 #Skills__title {
-  font-size: 1.2rem;
+  display: none;
+  font-size: 1.3rem;
   font-weight: bold;
   text-shadow: var(--heading-shadow);
   text-transform: uppercase;

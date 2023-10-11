@@ -1,0 +1,33 @@
+#OtherTech {
+  background-color: rgb(var(--primary-900));
+}
+
+#OtherTech__inner {
+  max-width: var(--global-max-width);
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  padding: var(--home-section-v-padding) var(--home-section-h-padding);
+}
+
+#OtherTech__icon-wrapper {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+#OtherTech__icon-wrapper > img {
+  height: 3.5rem;
+  aspect-ratio: 1;
+  filter: var(--icon-grey-filter);
+}
+
+@media (max-width: 768px) {
+  #OtherTech__icon-wrapper > img {
+    height: 3rem;
+  }
+}

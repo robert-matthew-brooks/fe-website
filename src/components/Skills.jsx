@@ -1,4 +1,3 @@
-import Languages from './Languages';
 import './Skills.css';
 
 export default function Skills() {
@@ -6,7 +5,6 @@ export default function Skills() {
     <section id="Skills">
       <div id="Skills__inner">
         <h2 id="Skills__title">Experienced In:</h2>
-        <Languages />
 
         <ul id="Skills__soft-skills-list">
           <li>

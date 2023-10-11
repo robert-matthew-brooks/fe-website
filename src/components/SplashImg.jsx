@@ -1,9 +1,9 @@
 import { useEffect, useState, useRef } from 'react';
-import splashImg from '../assets/splash-image.png';
-import splashShadows from '../assets/splash-shadows.png';
-import splashWisp from '../assets/splash-wisp.png';
-import splashLights from '../assets/splash-lights.png';
-import './SplashImage.css';
+import splashComputer from '../assets/splash-img/computer.png';
+import splashShadows from '../assets/splash-img/shadows.png';
+import splashWisp from '../assets/splash-img/wisp.png';
+import splashLights from '../assets/splash-img/lights.png';
+import './SplashImg.css';
 
 const colours = [
   '#ffffff',
@@ -132,7 +132,7 @@ export default function SplashImage() {
     <div id="splash-image__outer">
       <div id="splash-image__inner">
         <img id="splash-image__shadows" src={splashShadows} alt="Shadows" />
-        <img src={splashImg} alt="Laptop, screen and mug of coffee" />
+        <img src={splashComputer} alt="Laptop, screen and mug of coffee" />
         <img id="splash-image__wisp" src={splashWisp} alt="Coffee wisp" />
         <img
           id="splash-image__lights"

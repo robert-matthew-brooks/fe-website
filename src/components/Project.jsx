@@ -73,11 +73,7 @@ export default function Project() {
               <div id="Project__details__languages">
                 {project.languages &&
                   project.languages.map((language, i) => (
-                    <LanguageIcon
-                      key={i}
-                      language={language}
-                      height={'1.8rem'}
-                    />
+                    <LanguageIcon key={i} language={language} />
                   ))}
               </div>
             </div>

@@ -31,7 +31,7 @@ export default function Portfolio() {
   const params = useParams();
 
   const [projects, setProjects] = useState([]);
-  const [totalProjects, setTotalProjects] = useState(0);
+  const [projectCount, setProjectCount] = useState(0);
   const [languages, setLanguages] = useState([]);
 
   const [language, setLanguage] = useState(params.language);
@@ -127,9 +127,11 @@ export default function Portfolio() {
           setIsInitialLoad(false);
         }
 
-        const { projects, project_count } = await fetchProjects(requestParams);
+        const { projects, project_count: projectCount } = await fetchProjects(
+          requestParams
+        );
         setProjects(projects);
-        setTotalProjects(project_count);
+        setProjectCount(projectCount);
 
         setIsLoading(false);
       } catch (err) {
@@ -171,7 +173,7 @@ export default function Portfolio() {
 
           <PortfolioPagination
             limit={limit}
-            totalProjects={totalProjects}
+            projectCount={projectCount}
             page={page}
             changeRequestParams={changeRequestParams}
           />

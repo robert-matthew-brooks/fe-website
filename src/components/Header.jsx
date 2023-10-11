@@ -7,7 +7,7 @@ import './Header.css';
 
 const menuItems = [
   { text: 'Home', link: '/' },
-  { text: 'Skills', link: '/#Skills' },
+  { text: 'Skills', link: '/#Languages' },
   { text: 'Portfolio', link: '/portfolio' },
   { text: 'Contact', link: '/#Contact' },
 ];

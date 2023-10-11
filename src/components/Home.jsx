@@ -2,9 +2,11 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Splash from './Splash';
+import Languages from './Languages';
 import Skills from './Skills';
+import Featured from './Featured';
+import OtherTech from './OtherTech';
 import Contact from './Contact';
-import ScrollToTopBtn from './ScrollToTopBtn';
 
 export default function Home() {
   const { pathname, hash, key } = useLocation();
@@ -28,7 +30,10 @@ export default function Home() {
       </Helmet>
 
       <Splash />
+      <Languages />
       <Skills />
+      <Featured />
+      <OtherTech />
       <Contact />
     </>
   );

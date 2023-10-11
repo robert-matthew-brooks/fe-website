@@ -8,7 +8,7 @@ import './Languages.css';
 // add tooltip to body, not this component
 // (x/y needs to be relative to whole document)
 let tooltip;
-addEventListener('load', (e) => {
+addEventListener('load', (_evt) => {
   tooltip = document.createElement('div');
   tooltip.id = 'Languages__tooltip';
   tooltip.classList.add('Languages__tooltip');
@@ -17,10 +17,10 @@ addEventListener('load', (e) => {
 });
 
 // move tooltip when mouse moves
-document.addEventListener('mousemove', (e) => {
+document.addEventListener('mousemove', (evt) => {
   if (tooltip) {
-    let left = e.pageX;
-    let top = e.pageY;
+    let left = evt.pageX;
+    let top = evt.pageY;
     tooltip.style.left = `${left + 12}px`;
     tooltip.style.top = `${top + window.scrollX}px`;
   }
@@ -59,27 +59,32 @@ export default function Languages() {
   useEffect(() => {}, []);
 
   return (
-    <div id="Languages">
-      <Loading isLoading={isLoading}>
-        {languages.map((language, i) => {
-          return (
-            <LanguageIcon
-              key={i}
-              language={language}
-              height={'5rem'}
-              onMouseOver={() => {
-                showTooltip(language.name, language.project_count);
-              }}
-              onMouseOut={() => {
-                hideTooltip();
-              }}
-              onClick={() => {
-                hideTooltip();
-              }}
-            />
-          );
-        })}
-      </Loading>
-    </div>
+    <section id="Languages">
+      <div id="Languages__inner">
+        <h2 id="Languages__title">Experience with:</h2>
+
+        <div id="Languages__icon-wrapper">
+          <Loading isLoading={isLoading}>
+            {languages.map((language, i) => {
+              return (
+                <LanguageIcon
+                  key={i}
+                  language={language}
+                  onMouseOver={() => {
+                    showTooltip(language.name, language.project_count);
+                  }}
+                  onMouseOut={() => {
+                    hideTooltip();
+                  }}
+                  onClick={() => {
+                    hideTooltip();
+                  }}
+                />
+              );
+            })}
+          </Loading>
+        </div>
+      </div>
+    </section>
   );
 }

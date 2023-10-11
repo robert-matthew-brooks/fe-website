@@ -63,7 +63,7 @@
   justify-content: center;
   gap: 0.5rem;
 }
-#Project__details__languages img {
+#Project__details__languages svg {
   width: 1.5rem;
   aspect-ratio: 1;
 }

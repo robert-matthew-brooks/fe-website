@@ -3,6 +3,9 @@
 :root {
   --global-max-width: 1300px;
 
+  --home-section-v-padding: 6rem;
+  --home-section-h-padding: 3rem;
+
   --splash-image-aspect-ratio: calc(1000 / 720);
   /* Image size is 1000px x 720px */
   /* make a bit smaller because bottom of image is empty */
