@@ -14,7 +14,11 @@ const smIcons = [
     link: 'https://github.com/robert-matthew-brooks/',
     alt: 'GitHub',
   },
-  { image: youtubeLogo, link: '#', alt: 'YouTube' },
+  {
+    image: youtubeLogo,
+    link: 'https://www.youtube.com/channel/UCPc2mChnqSP4xI9TgSns5hw/',
+    alt: 'YouTube',
+  },
 ];
 
 export default function Footer() {

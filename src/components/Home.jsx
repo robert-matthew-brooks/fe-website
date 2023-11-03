@@ -20,6 +20,8 @@ export default function Home() {
       const id = hash.replace('#', '');
       const element = document.getElementById(id);
       element.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   }, [pathname, hash, key]);
 
