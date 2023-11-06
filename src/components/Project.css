@@ -148,6 +148,7 @@
 /* Main text */
 #Project__body p,
 #Project__body ul,
+#Project__body ol,
 #Project__body div.quote {
   font-size: 1rem;
   line-height: 1.6rem;
@@ -155,10 +156,12 @@
   margin-left: 1rem;
   margin-right: 1rem;
 }
-#Project__body ul > li {
+#Project__body ul > li,
+#Project__body ol > li {
   margin-left: 1rem;
 }
-#Project__body ul > li:not(:first-child) {
+#Project__body ul > li:not(:first-child),
+#Project__body ol > li:not(:first-child) {
   margin-top: 1.5rem;
 }
 
@@ -293,7 +296,8 @@
   }
 
   #Project__body p,
-  #Project__body ul {
+  #Project__body ul,
+  #Project__body ol {
     margin-left: 0;
     margin-right: 0;
   }
@@ -309,7 +313,8 @@
     margin: 0.5rem;
   }
   #Project__body p,
-  #Project__body ul {
+  #Project__body ul,
+  #Project__body ol {
     font-size: 0.9rem;
   }
   #Project__body pre {
